@@ -4,10 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "muicss": "^0.9.30",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-form": "^2.14.1",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.17",
     "redux": "^3.7.2",
