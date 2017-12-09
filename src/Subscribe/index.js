@@ -1,39 +1,34 @@
 import React from 'react'
-// import { Form, Text } from 'react-form'
-import Form from 'muicss/lib/react/form';
-import Input from 'muicss/lib/react/input'
-import Button from 'muicss/lib/react/button'
+import { Field, reduxForm } from 'redux-form'
 
-// const TextWithLabel = ({label, id}) =>
-//   <React.Fragment>
-//     <label htmlFor={id}>{label}</label>
-//     <Text field={id} id={id} />
-//   </React.Fragment>
+const TextInput = ({ id, label }) =>
+  <div className="field">
+    <label htmlFor={id} className="label">{label}</label>
+    <div className="control has-icons-right">
+      <Field id={id} name={id} component="input" type="text" className="input"/>
+    </div>
+  </div>
 
-// const SubscribeForm = props =>
-//   <form onSubmit={props.formApi.submitForm} id="form1">
-//     <fieldset>
-//       <TextWithLabel id="apellido" label="Apellido(s)" />
-//       <TextWithLabel id="nombre" label="Nombre(s)" />
-//     </fieldset>
-//     <button type="submit" className="btn btn-primary">Submit</button>
-//   </form>
+const SubmitButton = () =>
+  <div className="control">
+    <button className="button is-link" type="submit">Submit</button>
+  </div>
 
-const SubscribeFormMaterial = () =>
-  <Form>
-    <legend>Solicitud de Inscripción</legend>
-    <fieldset>
-      <Input label="Apellido(s)" floatingLabel={true} required={true} />
-      <Input label="Nombre(s)" floatingLabel={true} required={true} />
-    </fieldset>
-    <Button variant="raised">Submit</Button>
-  </Form>
+const ContactForm = ({handleSubmit}) =>
+  <form onSubmit={handleSubmit}>
+    <TextInput id="apellido" label="Apellido(s)" />
+    <TextInput id="nombre" label="Nombre(s)" />
+    <SubmitButton />
+  </form>
+
+const ContactFormRedux = reduxForm({
+  form: 'contact',
+  onSubmit: (values) => alert(values.firstName)
+})(ContactForm)
 
 const Subscribe = () =>
-  <section>
-    {/* <h2>Solicitud de Inscripción</h2> */}
-    {/* <Form component={SubscribeForm} /> */}
-    <SubscribeFormMaterial/>
+  <section className="section">
+    <ContactFormRedux/>
   </section>
 
 export default Subscribe
