@@ -1,3 +1,4 @@
+// @flow
 import React from 'react'
 import Explanation from '../messages/Explanation'
 import LeftIcon from '../icons/LeftIcon'
@@ -10,7 +11,7 @@ const Input = ({ id, icon = '', type = 'text' }: ControlProps) => {
     <div className={controlClassName}>
       <input id={id} name={id} component="input" type={type} className="input"/>
       { type === 'number' ? Explanation({ message: '* Sólo números' }) : null }
-      { icon ? <LeftIcon className={icon} /> : null }
+      { icon ? <LeftIcon icon={icon} /> : null }
     </div>
   )
 }
