@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import './Subscribe.css'
 
 const Explanation = ({ message }) =>
   <small>{ message }</small>
@@ -48,7 +49,7 @@ const SubmitButton = () =>
   </div>
 
 const ContactForm = ({handleSubmit}) =>
-  <form onSubmit={handleSubmit}>
+  <form className="subscription__form" onSubmit={handleSubmit}>
     <fieldset className="box">
       <legend className="label has-text-centered">Información de Contacto</legend>
       <div className="columns">
@@ -77,7 +78,7 @@ const ContactForm = ({handleSubmit}) =>
   </form>
 
 const Subscribe = () =>
-  <section className="section">
+  <section className="subscription">
     <ContactForm/>
   </section>
 
