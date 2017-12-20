@@ -2,7 +2,7 @@
 import React from 'react'
 import './Subscribe.css'
 
-import Form from './SubscriptionForm'
+import Form from './Form'
 
 const Subscribe = () =>
   <section className="subscription">

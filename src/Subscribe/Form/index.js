@@ -1,10 +1,8 @@
+// @flow
 import React from 'react'
 import FormLayout from './FormLayout'
 
 import Field from '../fields/Field'
-import Input from '../fields/Input'
-import Select from '../fields/Select'
-import Submit from '../fields/Submit'
 
 import fields from './fields'
 
@@ -25,26 +23,26 @@ type FormFields = {|
   pais: StatelessFunctionalComponent<FieldProps>,
 |}
 
-class SubscriptionForm extends React.Component {
+class SubscriptionForm extends React.Component<any> {
   construct() {
     
   }
 
   render() {
+    const fieldKeys = Object.keys(fields)
     return (
       <FormLayout>
-        {/* Contact information */}
         {
-          fields.map((field) => {
+          fieldKeys.map((field, idx) => {
             const {
               id,
               label,
               control,
               icon = '',
               options = [],
-            } = field
+            } = fields[field]
             return (
-              <Field id={id} label={label} control={control} icon={icon} options={options} />
+              <Field key={idx} id={id} label={label} control={control} icon={icon} options={options} />
             )
           })
         }

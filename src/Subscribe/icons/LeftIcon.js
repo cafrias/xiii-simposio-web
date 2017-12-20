@@ -6,8 +6,8 @@ type Icon = {
 }
 
 const LeftIcon = ({ icon }: Icon) =>
-  <div class="icon is-small is-left">
-    <i class={`fa ${icon}`}></i>
+  <div className="icon is-small is-left">
+    <i className={`fa ${icon}`}></i>
   </div>
 
 export default LeftIcon
