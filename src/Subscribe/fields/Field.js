@@ -23,10 +23,10 @@ const isMissing = ({ touched, missing }) => touched && missing
 const isInvalid = ({ touched, invalid }) => touched && invalid
 const hasError = state => isMissing(state) || isInvalid(state)
 
-const Field = ({ id, label, control, className = '', icon = '', type = '', options, state }: FieldProps) =>
+const Field = ({ id, label, control, className = '', icon = '', type = '', options, state, changeHandler }: FieldProps) =>
   <div className={`field ${className}`}>
     <label htmlFor={id} className="label">{label}</label>
-    { control({ id, icon, type, options, value: state.value, hasError: hasError(state) }) }
+    { control({ id, icon, type, options, value: state.value, changeHandler, hasError: hasError(state) }) }
     { isMissing(state) ? Missing() : null }
     { isInvalid(state) ? Invalid() : null }
   </div>

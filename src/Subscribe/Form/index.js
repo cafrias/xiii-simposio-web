@@ -55,8 +55,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
     console.log('Submitted')
   }
 
-  changeHandler(field, event, validator) {
-    const newValue = event.value
+  changeHandler(field, event) {
+    const newValue = event.target.value
     this.setState({
       loading: this.state.loading,
       fields: Object.assign({}, this.state.fields, {
@@ -64,7 +64,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
           value: newValue,
           touched: true,
           missing: true,
-          invalid: !validator(newValue)
+          invalid: !fields[field].validator(newValue)
         }
       })
     })
@@ -84,7 +84,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
               options,
             } = fields[field]
             return (
-              <Field key={idx} state={this.state.fields[field]}
+              <Field key={idx} state={this.state.fields[field]} changeHandler={this.changeHandler.bind(this, field)}
                 id={id} label={label} control={control} icon={icon} options={options} />
             )
           }, this)

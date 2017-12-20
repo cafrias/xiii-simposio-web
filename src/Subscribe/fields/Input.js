@@ -5,10 +5,10 @@ import LeftIcon from '../icons/LeftIcon'
 
 import type { ControlProps } from './Field'
 
-const Input = ({ id, icon = '', type = 'text', hasError, value }: ControlProps) => {
+const Input = ({ id, icon = '', type = 'text', hasError, value, changeHandler }: ControlProps) => {
   const controlClassName = `control has-icons-right ${ icon ? 'has-icons-left' : '' }`
   return (
-    <div className={controlClassName}>
+    <div className={controlClassName} onChange={changeHandler}>
       <input id={id} name={id} component="input" type={type} className={`input ${ hasError ? 'is-danger' : '' }`} value={value}/>
       { type === 'number' ? Explanation({ message: '* Sólo números' }) : null }
       { icon ? <LeftIcon icon={icon} /> : null }
