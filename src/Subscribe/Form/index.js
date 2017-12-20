@@ -22,16 +22,15 @@ type SubscriptionFormState = {
 }
 
 class SubscriptionForm extends React.Component<SubscriptionFormProps> {
-  state: SubscriptionFormState
-
   submitHandler: () => void
-  initializeState: () => FieldsMap
+  initializeState: () => any
   
-  construct() {
-    this.setState({
+  constructor(props) {
+    super(props)
+    this.state = {
       loading: false,
       fields: this.initializeState()
-    })
+    }
     // Binding
     this.submitHandler = this.submitHandler.bind(this)
   }
@@ -43,8 +42,9 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
     keys.forEach((field) => {
       newState[field] = {
         value: '',
-        touched: false,
-        valid: false
+        touched: true,
+        invalid: true,
+        missing: true
       }
     })
 
@@ -69,9 +69,10 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
               options,
             } = fields[field]
             return (
-              <Field key={idx} id={id} label={label} control={control} icon={icon} options={options} />
+              <Field key={idx} state={this.state.fields[field]}
+                id={id} label={label} control={control} icon={icon} options={options} />
             )
-          })
+          }, this)
         }
       </FormLayout>
     )
