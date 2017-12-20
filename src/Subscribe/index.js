@@ -2,16 +2,26 @@
 import React from 'react'
 import './Subscribe.css'
 
-import Field from './fields/Field'
+import Field, { FieldProps } from './fields/Field'
 import Input from './fields/Input'
 import Select from './fields/Select'
 
-import type { StatelessFuncionalComponent } from 'react'
+import type { StatelessFunctionalComponent } from 'react'
 import type { FieldProps } from './fields/Field'
 
-type FormFields = {
-  nombre: StatelessComponent<>
-}
+type FormFields = {|
+  nombre: StatelessFunctionalComponent<FieldProps>,
+  apellido: StatelessFunctionalComponent<FieldProps>,
+  documento: StatelessFunctionalComponent<FieldProps>,
+  telefono: StatelessFunctionalComponent<FieldProps>,
+  celular: StatelessFunctionalComponent<FieldProps>,
+  fax: StatelessFunctionalComponent<FieldProps>,
+  email: StatelessFunctionalComponent<FieldProps>,
+  direccion: StatelessFunctionalComponent<FieldProps>,
+  zip: StatelessFunctionalComponent<FieldProps>,
+  localidad: StatelessFunctionalComponent<FieldProps>,
+  pais: StatelessFunctionalComponent<FieldProps>,
+|}
 
 const SubmitButton = () =>
   <div className="control">
@@ -74,8 +84,6 @@ const ContactForm = ({handleSubmit}) =>
             </div>
           </div>
         </div>
-      </div>
-      <div className="column">
       </div>
     </fieldset>
     <SubmitButton />
