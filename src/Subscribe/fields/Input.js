@@ -8,7 +8,7 @@ import type { ControlProps } from './Field'
 const Input = ({ id, icon = '', type = 'text', hasError, value, changeHandler }: ControlProps) => {
   const controlClassName = `control has-icons-right ${ icon ? 'has-icons-left' : '' }`
   return (
-    <div className={controlClassName} onChange={changeHandler}>
+    <div className={controlClassName} onChange={changeHandler} onBlur={changeHandler}>
       <input id={id} name={id} component="input" type={type} className={`input ${ hasError ? 'is-danger' : '' }`} value={value}/>
       { type === 'number' ? Explanation({ message: '* Sólo números' }) : null }
       { icon ? <LeftIcon icon={icon} /> : null }

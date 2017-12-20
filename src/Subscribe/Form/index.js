@@ -57,14 +57,15 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
 
   changeHandler(field, event) {
     const newValue = event.target.value
+    const {required, validator} = fields[field]
     this.setState({
       loading: this.state.loading,
       fields: Object.assign({}, this.state.fields, {
         [field]: {
           value: newValue,
           touched: true,
-          missing: true,
-          invalid: !fields[field].validator(newValue)
+          missing: required && !Boolean(newValue),
+          invalid: !validator(newValue)
         }
       })
     })
