@@ -4,33 +4,7 @@ import './Subscribe.css'
 
 import Field from './fields/Field'
 import Input from './fields/Input'
-
-const Explanation = ({ message }) =>
-  <small>{ message }</small>
-
-const LeftIcon = ({ className = '' }) =>
-  <div class="icon is-small is-left">
-    <i class={`fa ${className}`}></i>
-  </div>
-
-const Select = ({ id, label, type = 'text', className = '' }) =>
-  <div className={`field ${className}`}>
-    <label htmlFor={id} className="label">{label}</label>
-    <div className="control has-icons-left has-icons-right" style={{ width: '100%' }}>
-      <div className="select">
-        <select>
-          <option selected>Argentina</option>
-          <option>Bolivia</option>
-          <option>Brasil</option>
-          <option>Chile</option>
-          <option>Paraguay</option>
-          <option>Uruguay</option>
-          <option>Otro</option>
-        </select>
-        <LeftIcon className="fa-globe"/>
-      </div>
-    </div>
-  </div>
+import Select from './fields/Select'
 
 const SubmitButton = () =>
   <div className="control">
@@ -60,7 +34,7 @@ const ContactForm = ({handleSubmit}) =>
         <Field id="direccion" label="Dirección" className="column" icon="fa-map-marker" control={Input} />
         <Field id="zip" label="Codigo Postal" type="number" className="column" control={Input} />
         <Field id="localidad" label="Localidad" className="column" icon="fa-building" control={Input} />
-        <Select id="pais" label="País" className="column" />
+        <Field id="pais" label="País" className="column" control={Select} />
       </div>
     </fieldset>
     <SubmitButton />
