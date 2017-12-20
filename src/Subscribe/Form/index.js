@@ -6,14 +6,49 @@ import Field from '../fields/Field'
 
 import fields from './fields'
 
+type FieldState = {
+  value: mixed,
+  touched: boolean,
+  valid: boolean
+}
+type FieldsMap = {
+  [any]: FieldState
+}
+
 type SubscriptionFormProps = {}
+type SubscriptionFormState = {
+  loading: boolean,
+  fields: FieldsMap
+}
 
 class SubscriptionForm extends React.Component<SubscriptionFormProps> {
+  state: SubscriptionFormState
+
   submitHandler: () => void
+  initializeState: () => FieldsMap
   
   construct() {
+    this.setState({
+      loading: false,
+      fields: this.initializeState()
+    })
     // Binding
     this.submitHandler = this.submitHandler.bind(this)
+  }
+
+  initializeState() {
+    const keys = Object.keys(fields)
+    const newState = {}
+
+    keys.forEach((field) => {
+      newState[field] = {
+        value: '',
+        touched: false,
+        valid: false
+      }
+    })
+
+    return newState
   }
 
   submitHandler() {
