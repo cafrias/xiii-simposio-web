@@ -19,12 +19,16 @@ export type FieldProps = {
   className?: string,
 } & ControlProps
 
+const isMissing = ({ touched, missing }) => touched && missing
+const isInvalid = ({ touched, invalid }) => touched && invalid
+const hasError = state => isMissing(state) || isInvalid(state)
+
 const Field = ({ id, label, control, className = '', icon = '', type = '', options, state }: FieldProps) =>
   <div className={`field ${className}`}>
     <label htmlFor={id} className="label">{label}</label>
-    { control({ id, icon, type, options }) }
-    { state.touched && state.missing ? Missing() : null }
-    { state.touched && state.invalid ? Invalid() : null }
+    { control({ id, icon, type, options, hasError: hasError(state) }) }
+    { isMissing(state) ? Missing() : null }
+    { isInvalid(state) ? Invalid() : null }
   </div>
 
 export default Field
