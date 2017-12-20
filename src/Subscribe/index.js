@@ -6,6 +6,13 @@ import Field from './fields/Field'
 import Input from './fields/Input'
 import Select from './fields/Select'
 
+import type { StatelessFuncionalComponent } from 'react'
+import type { FieldProps } from './fields/Field'
+
+type FormFields = {
+  nombre: StatelessComponent<>
+}
+
 const SubmitButton = () =>
   <div className="control">
     <button className="button is-link" type="submit">Submit</button>

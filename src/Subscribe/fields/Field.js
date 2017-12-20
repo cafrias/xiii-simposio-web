@@ -9,7 +9,7 @@ export type ControlProps = {
   type?: string
 }
 
-type FieldProps = {
+export type FieldProps = {
   id: string,
   label: string,
   control: StatelessFunctionalComponent<ControlProps>,
