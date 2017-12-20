@@ -6,40 +6,32 @@ import Field from '../fields/Field'
 
 import fields from './fields'
 
-import type { StatelessFunctionalComponent } from 'react'
-import type { FieldProps } from '../fields/Field'
+type SubscriptionFormProps = {}
 
-type FormFields = {|
-  nombre: StatelessFunctionalComponent<FieldProps>,
-  apellido: StatelessFunctionalComponent<FieldProps>,
-  documento: StatelessFunctionalComponent<FieldProps>,
-  telefono: StatelessFunctionalComponent<FieldProps>,
-  celular: StatelessFunctionalComponent<FieldProps>,
-  fax: StatelessFunctionalComponent<FieldProps>,
-  email: StatelessFunctionalComponent<FieldProps>,
-  direccion: StatelessFunctionalComponent<FieldProps>,
-  zip: StatelessFunctionalComponent<FieldProps>,
-  localidad: StatelessFunctionalComponent<FieldProps>,
-  pais: StatelessFunctionalComponent<FieldProps>,
-|}
-
-class SubscriptionForm extends React.Component<any> {
+class SubscriptionForm extends React.Component<SubscriptionFormProps> {
+  submitHandler: () => void
+  
   construct() {
-    
+    // Binding
+    this.submitHandler = this.submitHandler.bind(this)
+  }
+
+  submitHandler() {
+    console.log('Submitted')
   }
 
   render() {
     const fieldKeys = Object.keys(fields)
     return (
-      <FormLayout>
+      <FormLayout handleSubmit={this.submitHandler}>
         {
           fieldKeys.map((field, idx) => {
             const {
               id,
               label,
               control,
-              icon = '',
-              options = [],
+              icon,
+              options,
             } = fields[field]
             return (
               <Field key={idx} id={id} label={label} control={control} icon={icon} options={options} />
