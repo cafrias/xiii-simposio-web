@@ -41,7 +41,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
 
     keys.forEach((field) => {
       newState[field] = {
-        value: 'Matraca',
+        value: '',
         touched: false,
         invalid: false,
         missing: false
