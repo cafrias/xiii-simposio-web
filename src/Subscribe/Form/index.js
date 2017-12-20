@@ -41,7 +41,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
 
     keys.forEach((field) => {
       newState[field] = {
-        value: '',
+        value: 'Matraca',
         touched: false,
         invalid: false,
         missing: false
@@ -53,6 +53,21 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
 
   submitHandler() {
     console.log('Submitted')
+  }
+
+  changeHandler(field, event, validator) {
+    const newValue = event.value
+    this.setState({
+      loading: this.state.loading,
+      fields: Object.assign({}, this.state.fields, {
+        [field]: {
+          value: newValue,
+          touched: true,
+          missing: true,
+          invalid: !validator(newValue)
+        }
+      })
+    })
   }
 
   render() {

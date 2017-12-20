@@ -26,7 +26,7 @@ const hasError = state => isMissing(state) || isInvalid(state)
 const Field = ({ id, label, control, className = '', icon = '', type = '', options, state }: FieldProps) =>
   <div className={`field ${className}`}>
     <label htmlFor={id} className="label">{label}</label>
-    { control({ id, icon, type, options, hasError: hasError(state) }) }
+    { control({ id, icon, type, options, value: state.value, hasError: hasError(state) }) }
     { isMissing(state) ? Missing() : null }
     { isInvalid(state) ? Invalid() : null }
   </div>
