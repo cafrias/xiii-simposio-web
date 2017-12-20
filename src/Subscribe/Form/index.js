@@ -42,9 +42,9 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
     keys.forEach((field) => {
       newState[field] = {
         value: '',
-        touched: true,
-        invalid: true,
-        missing: true
+        touched: false,
+        invalid: false,
+        missing: false
       }
     })
 
