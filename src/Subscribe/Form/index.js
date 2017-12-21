@@ -3,8 +3,11 @@ import React from 'react'
 import FormLayout from './FormLayout'
 
 import Field from '../fields/Field'
-
 import fields from './fields'
+
+
+// TYPES _______________________________________________________________________
+
 import type { FormField } from './fields'
 
 export type FieldState = {
@@ -29,6 +32,9 @@ export type TargetElements =
   | HTMLInputElement
   | HTMLSelectElement
 
+
+// COMPONENT ___________________________________________________________________
+
 class SubscriptionForm extends React.Component<SubscriptionFormProps, SubscriptionFormState> {
   constructor(props: SubscriptionFormProps) {
     super(props)
@@ -36,7 +42,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
       loading: false,
       fields: this.initializeState()
     }
-    // Binding
+
+    // Bindings
     this.submitHandler = this.submitHandler.bind(this)
   }
 
