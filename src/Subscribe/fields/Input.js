@@ -1,12 +1,29 @@
 // @flow
 import React from 'react'
+
 import Explanation from '../messages/Explanation'
 import LeftIcon from '../icons/LeftIcon'
 
+
+// TYPES _______________________________________________________________________
+
 import type { ControlProps } from './Field'
 
-const Input = ({ id, icon = '', type = 'text', hasError, value, changeHandler }: ControlProps) => {
+
+// COMPONENT ___________________________________________________________________
+
+const Input = (props: ControlProps) => {
+  const {
+    id,
+    hasError,
+    value,
+    changeHandler,
+    icon = '',
+    type = 'text'
+  } = props
+
   const controlClassName = `control has-icons-right ${ icon ? 'has-icons-left' : '' }`
+  
   return (
     <div className={controlClassName} onChange={changeHandler} onBlur={changeHandler}>
       <input id={id} name={id} component="input" type={type} className={`input ${ hasError ? 'is-danger' : '' }`} value={value}/>

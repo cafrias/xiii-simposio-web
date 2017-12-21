@@ -4,41 +4,59 @@ import * as React from 'react'
 import Missing from '../messages/Missing'
 import Invalid from '../messages/Invalid'
 
+
+// TYPES _______________________________________________________________________
+
 import type { FieldState, TargetElements } from '../Form/index.js'
+
+type EventHandler = (event: SyntheticEvent<TargetElements>) => void
 
 export type ControlProps = {
   id: string,
+  changeHandler: EventHandler,
+  value?: mixed,
+  hasError?: boolean,
   icon?: string,
   type?: string,
-  options?: [string]
+  options?: string[]
 }
 
-export type FieldProps = {
+export type FieldProps = ControlProps & {
+  changeHandler: EventHandler,
   label: string,
   control: React.StatelessFunctionalComponent<ControlProps>,
-  changeHandler: (field: string, event: SyntheticEvent<TargetElements>) => void,
   state: FieldState,
   className?: string
-} & ControlProps
+}
 
-const isMissing = ({ touched, missing }) => touched && missing
-const isInvalid = ({ touched, invalid }) => touched && invalid
-const hasError = state => isMissing(state) || isInvalid(state)
+
+// CONSTANTS ___________________________________________________________________
+
+const isMissing = ({ touched, missing }: FieldState): boolean =>
+  touched && missing
+const isInvalid = ({ touched, invalid }: FieldState): boolean =>
+  touched && invalid
+const hasError = (state: FieldState): boolean =>
+  isMissing(state) || isInvalid(state)
+
+
+// COMPONENT ___________________________________________________________________
 
 const Field = (props: FieldProps) => {
+  // Workaroud because of weird bug on Flow.
+  const state: FieldState = props.state
+  const control: React.StatelessFunctionalComponent<ControlProps> = props.control
   const {
     id,
     label,
-    control,
     changeHandler,
     className = '',
     icon = '',
     type = '',
     options,
-    state
   } = props
 
-  const controlProps = {
+  const controlProps: ControlProps = {
     id,
     icon,
     type,

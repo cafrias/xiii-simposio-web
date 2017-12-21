@@ -10,17 +10,18 @@ import fields from './fields'
 
 import type { FormField } from './fields'
 
-export type FieldState = {
+export type FieldState = {|
   value: mixed,
   touched: boolean,
-  valid: boolean
-}
+  invalid: boolean,
+  missing: boolean
+|}
 type FieldsMap = {
-  [any]: FieldState
+  [string]: FieldState
 }
 
 type SubscriptionFormProps = {
-  [any]: any
+  [string]: any
 }
 
 type SubscriptionFormState = {
@@ -70,7 +71,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
   changeHandler = (field: FormField, event: SyntheticEvent<TargetElements>) => {
     const newValue = event.currentTarget.value
     const {required, validator} = fields[field]
-    this.setState({
+    const newState: SubscriptionFormState = {
       loading: this.state.loading,
       fields: Object.assign({}, this.state.fields, {
         [field]: {
@@ -80,7 +81,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
           invalid: !validator(newValue)
         }
       })
-    })
+    }
+    this.setState(newState)
   }
 
   render() {
@@ -88,17 +90,19 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     return (
       <FormLayout handleSubmit={this.submitHandler}>
         {
-          fieldKeys.map((field, idx) => {
+          fieldKeys.map((fieldName, idx) => {
             const {
               id,
               label,
               control,
               icon,
               options,
-            } = fields[field]
+            } = fields[fieldName]
+            const state: FieldState = this.state.fields[fieldName]
             return (
-              <Field key={idx} state={this.state.fields[field]} changeHandler={this.changeHandler.bind(this, field)}
-                id={id} label={label} control={control} icon={icon} options={options} />
+              <Field key={idx} id={id} label={label} control={control}
+                state={state} icon={icon} options={options}
+                changeHandler={this.changeHandler.bind(this, fieldName)}  /> 
             )
           }, this)
         }
