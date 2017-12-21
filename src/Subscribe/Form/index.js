@@ -78,7 +78,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
           value: newValue,
           touched: true,
           missing: required && !Boolean(newValue),
-          invalid: required && !validator(newValue)
+          invalid: newValue !== '' && required && !validator(newValue)
         }
       })
     }
@@ -100,11 +100,12 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
               control,
               icon,
               options,
+              type,
               required
             } = fields[fieldName]
             const state: FieldState = this.state.fields[fieldName]
             return (
-              <Field key={idx} id={id} label={label} control={control}
+              <Field key={idx} id={id} label={label} control={control} type={type}
                 required={required} state={state} icon={icon} options={options}
                 changeHandler={this.changeHandler.bind(this, fieldName)}  /> 
             )
