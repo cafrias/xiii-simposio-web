@@ -105,8 +105,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
             const state: FieldState = this.state.fields[fieldName]
             return (
               <Field key={idx} id={id} label={label} control={control}
-                required={required}
-                state={state} icon={icon} options={options}
+                required={required} state={state} icon={icon} options={options}
                 changeHandler={this.changeHandler.bind(this, fieldName)}  /> 
             )
           }, this)
