@@ -1,9 +1,38 @@
+// @flow
 import validators from './validators'
 
 import Input from '../fields/Input'
 import Select from '../fields/Select'
 
-export default {
+import type { StatelessFunctionalComponent } from 'react'
+
+export type FormField =
+  | 'nombre'
+  | 'apellido'
+  | 'documento'
+  | 'telefono'
+  | 'celular'
+  | 'fax'
+  | 'email'
+  | 'direccion'
+  | 'zip'
+  | 'localidad'
+  | 'pais'
+
+type FieldsObject = {
+  [FormField]: {|
+    required: boolean,
+    validator: (value: mixed) => boolean,
+    control: StatelessFunctionalComponent<Object>,
+    id: string,
+    label: string,
+    type?: string,
+    icon?: string,
+    options?: string[]
+  |}
+}
+
+const fields: FieldsObject =  {
   nombre: {
     required: true,
     validator: validators.any,
@@ -104,3 +133,5 @@ export default {
     icon: 'fa-globe'
   }
 }
+
+export default fields

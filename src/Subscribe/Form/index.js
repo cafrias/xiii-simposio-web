@@ -5,8 +5,9 @@ import FormLayout from './FormLayout'
 import Field from '../fields/Field'
 
 import fields from './fields'
+import type { FormField } from './fields'
 
-type FieldState = {
+export type FieldState = {
   value: mixed,
   touched: boolean,
   valid: boolean
@@ -15,17 +16,21 @@ type FieldsMap = {
   [any]: FieldState
 }
 
-type SubscriptionFormProps = {}
+type SubscriptionFormProps = {
+  [any]: any
+}
+
 type SubscriptionFormState = {
   loading: boolean,
   fields: FieldsMap
 }
 
-class SubscriptionForm extends React.Component<SubscriptionFormProps> {
-  submitHandler: () => void
-  initializeState: () => any
-  
-  constructor(props) {
+export type TargetElements =
+  | HTMLInputElement
+  | HTMLSelectElement
+
+class SubscriptionForm extends React.Component<SubscriptionFormProps, SubscriptionFormState> {
+  constructor(props: SubscriptionFormProps) {
     super(props)
     this.state = {
       loading: false,
@@ -35,7 +40,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
     this.submitHandler = this.submitHandler.bind(this)
   }
 
-  initializeState() {
+  initializeState = (): FieldsMap => {
     const keys = Object.keys(fields)
     const newState = {}
 
@@ -51,12 +56,12 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps> {
     return newState
   }
 
-  submitHandler() {
+  submitHandler = (): void => {
     console.log('Submitted')
   }
 
-  changeHandler(field, event) {
-    const newValue = event.target.value
+  changeHandler = (field: FormField, event: SyntheticEvent<TargetElements>) => {
+    const newValue = event.currentTarget.value
     const {required, validator} = fields[field]
     this.setState({
       loading: this.state.loading,
