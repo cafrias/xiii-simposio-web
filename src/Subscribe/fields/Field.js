@@ -26,6 +26,7 @@ export type FieldProps = ControlProps & {
   label: string,
   control: React.StatelessFunctionalComponent<ControlProps>,
   state: FieldState,
+  required: boolean,
   className?: string
 }
 
@@ -50,10 +51,11 @@ const Field = (props: FieldProps) => {
     id,
     label,
     changeHandler,
+    options,
+    required,
     className = '',
     icon = '',
-    type = '',
-    options,
+    type = ''
   } = props
 
   const controlProps: ControlProps = {
@@ -68,7 +70,10 @@ const Field = (props: FieldProps) => {
 
   return (
     <div className={`field ${className}`}>
-      <label htmlFor={id} className="label">{label}</label>
+      <label htmlFor={id} className="label">
+        {label}
+        { required ? (<small> *</small>) : null }
+      </label>
       { control(controlProps) }
       { isMissing(state) ? Missing() : null }
       { isInvalid(state) ? Invalid() : null }
