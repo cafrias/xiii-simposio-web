@@ -11,7 +11,7 @@ import fields from './fields'
 import type { FormField } from './fields'
 
 export type FieldState = {|
-  value: mixed,
+  value: string,
   touched: boolean,
   invalid: boolean,
   missing: boolean
@@ -69,7 +69,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
   }
 
   changeHandler = (field: FormField, event: SyntheticEvent<TargetElements>) => {
-    const newValue = event.currentTarget.value
+    const newValue = event.currentTarget.value || ''
     const {required, validator} = fields[field]
     const newState: SubscriptionFormState = {
       loading: this.state.loading,

@@ -14,7 +14,7 @@ type EventHandler = (event: SyntheticEvent<TargetElements>) => void
 export type ControlProps = {
   id: string,
   changeHandler: EventHandler,
-  value?: mixed,
+  value: string,
   hasError?: boolean,
   icon?: string,
   type?: string,
