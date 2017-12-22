@@ -22,6 +22,19 @@ export type FormField =
   | 'arancel_base'
   | 'arancel_adicional'
   | 'arancel_pago'
+  | 'acompanantes'
+  | 'ponencia_presenta'
+  | 'ponencia_institucion'
+  | 'ponencia_titulo'
+  | 'ponencia_area'
+  | 'ponencia_coautores'
+
+type OptionsObject = {|
+  val: any,
+  label: string  
+|}
+
+type OptionsArray = string | OptionsObject
 
 type FieldsObject = {
   [FormField]: {|
@@ -29,10 +42,11 @@ type FieldsObject = {
     validator: (value: mixed) => boolean,
     control: StatelessFunctionalComponent<Object>,
     id: string,
+    requiredIf?: string,
     label: string,
     type?: string,
     icon?: string,
-    options?: string[]
+    options?: OptionsArray[]
   |}
 }
 
@@ -162,6 +176,60 @@ const fields: FieldsObject =  {
     control: TextArea,
     id: 'arancel_pago',
     label: 'Forma de pago (detallar Nº de recibo)',
+  },
+  acompanantes: {
+    required: true,
+    validator: validators.any,
+    control: Select,
+    options: [
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5'
+    ],
+    id: 'acompanantes',
+    label: 'Acompañantes'
+  },
+  ponencia_presenta: {
+    required: true,
+    validator: validators.boolean,
+    control: Radio,
+    id: 'ponencia_presenta',
+    label: '¿Presenta Ponencia?'
+  },
+  ponencia_titulo: {
+    required: false,
+    requiredIf: 'presenta_ponencia',
+    validator: validators.any,
+    control: Input,
+    id: 'ponencia_titulo',
+    label: 'Título de la Ponencia'
+  },
+  ponencia_area: {
+    required: false,
+    requiredIf: 'presenta_ponencia',
+    validator: validators.any,
+    control: Input,
+    id: 'ponencia_area',
+    label: 'Área'
+  },
+  ponencia_coautores: {
+    required: false,
+    requiredIf: 'presenta_ponencia',
+    validator: validators.any,
+    control: Input,
+    id: 'ponencia_coautores',
+    label: 'Co-Autor/es'
+  },
+  ponencia_institucion: {
+    required: true,
+    requiredIf: 'presenta_ponencia',
+    validator: validators.any,
+    control: Input,
+    id: 'ponencia_coautores',
+    label: 'Co-Autor/es'
   }
 }
 
