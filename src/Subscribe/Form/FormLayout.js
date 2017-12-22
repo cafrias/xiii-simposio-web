@@ -68,6 +68,22 @@ const FormLayout = ({handleSubmit, children}: FormLayoutProps) => {
           </div>
         </div>
       </fieldset>
+      <fieldset className="box">
+        <legend className="label has-text-centered">Pago Arancel</legend>
+        <div className="columns">
+          <div className="column">
+            {fields[11]}
+          </div>
+          <div className="column">
+            {fields[12]}
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column">
+            {fields[13]}
+          </div>
+        </div>
+      </fieldset>
       <Submit />
     </form>
   )

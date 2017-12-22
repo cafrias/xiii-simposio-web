@@ -3,6 +3,7 @@ import validators from './validators'
 
 import Input from '../fields/Input'
 import Select from '../fields/Select'
+import TextArea from '../fields/TextArea'
 
 import type { StatelessFunctionalComponent } from 'react'
 
@@ -18,6 +19,9 @@ export type FormField =
   | 'zip'
   | 'localidad'
   | 'pais'
+  | 'arancel_base'
+  | 'arancel_adicional'
+  | 'arancel_pago'
 
 type FieldsObject = {
   [FormField]: {|
@@ -131,6 +135,33 @@ const fields: FieldsObject =  {
     id: 'pais',
     label: 'País',
     icon: 'fa-globe'
+  },
+  arancel_base: {
+    required: true,
+    validator: validators.number,
+    control: Select,
+    options: [
+      'asd',
+      'dsa'
+    ],
+    id: 'arancel_base',
+    label: 'Arancel',
+    icon: 'fa-money'
+  },
+  arancel_adicional: {
+    required: false,
+    validator: validators.number,
+    control: Input,
+    type: 'number',
+    id: 'arancel_adicional',
+    label: 'Adicional',
+  },
+  arancel_pago: {
+    required: true,
+    validator: validators.any,
+    control: TextArea,
+    id: 'arancel_pago',
+    label: 'Forma de pago (detallar Nº de recibo)',
   }
 }
 
