@@ -8,7 +8,8 @@ type ValidatorsMap = {
 const validators: ValidatorsMap = {
   any: value => true,
   number: value => validator.isNumeric(String(value)),
-  email: value => validator.isEmail(String(value))
+  email: value => validator.isEmail(String(value)),
+  boolean: value => validator.isBoolean(String(value))
 }
 
 export default validators

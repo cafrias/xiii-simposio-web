@@ -14,9 +14,11 @@ const Select = (props: ControlProps) => {
     options = ['No Elements'],
   } = props
 
+  const divClassName = `control ${icon ? 'has-icons-left' : ''}`
+
   return (
-    <div className="control has-icons-left has-icons-right" style={{ width: '100%' }}>
-      <div className={`select ${hasError ? 'is-danger' : ''}`}>
+    <div className={divClassName} style={{ width: '100%' }}>
+      <div className={`select is-fullwidth ${hasError ? 'is-danger' : ''}`}>
         <select onChange={changeHandler} id={id} name={id} value={value}>
           {
             options.map((option, idx) => <option key={idx}>{option}</option>)

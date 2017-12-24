@@ -4,6 +4,7 @@ import validators from './validators'
 import Input from '../fields/Input'
 import Select from '../fields/Select'
 import TextArea from '../fields/TextArea'
+import Radio from '../fields/Radio'
 
 import type { StatelessFunctionalComponent } from 'react'
 
