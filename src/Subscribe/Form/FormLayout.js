@@ -4,16 +4,28 @@ import * as React from 'react'
 import Submit from '../fields/Submit'
 
 type FormLayoutProps = {
-  handleSubmit: () => void,
+  handleSubmit: (e: SyntheticEvent<HTMLButtonElement>) => void,
   children: React.Node,
-  presenta: boolean
+  presenta: boolean,
+  loading: boolean
 }
 
-const FormLayout = ({handleSubmit, children, presenta}: FormLayoutProps) => {
+const FormLayout = (props: FormLayoutProps) => {
+  const {
+    handleSubmit,
+    children,
+    presenta,
+    loading
+  } = props
+
   const fields = React.Children.toArray(children)
+
   console.log('Coerced presentaValue: ', presenta)
+
+  const formClassName = `subs_form ${loading ? 'subs_form--loading' : ''}`
+
   return (
-    <form className="subscription__form" onSubmit={handleSubmit}>
+    <form className={formClassName} onSubmit={handleSubmit}>
       <fieldset className="box">
         <legend className="label has-text-centered">Información de Contacto</legend>
         <div className="columns">
@@ -107,7 +119,11 @@ const FormLayout = ({handleSubmit, children, presenta}: FormLayoutProps) => {
           </React.Fragment>
         ) : null }
       </fieldset>
-      <Submit />
+      <div className="columns">
+        <div className="column flx justify-center">
+          <Submit id="subs_submit" loading={loading} />
+        </div>
+      </div>
     </form>
   )
 }

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react'
+import * as React from 'react'
 import FormLayout from './FormLayout'
 
 import Field from '../fields/Field'
@@ -64,7 +64,12 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     return newState
   }
 
-  submitHandler = (): void => {
+  submitHandler = (e: SyntheticEvent<HTMLButtonElement>): void => {
+    e.preventDefault()
+    const newState = Object.assign({}, this.state, {
+      loading: true
+    })
+    this.setState(newState)
     console.log('Submitted')
   }
 
@@ -93,7 +98,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     const presentaValue = this.state.fields.ponencia_presenta.value
     console.log('Precasted presentaValue: ', presentaValue)
     return (
-      <FormLayout presenta={Boolean(presentaValue)} handleSubmit={this.submitHandler}>
+      <FormLayout loading={this.state.loading}
+        presenta={Boolean(presentaValue)} handleSubmit={this.submitHandler}>
         {
           fieldKeys.map((fieldName, idx) => {
             const {
