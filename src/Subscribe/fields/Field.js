@@ -12,20 +12,21 @@ import type { OptionsArray } from '../Form/fields'
 
 type EventHandler = (event: SyntheticEvent<TargetElements>) => void
 
-export type ControlProps = {
+type ControlFieldProps = {
   id: string,
   changeHandler: EventHandler,
   blurHandler: EventHandler,
-  value: string,
-  hasError?: boolean,
   icon?: string,
   type?: string,
   options?: OptionsArray[]
 }
 
-export type FieldProps = ControlProps & {
-  changeHandler: EventHandler,
-  blurHandler: EventHandler,
+export type ControlProps = ControlFieldProps & {  
+  value: string,
+  hasError?: boolean,
+}
+
+export type FieldProps = ControlFieldProps & {
   label: string,
   control: React.StatelessFunctionalComponent<ControlProps>,
   state: FieldState,

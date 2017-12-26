@@ -18,6 +18,8 @@
     "flow": "flow"
   },
   "devDependencies": {
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "flow-bin": "^0.61.0"
   }
 }
