@@ -3,7 +3,6 @@
 exports[`matches snapshot 1`] = `
 <div
   className="control has-icons-right "
-  onBlur={[Function]}
 >
   <textarea
     className="input "

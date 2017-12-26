@@ -57,12 +57,14 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
     keys.forEach((field) => {
       newState[field] = {
-        value: '',
+        value: fields[field].default || '',
         touched: false,
         invalid: false,
         missing: false
       }
     })
+
+    console.log('Init state: ', newState)
 
     return newState
   }

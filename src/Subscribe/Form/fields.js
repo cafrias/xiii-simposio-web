@@ -43,6 +43,7 @@ type FieldsObject = {
     validator: (value: mixed) => boolean,
     control: StatelessFunctionalComponent<Object>,
     id: string,
+    default?: any,
     requiredIf?: string,
     label: string,
     type?: string,
@@ -150,6 +151,7 @@ const fields: FieldsObject =  {
     id: 'pais',
     label: 'País',
     icon: 'fa-globe',
+    default: 'Argentina'
   },
   arancel_base: {
     required: true,
@@ -162,6 +164,7 @@ const fields: FieldsObject =  {
     id: 'arancel_base',
     label: 'Arancel',
     icon: 'fa-money',
+    default: 800
   },
   arancel_adicional: {
     required: false,
@@ -192,6 +195,7 @@ const fields: FieldsObject =  {
     ],
     id: 'acompanantes',
     label: 'Acompañantes',
+    default: '0'
   },
   ponencia_presenta: {
     required: true,
@@ -199,6 +203,7 @@ const fields: FieldsObject =  {
     control: Radio,
     id: 'ponencia_presenta',
     label: '¿Presenta Ponencia?',
+    default: 'false'
   },
   ponencia_titulo: {
     required: false,

@@ -24,7 +24,7 @@ const TextArea = (props: ControlProps) => {
   const controlClassName = `control has-icons-right ${ icon ? 'has-icons-left' : '' }`
   
   return (
-    <div className={controlClassName} onBlur={changeHandler}>
+    <div className={controlClassName}>
       <textarea id={id} name={id} onChange={changeHandler}
         onBlur={blurHandler}
         className={`input ${ hasError ? 'is-danger' : '' }`} value={value}/>
