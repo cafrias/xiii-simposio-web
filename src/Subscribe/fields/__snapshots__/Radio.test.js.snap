@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="control flx justify-center"
+>
+  <label
+    className="radio"
+  >
+    <input
+      name="id"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="radio"
+      value={true}
+    />
+    Si
+  </label>
+  <label
+    className="radio"
+  >
+    <input
+      name="id"
+      onBlur={[Function]}
+      onChange={[Function]}
+      type="radio"
+      value={false}
+    />
+    No
+  </label>
+</div>
+`;
