@@ -54,7 +54,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
     keys.forEach((field) => {
       newState[field] = {
-        value: '',
+        value: fields[field].set(''),
         touched: false,
         invalid: false,
         missing: false
@@ -75,7 +75,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
       loading: this.state.loading,
       fields: Object.assign({}, this.state.fields, {
         [field]: {
-          value: newValue,
+          value: fields[field].set(newValue),
           touched: true,
           missing: required && !Boolean(newValue),
           invalid: newValue !== '' && required && !validator(newValue)
