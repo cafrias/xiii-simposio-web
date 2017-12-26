@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="control has-icons-right "
+  onBlur={[Function]}
+>
+  <textarea
+    className="input "
+    id="id"
+    name="id"
+    onBlur={[Function]}
+    onChange={[Function]}
+    value=""
+  />
+</div>
+`;
