@@ -81,8 +81,8 @@ const Field = (props: FieldProps) => {
         { required ? (<small> *</small>) : null }
       </label>
       { control(controlProps) }
-      { isMissing(state) ? Missing() : null }
-      { isInvalid(state) ? Invalid() : null }
+      { isMissing(state) ? <Missing/> : null }
+      { isInvalid(state) ? <Invalid/> : null }
     </div>
   )
 }
