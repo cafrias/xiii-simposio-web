@@ -27,3 +27,7 @@ test('renders control', () => {
 
   expect(wrapper.find(`#${reqProps.id}`)).toHaveLength(1)
 })
+
+test('shows missing message')
+
+test('shows invalid message')
