@@ -18,6 +18,7 @@ const Input = (props: ControlProps) => {
     hasError,
     value,
     changeHandler,
+    blurHandler,
     icon = '',
     type = 'text'
   } = props
@@ -25,7 +26,7 @@ const Input = (props: ControlProps) => {
   const controlClassName = `control has-icons-right ${ icon ? 'has-icons-left' : '' }`
   
   return (
-    <div className={controlClassName} onBlur={changeHandler}>
+    <div className={controlClassName} onBlur={blurHandler}>
       <input id={id} name={id} onChange={changeHandler} type={type}
         className={`input ${ hasError ? 'is-danger' : '' }`} value={value}/>
       { type === 'number' ? Explanation({ message: '* Sólo números' }) : null }

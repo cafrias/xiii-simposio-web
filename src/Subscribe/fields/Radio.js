@@ -12,6 +12,7 @@ const Input = (props: ControlProps) => {
   const {
     id,
     changeHandler,
+    blurHandler,
   } = props
   
   return (
@@ -19,14 +20,14 @@ const Input = (props: ControlProps) => {
       <label className="radio">
         <input type="radio" name={id}
           onChange={changeHandler}
-          onBlur={changeHandler}
+          onBlur={blurHandler}
           value={true}/>
         Si
       </label>
       <label className="radio">
         <input type="radio" name={id}
           onChange={changeHandler}
-          onBlur={changeHandler}
+          onBlur={blurHandler}
           value={false}/>
         No
       </label>

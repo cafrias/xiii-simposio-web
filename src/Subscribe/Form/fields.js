@@ -35,7 +35,7 @@ type OptionsObject = {|
   label: string  
 |}
 
-type OptionsArray = string | OptionsObject
+export type OptionsArray = string | OptionsObject
 
 type FieldsObject = {
   [FormField]: {|
@@ -43,20 +43,12 @@ type FieldsObject = {
     validator: (value: mixed) => boolean,
     control: StatelessFunctionalComponent<Object>,
     id: string,
-    set: (value: string) => mixed,
     requiredIf?: string,
     label: string,
     type?: string,
     icon?: string,
     options?: OptionsArray[]
   |}
-}
-
-const setters = {
-  string: (val: string): string => val,
-  boolean: (val: string): boolean => val === 'true',
-  int: (val: string): number => val ? parseInt(val, 10) : 0,
-  float: (val: string): number => val ? parseFloat(val) : 0
 }
 
 const fields: FieldsObject =  {
@@ -66,7 +58,6 @@ const fields: FieldsObject =  {
     control: Input,
     id: 'nombres',
     label: 'Nombre(s)',
-    set: setters.string
   },
   apellido: {
     required: true,
@@ -74,7 +65,6 @@ const fields: FieldsObject =  {
     control: Input,
     id: 'apellido',
     label: 'Apellido(s)',
-    set: setters.string
   },
   documento: {
     required: true,
@@ -83,7 +73,6 @@ const fields: FieldsObject =  {
     type: 'number',
     id: 'documento',
     label: 'Documento de Identidad',
-    set: setters.int
   },
   telefono: {
     required: false,
@@ -93,7 +82,6 @@ const fields: FieldsObject =  {
     id: 'telefono',
     label: 'Teléfono',
     icon: 'fa-phone',
-    set: setters.int
   },
   celular: {
     required: false,
@@ -103,7 +91,6 @@ const fields: FieldsObject =  {
     id: 'celular',
     label: 'Celular',
     icon: 'fa-mobile',
-    set: setters.int
   },
   fax: {
     required: false,
@@ -113,7 +100,6 @@ const fields: FieldsObject =  {
     id: 'fax',
     label: 'Fax',
     icon: 'fa-fax',
-    set: setters.int
   },
   email: {
     required: true,
@@ -123,7 +109,6 @@ const fields: FieldsObject =  {
     id: 'email',
     label: 'Email',
     icon: 'fa-envelope',
-    set: setters.string
   },
   direccion: {
     required: true,
@@ -132,7 +117,6 @@ const fields: FieldsObject =  {
     id: 'direccion',
     label: 'Dirección',
     icon: 'fa-map-marker',
-    set: setters.string
   },
   zip: {
     required: true,
@@ -141,7 +125,6 @@ const fields: FieldsObject =  {
     type: 'number',
     id: 'zip',
     label: 'Código Postal',
-    set: setters.int,
   },
   localidad: {
     required: true,
@@ -150,7 +133,6 @@ const fields: FieldsObject =  {
     id: 'localidad',
     label: 'Localidad',
     icon: 'fa-building',
-    set: setters.string
   },
   pais: {
     required: true,
@@ -168,20 +150,18 @@ const fields: FieldsObject =  {
     id: 'pais',
     label: 'País',
     icon: 'fa-globe',
-    set: setters.string
   },
   arancel_base: {
     required: true,
     validator: validators.number,
     control: Select,
     options: [
-      'asd',
-      'dsa'
+      { val: 1250, label: 'Alguno' },
+      { val: 800, label: 'Otro' }
     ],
     id: 'arancel_base',
     label: 'Arancel',
     icon: 'fa-money',
-    set: setters.float
   },
   arancel_adicional: {
     required: false,
@@ -190,7 +170,6 @@ const fields: FieldsObject =  {
     type: 'number',
     id: 'arancel_adicional',
     label: 'Adicional',
-    set: setters.float
   },
   arancel_pago: {
     required: true,
@@ -198,7 +177,6 @@ const fields: FieldsObject =  {
     control: TextArea,
     id: 'arancel_pago',
     label: 'Forma de pago (detallar Nº de recibo)',
-    set: setters.string
   },
   acompanantes: {
     required: true,
@@ -214,7 +192,6 @@ const fields: FieldsObject =  {
     ],
     id: 'acompanantes',
     label: 'Acompañantes',
-    set: setters.int
   },
   ponencia_presenta: {
     required: true,
@@ -222,7 +199,6 @@ const fields: FieldsObject =  {
     control: Radio,
     id: 'ponencia_presenta',
     label: '¿Presenta Ponencia?',
-    set: setters.boolean
   },
   ponencia_titulo: {
     required: false,
@@ -231,7 +207,6 @@ const fields: FieldsObject =  {
     control: Input,
     id: 'ponencia_titulo',
     label: 'Título de la Ponencia',
-    set: setters.string
   },
   ponencia_area: {
     required: false,
@@ -240,7 +215,6 @@ const fields: FieldsObject =  {
     control: Input,
     id: 'ponencia_area',
     label: 'Área',
-    set: setters.string
   },
   ponencia_coautores: {
     required: false,
@@ -249,7 +223,6 @@ const fields: FieldsObject =  {
     control: Input,
     id: 'ponencia_coautores',
     label: 'Co-Autor/es',
-    set: setters.string
   },
   ponencia_institucion: {
     required: false,
@@ -258,7 +231,6 @@ const fields: FieldsObject =  {
     control: Input,
     id: 'ponencia_instituciones',
     label: 'Institución',
-    set: setters.string
   }
 }
 

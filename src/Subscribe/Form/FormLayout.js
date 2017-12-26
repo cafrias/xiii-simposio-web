@@ -20,9 +20,9 @@ const FormLayout = (props: FormLayoutProps) => {
 
   const fields = React.Children.toArray(children)
 
-  console.log('Coerced presentaValue: ', presenta)
-
   const formClassName = `subs_form ${loading ? 'subs_form--loading' : ''}`
+
+  console.log('Presenta: ', presenta)
 
   return (
     <form className={formClassName} onSubmit={handleSubmit}>

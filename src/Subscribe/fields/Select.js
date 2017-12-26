@@ -10,6 +10,7 @@ const Select = (props: ControlProps) => {
     hasError,
     value,
     changeHandler,
+    blurHandler,
     icon = '',
     options = ['No Elements'],
   } = props
@@ -19,9 +20,14 @@ const Select = (props: ControlProps) => {
   return (
     <div className={divClassName} style={{ width: '100%' }}>
       <div className={`select is-fullwidth ${hasError ? 'is-danger' : ''}`}>
-        <select onChange={changeHandler} id={id} name={id} value={value}>
+        <select onBlur={blurHandler}
+          onChange={changeHandler} id={id} name={id} value={value}>
           {
-            options.map((option, idx) => <option key={idx}>{option}</option>)
+            options.map((option, idx) => (
+              typeof option === 'string'
+                ? <option key={idx}>{option}</option>
+                : <option key={idx} value={option.val}>{option.label}</option>)
+            )
           }
         </select>
         <LeftIcon icon={icon}/>

@@ -8,21 +8,24 @@ import Invalid from '../messages/Invalid'
 // TYPES _______________________________________________________________________
 
 import type { FieldState, TargetElements } from '../Form/index.js'
+import type { OptionsArray } from '../Form/fields'
 
 type EventHandler = (event: SyntheticEvent<TargetElements>) => void
 
 export type ControlProps = {
   id: string,
   changeHandler: EventHandler,
+  blurHandler: EventHandler,
   value: string,
   hasError?: boolean,
   icon?: string,
   type?: string,
-  options?: string[]
+  options?: OptionsArray[]
 }
 
 export type FieldProps = ControlProps & {
   changeHandler: EventHandler,
+  blurHandler: EventHandler,
   label: string,
   control: React.StatelessFunctionalComponent<ControlProps>,
   state: FieldState,
@@ -51,6 +54,7 @@ const Field = (props: FieldProps) => {
     id,
     label,
     changeHandler,
+    blurHandler,
     options,
     required,
     className = '',
@@ -65,6 +69,7 @@ const Field = (props: FieldProps) => {
     options,
     value: state.value,
     changeHandler,
+    blurHandler,
     hasError: hasError(state)
   }
 
