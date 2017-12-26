@@ -5,11 +5,13 @@ import Submit from '../fields/Submit'
 
 type FormLayoutProps = {
   handleSubmit: () => void,
-  children: React.Node
+  children: React.Node,
+  presenta: boolean
 }
 
-const FormLayout = ({handleSubmit, children}: FormLayoutProps) => {
+const FormLayout = ({handleSubmit, children, presenta}: FormLayoutProps) => {
   const fields = React.Children.toArray(children)
+  console.log('Coerced presentaValue: ', presenta)
   return (
     <form className="subscription__form" onSubmit={handleSubmit}>
       <fieldset className="box">
@@ -89,9 +91,21 @@ const FormLayout = ({handleSubmit, children}: FormLayoutProps) => {
       </fieldset>
       <fieldset className="box">
         <legend className="label has-text-centered">Ponencia</legend>
-        <div className="columns">
+        <div className="columns flx justify-center">
           {fields[15]}
         </div>
+        { presenta ? (
+          <React.Fragment>
+            <div className="columns">
+              <div className="column">{fields[16]}</div>
+              <div className="column">{fields[17]}</div>
+            </div>
+            <div className="columns">
+              <div className="column">{fields[18]}</div>
+              <div className="column">{fields[19]}</div>
+            </div>
+          </React.Fragment>
+        ) : null }
       </fieldset>
       <Submit />
     </form>

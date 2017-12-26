@@ -11,7 +11,7 @@ import fields from './fields'
 import type { FormField } from './fields'
 
 export type FieldState = {|
-  value: string,
+  value: string | boolean,
   touched: boolean,
   invalid: boolean,
   missing: boolean
@@ -90,8 +90,10 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
   render() {
     const fieldKeys = Object.keys(fields)
+    const presentaValue = this.state.fields.ponencia_presenta.value
+    console.log('Precasted presentaValue: ', presentaValue)
     return (
-      <FormLayout handleSubmit={this.submitHandler}>
+      <FormLayout presenta={Boolean(presentaValue)} handleSubmit={this.submitHandler}>
         {
           fieldKeys.map((fieldName, idx) => {
             const {

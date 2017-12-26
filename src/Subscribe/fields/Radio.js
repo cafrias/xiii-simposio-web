@@ -15,7 +15,7 @@ const Input = (props: ControlProps) => {
   } = props
   
   return (
-    <div className="control" >
+    <div className="control flx justify-center">
       <label className="radio">
         <input type="radio" name={id}
           onChange={changeHandler}

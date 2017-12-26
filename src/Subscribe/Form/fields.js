@@ -225,12 +225,12 @@ const fields: FieldsObject =  {
     label: 'Co-Autor/es'
   },
   ponencia_institucion: {
-    required: true,
+    required: false,
     requiredIf: 'presenta_ponencia',
     validator: validators.any,
     control: Input,
-    id: 'ponencia_coautores',
-    label: 'Co-Autor/es'
+    id: 'ponencia_instituciones',
+    label: 'Institución'
   }
 }
 
