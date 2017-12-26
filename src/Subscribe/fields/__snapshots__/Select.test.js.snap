@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="control "
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="select is-fullwidth "
+  >
+    <select
+      id="id"
+      name="id"
+      onBlur={[Function]}
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        key="0"
+      >
+        No Elements
+      </option>
+    </select>
+    <LeftIcon
+      icon=""
+    />
+  </div>
+</div>
+`;
