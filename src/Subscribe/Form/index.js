@@ -88,6 +88,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
     const isValid = await this.isValid()
 
+    console.log('isValid: ', isValid)
+
     if(isValid) {
       await this.setStateAsync(newState)
       await this.submitRequest()
@@ -107,8 +109,12 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
   }
 
   isValid = async () => {
-    const newState = Object.assign({}, this.state, this.updateAllFields())
+    const newState = Object.assign({}, this.state, {
+      fields: this.updateAllFields()
+    })
     await this.setStateAsync(newState)
+
+    console.log('New state', this.state)
     
     const { fields } = this.state
     for (const field in fields) {
@@ -117,6 +123,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
         
         // If any is invalid or missing, we simply have to return false, this form
         // isn't valid!
+        console.log(field, 'missing', element.missing)
+        console.log(field, 'invalid', element.invalid)
         if(element.missing || element.invalid)
           return false
       }
