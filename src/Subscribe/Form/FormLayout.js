@@ -4,7 +4,7 @@ import * as React from 'react'
 import Submit from '../fields/Submit'
 
 type FormLayoutProps = {
-  handleSubmit: (e: SyntheticEvent<HTMLButtonElement>) => void,
+  handleSubmit: (e: SyntheticEvent<HTMLButtonElement>) => Promise<any>,
   children: React.Node,
   presenta: boolean,
   loading: boolean

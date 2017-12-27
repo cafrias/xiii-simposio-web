@@ -3,11 +3,13 @@ import * as React from 'react'
 import FormLayout from './FormLayout'
 
 import Field from '../fields/Field'
-import fields, { FormField } from './fields'
+import fields from './fields'
 
 import 'whatwg-fetch'
 
 // TYPES _______________________________________________________________________
+
+import type { FormField } from './fields'
 
 export type FieldState = {|
   value: string,
@@ -16,7 +18,7 @@ export type FieldState = {|
   missing: boolean
 |}
 type FieldsMap = {
-  [FormField]: FieldState
+  [string]: FieldState
 }
 
 type SubscriptionFormProps = {
@@ -88,18 +90,18 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
     const isValid = await this.isValid()
 
-    console.log('isValid: ', isValid)
-
     if(isValid) {
+      console.log('Submitting ...')
       await this.setStateAsync(newState)
       await this.submitRequest()
+    } else {
+      console.error('Form is invalid')
     }
 
     this.setState(Object.assign({}, this.state, {
       loading: false
     }))
 
-    console.log('Submitting ...')
   }
 
   setStateAsync = (state: SubscriptionFormState): Promise<any> => {
@@ -184,7 +186,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     return newFields
   }
 
-  changeHandler = (field: FormField, event: SyntheticEvent<TargetElements>) => {
+  changeHandler = (field: string, event: SyntheticEvent<TargetElements>) => {
     const newValue = event.currentTarget.value
     const newState: SubscriptionFormState = Object.assign({}, this.state, {
       fields: Object.assign({}, this.state.fields, {
