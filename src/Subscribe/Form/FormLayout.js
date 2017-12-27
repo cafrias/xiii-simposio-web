@@ -86,6 +86,8 @@ const FormLayout = (props: FormLayoutProps) => {
           <div className="column">
             {fields[11]}
           </div>
+        </div>
+        <div className="columns">
           <div className="column">
             {fields[12]}
           </div>

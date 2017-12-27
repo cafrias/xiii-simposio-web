@@ -48,7 +48,8 @@ type FieldsObject = {
     label: string,
     type?: string,
     icon?: string,
-    options?: OptionsArray[]
+    options?: OptionsArray[],
+    small?: string
   |}
 }
 
@@ -158,13 +159,17 @@ const fields: FieldsObject =  {
     validator: validators.number,
     control: Select,
     options: [
-      { val: 1250, label: 'Alguno' },
-      { val: 800, label: 'Otro' }
+      { val: '0', label: 'Sin cargo - Estudiantes UNTDF' },
+      { val: '1', label: '$350 - Estudiantes otras instituciones' },
+      { val: '2', label: '$1600 - Docentes UNTDF*' },
+      { val: '3', label: '$2000 - Matriculados CPCETF*' },
+      { val: '4', label: '$2700 - Docentes/General*' },
     ],
     id: 'arancel_base',
     label: 'Arancel',
     icon: 'fa-money',
-    default: 800
+    default: '0',
+    small: '* Se incluye: Material, Certificado de Asistencia/Ponencia, Cóctel de Bienvenida y Cena de Camaradería'
   },
   arancel_adicional: {
     required: false,

@@ -3,6 +3,7 @@ import { shallow } from 'enzyme'
 
 import Select from './Select'
 import LeftIcon from '../icons/LeftIcon'
+import Explanation from '../messages/Explanation'
 
 const reqProps = {
   id: 'id',
@@ -38,6 +39,18 @@ test('renders icon', () => {
   const icon = wrapper.find(LeftIcon)
   expect(icon).toHaveLength(1)
   expect(icon.props()).toHaveProperty('icon', props.icon)
+})
+
+test('renders small message', () => {
+  const message = 'matraca!'
+  const props = Object.assign({}, reqProps, {
+    small: message
+  })
+  const wrapper = shallow(<Select {...props}/>)
+
+  const small = wrapper.find(Explanation)
+  expect(small).toHaveLength(1)
+  expect(small.prop('message')).toBe(message)
 })
 
 test('changes classes when it has an error', () => {

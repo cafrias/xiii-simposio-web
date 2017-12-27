@@ -1,6 +1,7 @@
 // @flow
 import React from 'react'
 import LeftIcon from '../icons/LeftIcon'
+import Explanation from '../messages/Explanation'
 
 import type { ControlProps } from './Field'
 
@@ -13,6 +14,7 @@ const Select = (props: ControlProps) => {
     blurHandler,
     icon = '',
     options = ['No Elements'],
+    small
   } = props
 
   const divClassName = `control ${icon ? 'has-icons-left' : ''}`
@@ -32,6 +34,7 @@ const Select = (props: ControlProps) => {
         </select>
         <LeftIcon icon={icon}/>
       </div>
+      { small ? <Explanation message={small} /> : null }
     </div>
   )
 }

@@ -18,7 +18,8 @@ type ControlFieldProps = {
   blurHandler: EventHandler,
   icon?: string,
   type?: string,
-  options?: OptionsArray[]
+  options?: OptionsArray[],
+  small?: string
 }
 
 export type ControlProps = ControlFieldProps & {  
@@ -60,7 +61,8 @@ const Field = (props: FieldProps) => {
     required,
     className = '',
     icon = '',
-    type = ''
+    type = '',
+    small
   } = props
 
   const controlProps: ControlProps = {
@@ -71,7 +73,8 @@ const Field = (props: FieldProps) => {
     value: state.value,
     changeHandler,
     blurHandler,
-    hasError: hasError(state)
+    hasError: hasError(state),
+    small
   }
 
   return (

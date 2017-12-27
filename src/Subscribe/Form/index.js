@@ -230,12 +230,24 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
               icon,
               options,
               type,
-              required
+              required,
+              small
             } = fields[fieldName]
+
+            const toPass = {
+              id,
+              label,
+              control,
+              icon,
+              options,
+              type,
+              required,
+              small
+            }
+
             const state: FieldState = this.state.fields[fieldName]
             return (
-              <Field key={idx} id={id} label={label} control={control} type={type}
-                required={required} state={state} icon={icon} options={options}
+              <Field key={idx} {...toPass} state={state}
                 changeHandler={this.changeHandler.bind(this, fieldName)}
                 blurHandler={this.blurHandler.bind(this, fieldName)}  /> 
             )
