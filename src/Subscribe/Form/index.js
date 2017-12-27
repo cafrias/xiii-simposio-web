@@ -3,13 +3,11 @@ import * as React from 'react'
 import FormLayout from './FormLayout'
 
 import Field from '../fields/Field'
-import fields from './fields'
+import fields, { FormField } from './fields'
 
 import 'whatwg-fetch'
 
 // TYPES _______________________________________________________________________
-
-import type { FormField } from './fields'
 
 export type FieldState = {|
   value: string,
@@ -18,7 +16,7 @@ export type FieldState = {|
   missing: boolean
 |}
 type FieldsMap = {
-  [string]: FieldState
+  [FormField]: FieldState
 }
 
 type SubscriptionFormProps = {
@@ -49,6 +47,7 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
     // Bindings
     this.submitHandler = this.submitHandler.bind(this)
+    this.submitRequest = this.submitRequest.bind(this)
   }
 
   initializeState = (): FieldsMap => {
@@ -63,8 +62,6 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
         missing: false
       }
     })
-
-    console.log('Init state: ', newState)
 
     return newState
   }
@@ -83,53 +80,111 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     return requestObject
   }
 
-  submitHandler = (e: SyntheticEvent<HTMLButtonElement>): void => {
+  submitHandler = async (e: SyntheticEvent<HTMLButtonElement>) => {
     e.preventDefault()
     const newState = Object.assign({}, this.state, {
       loading: true
     })
-    this.setState(newState, () => {
-      const request = this.generatePostRequest()
 
-      fetch(endpointURI, {
+    const isValid = await this.isValid()
+
+    if(isValid) {
+      await this.setStateAsync(newState)
+      await this.submitRequest()
+    }
+
+    this.setState(Object.assign({}, this.state, {
+      loading: false
+    }))
+
+    console.log('Submitting ...')
+  }
+
+  setStateAsync = (state: SubscriptionFormState): Promise<any> => {
+    return new Promise((resolve) => {
+      this.setState(state, resolve)
+    })
+  }
+
+  isValid = async () => {
+    const newState = Object.assign({}, this.state, this.updateAllFields())
+    await this.setStateAsync(newState)
+    
+    const { fields } = this.state
+    for (const field in fields) {
+      if (fields.hasOwnProperty(field)) {
+        const element = fields[field]
+        
+        // If any is invalid or missing, we simply have to return false, this form
+        // isn't valid!
+        if(element.missing || element.invalid)
+          return false
+      }
+    }
+
+    // Not a single element is missing nor invalid, hence, this form is valid!.
+    return true
+  }
+
+  submitRequest = async () => {
+    const request = this.generatePostRequest()
+
+    try {
+      const res = await fetch(endpointURI, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(request)
-      }).then(response => {
-        console.log(response.status)
-        const newState = Object.assign({}, this.state, {
-          loading: false
-        })
-        this.setState(newState)
-        if(response.status >= 400 && response.status <= 500)
-          return response.json()
-      }).then(json => {
-        console.log('Response body:', json)
-      }).catch(err => {
-        console.error(err)
       })
-    })
 
-    console.log('Submitting ...')
+      if(res.status === 201) {
+        console.log('Successfully done!')
+      }
+
+      if(res.status >= 400 && res.status <= 500) {
+        const parsedRes = await res.json()
+        console.log('Response body:', parsedRes)
+      }
+    } catch(err) {
+      console.error(err)
+    }
+  }
+
+  updateField = (field: FormField, newValue: any): FieldState => {
+    const {required, validator} = fields[field]
+    return {
+      value: newValue,
+      touched: true,
+      missing: required && !Boolean(newValue),
+      invalid: newValue !== '' && required && !validator(newValue)
+    }
+  }
+
+  updateAllFields = (): FieldsMap => {
+    // update basic state
+    const { fields } = this.state
+    const newFields = {}
+    for (const field in fields) {
+      if (fields.hasOwnProperty(field)) {
+        const element = fields[field]
+        
+        newFields[field] = this.updateField(field, element.value)
+      }
+    }
+
+    return newFields
   }
 
   changeHandler = (field: FormField, event: SyntheticEvent<TargetElements>) => {
     const newValue = event.currentTarget.value
-    const {required, validator} = fields[field]
     const newState: SubscriptionFormState = Object.assign({}, this.state, {
       fields: Object.assign({}, this.state.fields, {
-        [field]: Object.assign({}, this.state.fields[field], {
-          value: newValue,
-          touched: true,
-          missing: required && !Boolean(newValue),
-          invalid: newValue !== '' && required && !validator(newValue)
-        })
+        [field]: this.updateField(field, newValue)
       })
     })
 
-    console.log('New State:', newState)
+    // console.log('New State:', newState)
 
     this.setState(newState)
   }
@@ -153,7 +208,6 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
   render() {
     const fieldKeys = Object.keys(fields)
     const presenta = this.state.fields.ponencia_presenta.value === 'true'
-    console.log('presenta: ', presenta)
     return (
       <FormLayout loading={this.state.loading}
         presenta={presenta} handleSubmit={this.submitHandler}>

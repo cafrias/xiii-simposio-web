@@ -57,7 +57,7 @@ const fields: FieldsObject =  {
     required: true,
     validator: validators.any,
     control: Input,
-    id: 'nombres',
+    id: 'nombre',
     label: 'Nombre(s)',
   },
   apellido: {
@@ -234,7 +234,7 @@ const fields: FieldsObject =  {
     requiredIf: 'presenta_ponencia',
     validator: validators.any,
     control: Input,
-    id: 'ponencia_instituciones',
+    id: 'ponencia_institucion',
     label: 'Institución',
   }
 }

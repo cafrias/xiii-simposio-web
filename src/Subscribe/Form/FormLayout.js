@@ -22,8 +22,6 @@ const FormLayout = (props: FormLayoutProps) => {
 
   const formClassName = `subs_form ${loading ? 'subs_form--loading' : ''}`
 
-  console.log('Presenta: ', presenta)
-
   return (
     <form className={formClassName} onSubmit={handleSubmit}>
       <fieldset className="box">
