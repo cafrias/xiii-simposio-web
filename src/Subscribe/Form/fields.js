@@ -20,7 +20,7 @@ export type FormField =
   | 'zip'
   | 'localidad'
   | 'pais'
-  | 'arancel_base'
+  | 'arancel_categoria'
   | 'arancel_adicional'
   | 'arancel_pago'
   | 'acompanantes'
@@ -154,7 +154,7 @@ const fields: FieldsObject =  {
     icon: 'fa-globe',
     default: 'Argentina'
   },
-  arancel_base: {
+  arancel_categoria: {
     required: true,
     validator: validators.number,
     control: Select,
@@ -165,7 +165,7 @@ const fields: FieldsObject =  {
       { val: '3', label: '$2000 - Matriculados CPCETF*' },
       { val: '4', label: '$2700 - Docentes/General*' },
     ],
-    id: 'arancel_base',
+    id: 'arancel_categoria',
     label: 'Arancel',
     icon: 'fa-money',
     default: '0',

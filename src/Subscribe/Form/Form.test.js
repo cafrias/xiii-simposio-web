@@ -4,6 +4,13 @@ import { shallow, mount } from 'enzyme'
 import Form from './index'
 import FormLayout from './FormLayout'
 
+beforeEach(() => {
+  global.console = {
+    log: jest.fn(),
+    error: jest.fn()
+  }
+})
+
 test('renders form', () => {
   const wrapper = shallow(<Form/>)
 
@@ -25,7 +32,7 @@ const OK = {
   zip: "9420",
   localidad: "Rio Grande, Tierra del Fuego",
   pais: "Argentina",
-  arancel_base: "123444.232",
+  arancel_categoria: "2",
   arancel_adicional: "111",
   arancel_pago: "Recibo Nro 122245",
   ponencia_presenta: "false",
@@ -77,7 +84,7 @@ const notOK = {
   zip: "9420",
   localidad: "",
   pais: "Argentina",
-  arancel_base: "123444.232",
+  arancel_categoria: "10",
   arancel_adicional: "111",
   arancel_pago: "Recibo Nro 122245",
   ponencia_presenta: "false",
