@@ -5,11 +5,16 @@ exports[`matches snapshot 1`] = `
   className="control"
 >
   <button
-    className="button is-link "
+    className="
+      button is-link
+      
+      
+      
+      "
     id="id"
     type="submit"
   >
-    Submit
+    Enviar
   </button>
 </div>
 `;

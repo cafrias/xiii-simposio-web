@@ -27,6 +27,8 @@ type SubscriptionFormProps = {
 
 type SubscriptionFormState = {
   loading: boolean,
+  success: boolean,
+  failure: boolean,
   fields: FieldsMap
 }
 
@@ -44,6 +46,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     super(props)
     this.state = {
       loading: false,
+      success: false,
+      failure: false,
       fields: this.initializeState()
     }
 
@@ -149,11 +153,17 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
       })
 
       if(res.status === 201) {
+        this.setState(Object.assign({}, this.state, {
+          success: true
+        }))
         console.log('Successfully done!')
       }
 
       if(res.status >= 400 && res.status <= 500) {
         const parsedRes = await res.json()
+        this.setState(Object.assign({}, this.state, {
+          failure: true
+        }))
         console.log('Response body:', parsedRes)
       }
     } catch(err) {
@@ -218,8 +228,13 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
   render() {
     const fieldKeys = Object.keys(fields)
     const presenta = this.state.fields.ponencia_presenta.value === 'true'
+    const {
+      success,
+      failure,
+      loading
+    } = this.state
     return (
-      <FormLayout loading={this.state.loading}
+      <FormLayout loading={loading} success={success} failure={failure}
         presenta={presenta} handleSubmit={this.submitHandler}>
         {
           fieldKeys.map((fieldName, idx) => {
