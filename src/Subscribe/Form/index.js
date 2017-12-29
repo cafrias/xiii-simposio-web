@@ -39,7 +39,7 @@ export type TargetElements =
 
 // COMPONENT ___________________________________________________________________
 
-const endpointURI = 'https://t5n8p8b7m8.execute-api.sa-east-1.amazonaws.com/dev'
+const endpointURI = process.env.REACT_APP_ENDPOINT || ''
 
 class SubscriptionForm extends React.Component<SubscriptionFormProps, SubscriptionFormState> {
   constructor(props: SubscriptionFormProps) {
@@ -159,12 +159,16 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
         console.log('Successfully done!')
       }
 
-      if(res.status >= 400 && res.status <= 500) {
-        const parsedRes = await res.json()
+      if(res.status >= 400 && res.status < 500) {
+        try {
+          const parsedRes = await res.json()
+          console.log('Response body:', parsedRes)
+        } catch(err) {
+          console.log('No body to parse')
+        }
         this.setState(Object.assign({}, this.state, {
           failure: true
         }))
-        console.log('Response body:', parsedRes)
       }
     } catch(err) {
       console.error(err)

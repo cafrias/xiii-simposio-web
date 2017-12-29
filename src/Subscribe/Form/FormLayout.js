@@ -20,7 +20,7 @@ const Success = () =>
 
 const Failure = () =>
   <p className="notification is-danger">
-    ¡Algo salió mal! Intente nuevamente más tarde, o contáctese con nosotros a
+    ¡Algo salió mal! Intente nuevamente más tarde, o contáctese con nosotros a:{' '}
     <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
   </p>
 
