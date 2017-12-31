@@ -8,8 +8,6 @@ exports[`matches snapshot 1`] = `
     className="
       button is-link
       
-      
-      
       "
     id="id"
     type="submit"
