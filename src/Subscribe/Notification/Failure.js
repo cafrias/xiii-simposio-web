@@ -8,7 +8,7 @@ type MessagesTypes = {
   [StatusReason]: string
 }
 
-export const messages = {
+export const messages: MessagesTypes = {
   invalid: 'Algo está mal con la información que envió, por favor revise la información, e intente nuevamente. Si el problema persiste,',
   duplicated: '¡Ya se encuentra registrado! Si usted no se registró anteriormente,',
   unknown: '¡Oops, algo salió mal! Intente nuevamente más tarde. Si el problema persiste,',
