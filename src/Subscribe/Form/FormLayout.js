@@ -2,48 +2,16 @@
 import * as React from 'react'
 
 import Submit from '../fields/Submit'
+import Notification from '../Notification'
+
+import type { FormStatus } from './index'
 
 type FormLayoutProps = {
   handleSubmit: (e: SyntheticEvent<HTMLButtonElement>) => Promise<any>,
   children: React.Node,
   presenta: boolean,
   loading: boolean,
-  success: boolean,
-  failure: boolean
-}
-
-const Success = () =>
-  <p className="notification is-success">
-    ¡Muchas gracias por inscribirse! Nos pondremos en contacto con usted a la
-    brevedad.
-  </p>
-
-const Failure = () =>
-  <p className="notification is-danger">
-    ¡Algo salió mal! Intente nuevamente más tarde, o contáctese con nosotros a:{' '}
-    <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
-  </p>
-
-const Notification = (type: string) => {
-  let component
-  switch(type) {
-  case 'failure':
-    component = Failure
-    break
-  case 'success':
-    component = Success
-    break
-  default:
-    component = () => null
-  }
-
-  return (
-    <div className="columns">
-      <div className="column">
-        { component() }
-      </div>
-    </div>
-  )
+  status: FormStatus
 }
 
 const FormLayout = (props: FormLayoutProps) => {
@@ -52,8 +20,7 @@ const FormLayout = (props: FormLayoutProps) => {
     children,
     presenta,
     loading,
-    success,
-    failure
+    status
   } = props
 
   const fields = React.Children.toArray(children)
@@ -157,12 +124,10 @@ const FormLayout = (props: FormLayoutProps) => {
           </React.Fragment>
         ) : null }
       </fieldset>
-      { failure ? Notification('failure') : null }
-      { success ? Notification('success') : null }
+      <Notification {...status} />
       <div className="columns">
         <div className="column flx justify-center">
-          <Submit id="subs_submit" loading={loading} success={success}
-            failure={failure} />
+          <Submit id="subs_submit" loading={loading} status={status} />
         </div>
       </div>
     </form>

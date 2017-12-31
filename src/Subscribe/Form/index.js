@@ -25,10 +25,25 @@ type SubscriptionFormProps = {
   [string]: any
 }
 
+export type StatusConditions =
+  | 'success'
+  | 'failure'
+  | 'initial'
+
+export type StatusReasons = 
+  | 'duplicated'
+  | 'invalid'
+  | 'internal'
+  | 'unknown'
+
+export type FormStatus = {
+  condition: StatusConditions,
+  reason?: StatusReasons
+}
+
 type SubscriptionFormState = {
   loading: boolean,
-  success: boolean,
-  failure: boolean,
+  status: FormStatus,
   fields: FieldsMap
 }
 
@@ -46,8 +61,9 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     super(props)
     this.state = {
       loading: false,
-      success: false,
-      failure: false,
+      status: {
+        condition: 'initial'
+      },
       fields: this.initializeState()
     }
 
@@ -129,8 +145,6 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
         
         // If any is invalid or missing, we simply have to return false, this form
         // isn't valid!
-        console.log(field, 'missing', element.missing)
-        console.log(field, 'invalid', element.invalid)
         if(element.missing || element.invalid)
           return false
       }
@@ -154,20 +168,32 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
       if(res.status === 201) {
         this.setState(Object.assign({}, this.state, {
-          success: true
+          status: {
+            condition: 'success'
+          }
         }))
         console.log('Successfully done!')
-      }
-
-      if(res.status >= 400 && res.status < 500) {
-        try {
-          const parsedRes = await res.json()
-          console.log('Response body:', parsedRes)
-        } catch(err) {
-          console.log('No body to parse')
+      } else {
+        let reason
+        switch(res.status) {
+        case 400:
+          reason = 'invalid'
+          break
+        case 409:
+          reason = 'duplicated'
+          break
+        case 500:
+          reason = 'internal'
+          break
+        default:
+          reason = 'unknown'
         }
+
         this.setState(Object.assign({}, this.state, {
-          failure: true
+          status: {
+            condition: 'failure',
+            reason
+          }
         }))
       }
     } catch(err) {
@@ -233,12 +259,11 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     const fieldKeys = Object.keys(fields)
     const presenta = this.state.fields.ponencia_presenta.value === 'true'
     const {
-      success,
-      failure,
+      status,
       loading
     } = this.state
     return (
-      <FormLayout loading={loading} success={success} failure={failure}
+      <FormLayout loading={loading} status={status}
         presenta={presenta} handleSubmit={this.submitHandler}>
         {
           fieldKeys.map((fieldName, idx) => {
