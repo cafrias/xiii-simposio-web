@@ -1,0 +1,90 @@
+@import '_sass/_constants.sass'
+@import '_sass/_breakpoints.sass'
+
+// CONTENT _____________________________________________________________________
+.about__content
+  padding: 0 1.618rem
+  width: 100%
+
+// PICTURE _____________________________________________________________________
+.about__pic-container
+  width: 70%
+  height: 100%
+  overflow: hidden
+  transform: skew(15deg) scale(1.2)
+  background-color: $light-brown
+  +shadow-1
+
+.about__pic
+  position: relative
+  left: -25%
+  width: 150%
+  transform: skew(-15deg)
+
+.about__portrait
+  margin-top: 2.618rem
+  background-color: $light-brown
+  width: 100%
+  display: flex
+  justify-content: center
+  height: 8.567rem
+
+.about__pic-container--back
+  display: none
+
+// INTRODUCTION ________________________________________________________________
+.intro-container
+  width: 100%
+
+.introduction
+  margin-top: 2.618rem
+  padding: 0 1.618rem
+  width: 100%
+
+// MORE INFO ___________________________________________________________________
+.about__more-info
+  margin-top: 1.618rem
+  text-align: right
+
+// DOWNLOAD DISCLAIMER
+.download-disclaimer
+  border-top: 2px solid $light-brown
+  border-bottom: 2px solid $light-brown
+  margin: 1.618rem 0
+  padding: 1.618rem 0
+
+// TEMARIO SECTION _____________________________________________________________
+.temario
+  margin-top: 2.618rem
+
+// DESKTOP BREAKPOINTS _________________________________________________________
++for-desktop-up
+  .intro-container
+    display: flex
+    align-items: stretch
+
+  .about__pic
+    width: 170%
+
+  .about__pic-container
+    height: inherit
+    transform: skew(15deg) scale(0.8)
+
+  .about__pic-container--back
+    display: block
+    z-index: 1
+    transform: skew(-15deg)
+
+  .about__pic--back
+    transform: skew(15deg)
+
+  .about__portrait
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background-color: #fff
+    height: auto
+
+  .temario-grid
+    display: flex
+    justify-content: space-around

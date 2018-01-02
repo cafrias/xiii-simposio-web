@@ -1,0 +1,28 @@
+@import '_sass/_breakpoints.sass'
+@import '_sass/_constants.sass'
+
+.temario-list
+  margin: 0
+  padding-left: 1rem
+
+.temario-list__item:first-child
+  margin-top: 0
+
+.temario-list__item
+  margin-top: 1rem
+
+.temario__area
+  margin-bottom: 3.272rem
+
+.prizes
+  margin: 2.618rem 0
+
++for-desktop-up
+  .temario__area
+    width: 30%
+    padding-right: 1.618rem
+    border-right: 1px solid $light-brown
+
+  .temario__area:last-child
+    padding-right: 0rem
+    border-right: none
