@@ -2,10 +2,12 @@
 
 import React from 'react'
 import './App.css'
-import Subscribe from './Subscribe'
+import Home from './pages/Home'
+import Subscribe from './pages/Subscribe'
 
 const App = () =>
   <div className="App">
+    <Home/>
     <Subscribe/>
   </div>
 

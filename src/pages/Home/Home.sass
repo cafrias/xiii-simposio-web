@@ -1,0 +1,237 @@
+@import '../../_sass/_constants.sass'
+@import '../../_sass/_breakpoints.sass'
+
+.home-container
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+// HERO LOGO ___________________________________________________________________
+.hero-logo-container
+  padding: 0 2.618rem
+  width: 100%
+  margin: 2.618rem 0
+
+.hero-logo
+  max-width: 100%
+
+// TIME ________________________________________________________________________
+.time-container
+  width: 100%
+  text-align: center
+
+.time
+  position: relative
+  max-width: 100%
+  top: 8px
+
+.time-container::after
+  display: block
+  content: ""
+  height: 10px
+  width: 100%
+  background: $dark-gradient
+  position: relative
+  z-index: 2
+
+// HERO PICS ___________________________________________________________________
+.hero-pics
+  width: 100%
+  height: 6.854rem
+  background-image: url('./assets/left.jpg')
+  background-position: center
+  background-size: cover
+  text-align: center
+
+@media (min-resolution: 2dppx)
+  .hero-pics
+    background-image: url('./assets/left@2x.jpg')
+
+@media (min-resolution: 3dppx)
+  .hero-pics
+    background-image: url('./assets/left@3x.jpg')
+
+// SOCIAL ______________________________________________________________________
+.social
+  display: inline-block
+  background-color: #fff
+  position: relative
+  z-index: 3
+  transform: scale(1.1, 1.1) skew(15deg)
+  height: 100%
+  width: 50%
+  max-width: 22.428rem
+  +shadow-1
+
+.social>.social-container
+  transform: scale(0.9, 0.9) skew(-15deg)
+
+// ORGANIZED BY ________________________________________________________________
+.organized-by
+  position: relative
+  z-index: 4
+  margin: 0
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 6.854rem
+  background-color: green
+  background: $light-gradient
+  +shadow-0
+  +anti-aliased
+
+.organized-by__text
+  font-size: 2.023rem
+  color: #fff
+  font-weight: 900
+  text-transform: uppercase
+
+// ORGANIZED ___________________________________________________________________
+.organized-section
+  width: 100%
+
+.organized
+  height: 6.854rem
+  padding: 1rem 0
+  display: flex
+  align-items: center
+  justify-content: space-around
+  width: 100%
+  background-image: url('./assets/subtle_dots_@2X.png')
+  background-repeat: repeat
+
+.organized__logo
+  max-height: 100%
+
+// SPONSORS ____________________________________________________________________
+.sponsors
+  width: 100%
+  background-color: $primary
+  display: flex
+  flex-direction: column
+  align-items: center
+  +shadow-2
+
+.sponsors__header
+  display: inline-block
+  background-color: #fff
+  transform: skew(15deg)
+  padding: 1rem 1.618rem
+  +shadow-1
+  +anti-aliased
+
+.sponsors__grid
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  width: 100%
+  justify-content: space-around
+  margin-top: 2.618rem
+  padding: 0
+
+// COLLABORATION _______________________________________________________________
+.collaboration
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 0 .75rem
+  margin-top: 4rem
+  width: 100%
+
+.collaborators__grid
+  margin-top: 0
+
+.collaboration__title
+  color: #fff
+  margin: 0
+  font-size: 1.25rem
+  text-transform: none
+  +anti-aliased
+
+.collaboration__list
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: baseline
+
+.collaboration__item
+  color: #fff
+  +anti-aliased
+
+// TABLET PORTRAIT _____________________________________________________________
++for-tablet-portrait-up
+  .hero-logo-container
+    display: flex
+    align-items: center
+    justify-content: center
+
+// DESKTOP _____________________________________________________________________
++for-desktop-up
+  .hero-logo-container
+    padding: 0
+    margin-bottom: 4.236rem
+
+  .hero-logo-container::before
+    display: block
+    content: ""
+    height: 0.5rem
+    flex-grow: 2
+    border-top: 1px solid $primary
+
+  .hero-logo-container::after
+    display: block
+    content: ""
+    height: 0.5rem
+    flex-grow: 2
+    border-top: 1px solid $primary
+
+  .hero-logo
+    margin: 0 4.236rem
+
+  // ORGANIZED SECTION
+  .organized-section
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  // ORGANIZED BY
+  .organized-by
+    margin: -6rem
+    top: 5rem
+    width: 32rem
+    height: 12rem
+    transform: skew(-15deg)
+
+  .organized-by__text
+    transform: skew(15deg)
+    font-size: 2.618rem
+
+  // ORGANIZED
+  .organized
+    height: 10rem
+    justify-content: space-between
+    padding-left: 10%
+    padding-right: 6%
+
+  .time-container
+    z-index: 1
+
+  .time
+    height: 5.295rem
+    margin: -5px
+
+  .hero-pics
+    z-index: 2
+    background-image: url('./assets/back-desktop.jpg')
+    background-position: top center
+    +shadow-2
+
+  .collaboration__title
+    font-size: 1.618rem
+
++for-big-desktop-up
+  .organized
+    padding-left: 14%
+    padding-right: 9%

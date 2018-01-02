@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<section
+  className="home-container"
+>
+  <div
+    className="hero-logo-container"
+  >
+    <img
+      alt="Simposio Ushuaia logo con lema"
+      className="hero-logo"
+      src="logo.svg"
+    />
+  </div>
+  <div
+    className="time-container"
+  >
+    <img
+      alt="17/05 - 19/05"
+      className="time"
+      src="time.svg"
+    />
+  </div>
+  <div
+    className="hero-pics"
+  >
+    <div
+      className="social"
+    >
+      <SocialLinks />
+    </div>
+  </div>
+  <section
+    className="organized-section"
+  >
+    <h2
+      className="organized-by"
+    >
+      <span
+        className="organized-by__text"
+      >
+        Organizado Por
+      </span>
+    </h2>
+    <div
+      className="organized"
+    >
+      <img
+        alt="Idei Logo"
+        className="organized__logo"
+        src="idei@2x.png"
+      />
+      <img
+        alt="UNTDF Logo"
+        className="organized__logo"
+        src="untdf@2x.png"
+      />
+    </div>
+  </section>
+  <section
+    className="background_orange sponsors"
+  >
+    <header
+      className="sponsors__header"
+    >
+      <h2
+        className="section__title"
+      >
+        Auspiciantes
+      </h2>
+    </header>
+    <ul
+      className="sponsors__grid"
+    >
+      <Sponsor
+        alt="Logo Legislatura de la Provincia de Tierra del Fuego"
+        key="0"
+        logo="logo-01.svg"
+      />
+      <Sponsor
+        alt="Logo Gobierno de la Provincia de Tierra del Fuego"
+        key="1"
+        logo="logo-02.png"
+      />
+      <Sponsor
+        alt="Logo Banco de la Provincia de Tierra del Fuego"
+        key="2"
+        logo="logo-03.jpg"
+      />
+      <Sponsor
+        alt="Logo Consejo Profesional de Ciencias Económicas de Tierra del Fuego"
+        key="3"
+        logo="logo-04.gif"
+      />
+    </ul>
+    <section
+      className="collaboration"
+    >
+      <h3
+        className="collaboration__title"
+      >
+        Se agradece la colaboración de:
+      </h3>
+      <ul
+        className="sponsors__grid collaborators__grid"
+      >
+        <Sponsor
+          alt="Logo Laguna Negra Chocolatería"
+          key="0"
+          logo="logo-05.jpg"
+          small={true}
+        />
+        <Sponsor
+          alt="Logo Rumbo Sur SRL"
+          key="1"
+          logo="logo-06.png"
+          small={true}
+        />
+      </ul>
+    </section>
+  </section>
+</section>
+`;
