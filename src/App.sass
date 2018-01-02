@@ -1,0 +1,44 @@
+@import './_sass/_breakpoints.sass'
+@import './_sass/_constants.sass'
+
+.content-container
+  margin-top: 5.295rem
+  max-width: 100vw
+
+.no-scroll
+  height: 10px
+  overflow: hidden
+
+.main-footer
+  background-color: #4a4a4a
+  color: #fff
+  text-align: right
+  padding: .5rem
+  +anti-aliased
+
+
+// SECTION _____________________________________________________________________
+
+.section__header
+  position: relative
+  z-index: 9
+  max-width: 95%
+  top: -1.618rem
+  display: inline-block
+  background-color: #fff
+  transform: skew(15deg)
+  padding: 1rem 1.618rem
+  +shadow-1
+  +anti-aliased
+
+.section__title
+  margin: 0
+  color: $dark-grey
+  font-weight: 900
+  font-size: 2.023rem
+  text-transform: uppercase
+  transform: skew(-15deg)
+
++for-desktop-up
+  .content-container
+    margin-top: 6.854rem

@@ -6,7 +6,7 @@ import './Sponsor.css'
 type SponsorProps = {
   logo: string,
   alt: string,
-  small: boolean
+  small?: boolean
 }
 
 function Sponsor({logo, alt, small}: SponsorProps) {
