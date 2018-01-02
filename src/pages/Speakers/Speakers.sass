@@ -1,0 +1,24 @@
+@import '_sass/_breakpoints.sass'
+
+.speakers
+  width: 100%
+  padding-bottom: 2.618rem
+
+.speakers__grid
+  list-style: none
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding-top: 2.618rem
+  width: 100%
+  padding-left: 0
+
++for-tablet-portrait-up
+  .speakers__grid
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
++for-desktop-up
+  .speakers__grid
+    width: 75%

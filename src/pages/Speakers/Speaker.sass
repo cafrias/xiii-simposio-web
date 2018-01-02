@@ -1,0 +1,31 @@
+@import '_sass/_constants.sass'
+@import '_sass/_breakpoints.sass'
+
+.speaker
+  width: 100%
+  text-align: center
+  margin-bottom: 2.618rem
+
+.speaker__pic
+  border-radius: 50%
+  max-width: 180px
+  +shadow-1
+
+.speaker__name
+  font-weight: 900
+  color: #fff
+  font-size: 1.618rem
+  margin-bottom: 0
+  +anti-aliased
+
+.speaker__inst
+  color: $light-brown
+  margin: 0
+
++for-tablet-portrait-up
+  .speaker
+    width: 48%
+
++for-desktop-up
+  .speaker
+    width: 33%
