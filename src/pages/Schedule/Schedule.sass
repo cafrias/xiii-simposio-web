@@ -1,0 +1,53 @@
+@import '_sass/_breakpoints.sass'
+@import '_sass/_constants.sass'
+
+.mobile-content
+  width: 100%
+  padding: 1.618rem
+
+.desktop-content
+  display: none
+  width: 80%
+  max-width: 1400px
+  margin: 2.618rem 0
+
+// TABLE _______________________________________________________________________
+.schedule-table
+  width: 100%
+  border-collapse: collapse
+
+.mobile-table
+  margin-bottom: 2.618rem
+
+.desktop-table
+  width: 100%
+
+.table__date
+  font-size: 2.023rem
+  padding: 1rem 0
+  color: $secondary
+  text-align: center !important
+
+.table__weekday
+  display: block
+  color: $dark-brown
+  font-size: 1.618rem
+
+.activity-row>td
+  border-top: 1px solid $light-brown
+  padding: 1rem 0
+
+.activity__name
+  text-align: center
+
+.activity__time
+  font-weight: 900
+  color: $dark-brown
+
+// DESKTOP BREAKPOINT __________________________________________________________
++for-desktop-up
+  .mobile-content
+    display: none
+
+  .desktop-content
+    display: block

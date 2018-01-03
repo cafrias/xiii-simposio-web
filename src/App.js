@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Subscribe from './pages/Subscribe'
 import Speakers from './pages/Speakers'
+import Schedule from './pages/Schedule'
 
 
 // APP COMPONENT _______________________________________________________________
@@ -18,6 +19,7 @@ const App = () =>
       <Home/>
       <About/>
       <Speakers/>
+      <Schedule/>
       <Subscribe/>
     </main>
   </div>
