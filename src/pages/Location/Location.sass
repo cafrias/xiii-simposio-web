@@ -1,0 +1,89 @@
+@import '../../_sass/_constants.sass'
+@import '../../_sass/_breakpoints.sass'
+
+.location
+  position: relative
+  z-index: 5
+  +shadow-2
+
+.tile
+  margin-top: 2.618rem
+  background-color: #fff
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 95%
+  +shadow-2
+
+.tile__left
+  padding: 1.618rem
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.tile__title
+  margin: 0
+
+.tile__text
+  text-align: center
+  margin: 2.618rem 0
+
+.tile__social
+  border-top: 2px solid $secondary
+  padding-top: 1.618rem
+
+// TILE RIGHT __________________________________________________________________
+.tile__right
+  display: none
+
+.tile__map
+  height: inherit
+  max-width: 100%
+  position: relative
+  z-index: 2
+  +shadow-2
+
+// HOTEL _______________________________________________________________________
+.tile--hotel
+  display: flex
+  flex-direction: column
+  padding: 1.618rem
+  margin-top: 5.295rem
+
+.hotel__links
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  justify-content: space-between
+  margin-left: 0
+  padding-left: 1.618rem
+  padding-right: 1.618rem
+
+.hotel__links>li
+  padding: 1rem 0
+
+.hotel__text
+  margin-top: 2.618rem
+
++for-tablet-landscape-up
+  .tile
+    flex-wrap: nowrap
+    width: 80%
+
+  .tile__left
+    width: 62%
+    order: 0
+
+  .tile__right
+    display: flex
+    width: 35%
+    order: 1
+    align-items: center
+    justify-content: flex-end
+
+  .tile__map
+    transform: scale(1.1, 1.1)
+
+  .hotel__links
+    flex-wrap: nowrap

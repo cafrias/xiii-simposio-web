@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<Section
+  className="background_white registration-container"
+  id="registration"
+  name="Inscripción"
+>
+  <article
+    className="deadlines"
+  >
+    <h2>
+      Presentación de trabajos
+    </h2>
+    <div
+      className="deadline"
+      key="0"
+    >
+      <h3
+        className="deadline__title"
+      >
+        Fecha límite presentación de Resúmenes
+      </h3>
+      <p
+        className="table__date deadline__date"
+      >
+        <span
+          className="table__weekday"
+        >
+          Viernes
+        </span>
+        21/04/2017
+      </p>
+    </div>
+    <div
+      className="deadline"
+      key="1"
+    >
+      <h3
+        className="deadline__title"
+      >
+        Fecha límite presentación de Trabajos
+      </h3>
+      <p
+        className="table__date deadline__date"
+      >
+        <span
+          className="table__weekday"
+        >
+          Viernes
+        </span>
+        05/05/2017
+      </p>
+    </div>
+  </article>
+  <article
+    className="costs"
+  >
+    <h2>
+      Costo de las matrículas
+    </h2>
+    <div
+      className="cost"
+      key="0"
+    >
+      <h3
+        className="cost__title"
+      >
+        Asistentes en general
+      </h3>
+      <p
+        className="cost__total"
+      >
+        $2.200*
+      </p>
+    </div>
+    <div
+      className="cost"
+      key="1"
+    >
+      <h3
+        className="cost__title"
+      >
+        Matriculados Consejo Profesional de Ciencias Económicas TDF
+      </h3>
+      <p
+        className="cost__total"
+      >
+        $1.600*
+      </p>
+    </div>
+    <div
+      className="cost"
+      key="2"
+    >
+      <h3
+        className="cost__title"
+      >
+        Docentes UNTDF
+      </h3>
+      <p
+        className="cost__total"
+      >
+        $1.300*
+      </p>
+    </div>
+    <div
+      className="cost"
+      key="3"
+    >
+      <h3
+        className="cost__title"
+      >
+        Estudiantes UNTDF
+      </h3>
+      <p
+        className="cost__total"
+      >
+        Sin cargo
+      </p>
+    </div>
+    <div
+      className="cost"
+      key="4"
+    >
+      <h3
+        className="cost__title"
+      >
+        Estudiantes otras instituciones
+      </h3>
+      <p
+        className="cost__total"
+      >
+        $300**
+      </p>
+    </div>
+    <p
+      className="text-container disclaimer"
+    >
+      <small>
+        * Incluye material del Simposio, Cóctail de bienvenida y Cena de camaradería
+        <br />
+        ** Incluye el material del Simposio
+      </small>
+    </p>
+  </article>
+  <article
+    className="how-to"
+  >
+    <h2>
+      ¿Cómo inscribirse?
+    </h2>
+    <p
+      className="text-container"
+    >
+      Llene la siguiente 
+      <a
+        href="https://drive.google.com/file/d/0B4-MAjalS7DYNlFjcmJCVEQtTmM/view"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        ficha de inscripción
+      </a>
+       
+      y envíela a: 
+      <a
+        href="mailto:ponencias.simposio@gmail.com"
+      >
+        ponencias.simposio@gmail.com
+      </a>
+      ;
+       
+      nos pondremos en contacto con usted a la brevedad.
+    </p>
+    <h3>
+      ¿Cómo presentar ponencias?
+    </h3>
+    <p
+      className="text-container"
+    >
+      Para la presentación de ponencias recomendamos lea atentamente el 
+       
+      <a
+        href="https://drive.google.com/file/d/0B4-MAjalS7DYSGQ3WVJHRER4dXM/view"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        reglamento
+      </a>
+      .
+       
+      Cualquier consulta puede ser dirigida a: 
+      <a
+        href="mailto:ponencias.simposio@gmail.com"
+      >
+        ponencias.simposio@gmail.com
+      </a>
+    </p>
+  </article>
+</Section>
+`;

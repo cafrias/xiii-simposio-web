@@ -1,0 +1,89 @@
+@import '../../_sass/_constants.sass'
+@import '../../_sass/_breakpoints.sass'
+
+.deadlines
+  padding: 1.618rem 1.618rem 0 1.618rem
+
+// DEADLINE ____________________________________________________________________
+.deadline
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  margin-top: 1.618rem
+  padding-bottom: 1rem
+  border-bottom: 1px solid $light-brown
+
+.deadline__date
+  font-weight: 900
+  width: 100%
+  text-align: center
+  order: 0
+  margin: 0
+  +anti-aliased
+
+.deadline__title
+  order: 1
+  width: 100%
+  font-size: 1.618rem
+  margin: 0
+  +anti-aliased
+
+// COST ________________________________________________________________________
+.costs
+  margin-top: 2.618rem
+  padding: 1.618rem 1.618rem 0 1.618rem
+
+.cost
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  margin-top: 2.618rem
+  padding-bottom: 1rem
+  border-bottom: 1px solid $light-brown
+
+.cost__title
+  order: 1
+  margin: 0
+  width: 100%
+  font-size: 1.618rem
+  +anti-aliased
+
+.cost__total
+  order: 0
+  text-align: center
+  margin: 0
+  width: 100%
+  color: $secondary
+  font-size: 2.023rem
+  font-weight: 900
+  +anti-aliased
+
+.disclaimer
+  width: 100%
+
+.how-to
+  padding: 0 1.618rem
+
++for-desktop-up
+  .deadline
+    flex-wrap: nowrap
+
+  .deadline__date
+    width: auto
+
+  .deadline__title
+    margin-left: 2.618rem
+    width: auto
+
+  .cost
+    flex-wrap: nowrap
+
+  .cost__total
+    width: auto
+
+  .cost__title
+    width: auto
+    margin-left: 2.618rem
+
+  .how-to
+    padding: 0
