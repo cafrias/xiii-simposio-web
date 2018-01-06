@@ -4,15 +4,14 @@ import React from 'react'
 import './Header.css'
 
 type HeaderProps = {
-  id: string,
   title: string
 }
 
-function Header({id, title}: HeaderProps) {
+function Header({title}: HeaderProps) {
   const shouldShrink = title.length > 12
   return (
     <header className="section__header">
-      <h2 id={id} className={`section__title ${shouldShrink ? 'shrunk' : ''}`}>
+      <h2 className={`section__title ${shouldShrink ? 'shrunk' : ''}`}>
         {title}
       </h2>
     </header>

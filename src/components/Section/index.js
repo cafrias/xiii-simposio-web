@@ -12,12 +12,12 @@ type SectionProps = {
 
 function Section({id, name, className, children}: SectionProps) {
   return (
-    <section className={className} style={{
+    <section id={id} className={className} style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center'
     }}>
-      <Header id={id} title={name}/>
+      <Header title={name}/>
       {children}
     </section>
   )

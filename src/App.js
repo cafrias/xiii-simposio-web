@@ -2,6 +2,8 @@
 import React from 'react'
 import './App.css'
 
+import Navbar from './components/Navbar'
+
 // PAGES _______________________________________________________________________
 
 import Home from './pages/Home'
@@ -16,6 +18,7 @@ import Location from './pages/Location'
 
 const App = () =>
   <div className="App">
+    <Navbar/>
     <main className="content-container">
       <Home/>
       <About/>
