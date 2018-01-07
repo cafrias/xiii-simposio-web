@@ -6,18 +6,46 @@
   width: 100%
   top: 0
   left: 0
-  font-size: 1.125rem
   z-index: 10
-  +shadow-1
+  +shadow-2
+
+
+// MENU ________________________________________________________________________
 
 .menu
   list-style: none
   display: flex
   justify-content: space-around
+  font-size: 1.125rem
   width: 100%
+  max-width: 1200px
+  margin: 0 auto
 
 .menu__opt
-  padding: 1rem
+  padding: 1rem 2.618rem
+  color: $black
+  +anti-aliased
 
 .menu__opt--active
-  text-decoration: underline
+  position: relative
+  color: $dark-grey
+  // background: $dark-gradient
+  transition: .4s ease
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    height: .225rem
+    background: $light-gradient
+    animation: appear .3s
+    animation-fill-mode: forwards
+
+@keyframes appear
+  0%
+    opacity: 0
+    width: 0
+  100%
+    width: 100%
+    opacity: 1
