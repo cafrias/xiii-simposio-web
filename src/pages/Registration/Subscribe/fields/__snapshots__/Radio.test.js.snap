@@ -2,7 +2,7 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="control flx justify-center"
+  className="control "
 >
   <label
     className="radio"

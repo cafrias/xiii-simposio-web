@@ -2,11 +2,11 @@
 
 exports[`matches snapshot 1`] = `
 <div
-  className="control"
+  className="control flx justify-center"
 >
   <button
     className="
-      button is-link
+      button is-primary w-33
       
       "
     id="id"

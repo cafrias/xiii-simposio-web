@@ -3,6 +3,7 @@
 exports[`should match snapshot 1`] = `
 <section
   className="home-container"
+  id="home"
 >
   <div
     className="hero-logo-container"

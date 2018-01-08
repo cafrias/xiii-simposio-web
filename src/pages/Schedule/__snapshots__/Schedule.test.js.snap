@@ -7,7 +7,7 @@ exports[`should match snapshot 1`] = `
   name="Cronograma"
 >
   <div
-    className="mobile-content text-container"
+    className="mobile-content mobile-pad text-container"
   >
     <MobileTable
       activities={

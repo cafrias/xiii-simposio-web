@@ -44,7 +44,7 @@ exports[`should match snapshot 1`] = `
       </div>
     </div>
     <article
-      className="introduction"
+      className="introduction mobile-pad"
     >
       <h2>
         Introducción
