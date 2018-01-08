@@ -29,7 +29,7 @@ import {
 
 function Home() {
   return (
-    <section className="home-container">
+    <section id="home" className="home-container">
       <div className="hero-logo-container">
         <img className="hero-logo" src={logo} alt="Simposio Ushuaia logo con lema"/>
       </div>
