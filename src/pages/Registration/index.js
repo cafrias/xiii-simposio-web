@@ -28,15 +28,15 @@ const DEADLINE_DATA = [
 const COST_DATA = [
   {
     name: 'Asistentes en general',
-    cost: '$2.200*'
+    cost: '$2.700*'
   },
   {
     name: 'Matriculados Consejo Profesional de Ciencias Económicas TDF',
-    cost: '$1.600*'
+    cost: '$2.000*'
   },
   {
     name: 'Docentes UNTDF',
-    cost: '$1.300*'
+    cost: '$1.600*'
   },
   {
     name: 'Estudiantes UNTDF',
@@ -44,7 +44,7 @@ const COST_DATA = [
   },
   {
     name: 'Estudiantes otras instituciones',
-    cost: '$300**'
+    cost: '$350**'
   }
 ]
 
