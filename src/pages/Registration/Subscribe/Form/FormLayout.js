@@ -104,12 +104,12 @@ const FormLayout = (props: FormLayoutProps) => {
             {fields[13]}
           </div>
           <div className="column">
-            {fields[14]}
+            {fields[15]}
           </div>
         </div>
         <div className="columns">
           <div className="column">
-            {fields[15]}
+            {fields[14]}
           </div>
         </div>
       </fieldset>
