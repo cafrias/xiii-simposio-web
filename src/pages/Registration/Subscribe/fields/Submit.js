@@ -8,12 +8,12 @@ type SubmitButtonProps = {
 
 const SubmitButton = ({id, loading}: SubmitButtonProps) => {
   const className = `
-    button is-link
+    button is-primary w-33
     ${loading ? 'is-loading' : ''}
     `
 
   return (
-    <div className="control">
+    <div className="control flx justify-center">
       <button id={id} className={className} type="submit">
         Enviar
       </button>
