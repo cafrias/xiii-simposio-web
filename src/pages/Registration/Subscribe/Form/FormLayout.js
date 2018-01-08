@@ -115,8 +115,10 @@ const FormLayout = (props: FormLayoutProps) => {
       </fieldset>
       <fieldset className="box">
         <legend className="label has-text-centered">Ponencia</legend>
-        <div className="columns flx justify-center">
-          {fields[16]}
+        <div className="columns">
+          <div className="column">
+            {fields[16]}
+          </div>
         </div>
         { presenta ? (
           <React.Fragment>
@@ -132,7 +134,7 @@ const FormLayout = (props: FormLayoutProps) => {
       </fieldset>
       <Notification {...status} />
       <div className="columns">
-        <div className="column flx justify-center">
+        <div className="column">
           <Submit id="subs_submit" loading={loading} status={status} />
         </div>
       </div>

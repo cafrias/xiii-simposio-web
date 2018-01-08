@@ -19,7 +19,8 @@ type ControlFieldProps = {
   icon?: string,
   type?: string,
   options?: OptionsArray[],
-  small?: string
+  small?: string,
+  centered?: boolean
 }
 
 export type ControlProps = ControlFieldProps & {  
@@ -62,7 +63,8 @@ const Field = (props: FieldProps) => {
     className = '',
     icon = '',
     type = '',
-    small
+    small,
+    centered
   } = props
 
   const controlProps: ControlProps = {
@@ -74,12 +76,13 @@ const Field = (props: FieldProps) => {
     changeHandler,
     blurHandler,
     hasError: hasError(state),
-    small
+    small,
+    centered
   }
 
   return (
     <div className={`field ${className}`}>
-      <label htmlFor={id} className="label">
+      <label htmlFor={id} className={`label ${centered ? 'has-text-centered' : ''}`}>
         {label}
         { required ? (<small> *</small>) : null }
       </label>

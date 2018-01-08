@@ -275,7 +275,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
               options,
               type,
               required,
-              small
+              small,
+              centered
             } = fields[fieldName]
 
             const toPass = {
@@ -286,7 +287,8 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
               options,
               type,
               required,
-              small
+              small,
+              centered
             }
 
             const state: FieldState = this.state.fields[fieldName]

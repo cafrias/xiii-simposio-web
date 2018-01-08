@@ -49,7 +49,8 @@ type FieldsObject = {
     type?: string,
     icon?: string,
     options?: OptionsArray[],
-    small?: string
+    small?: string,
+    centered?: boolean
   |}
 }
 
@@ -209,7 +210,8 @@ const fields: FieldsObject =  {
     control: Radio,
     id: 'ponencia_presenta',
     label: '¿Presenta Ponencia?',
-    default: 'false'
+    default: 'false',
+    centered: true
   },
   ponencia_titulo: {
     required: false,
