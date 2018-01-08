@@ -8,7 +8,6 @@ import Navbar from './components/Navbar'
 
 import Home from './pages/Home'
 import About from './pages/About'
-import Subscribe from './pages/Subscribe'
 import Speakers from './pages/Speakers'
 import Schedule from './pages/Schedule'
 import Registration from './pages/Registration'
@@ -24,7 +23,6 @@ const App = () =>
       <About/>
       <Speakers/>
       <Schedule/>
-      <Subscribe/>
       <Registration/>
       <Location/>
     </main>

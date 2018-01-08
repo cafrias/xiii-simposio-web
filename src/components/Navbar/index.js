@@ -86,7 +86,14 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
           <div className="navbar-start">
             <Menu/>
           </div>
-          <div className="navbar-end"></div>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <Link spy={false} duration={500} smooth={true} to="subs_form"
+                offset={-50} className="button is-primary">
+                Incribirse
+              </Link>
+            </div>
+          </div>
         </div>
       </nav>
     )

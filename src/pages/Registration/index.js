@@ -3,10 +3,15 @@ import React from 'react'
 
 import './Registration.css'
 
+
 // COMPONENTS __________________________________________________________________
+
 import Section from '../../components/Section'
+import Subscribe from './Subscribe'
+
 
 // DATA ________________________________________________________________________
+
 const DEADLINE_DATA = [
   {
     name: 'Fecha límite presentación de Resúmenes',
@@ -104,6 +109,7 @@ function Registration() {
           Cualquier consulta puede ser dirigida a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
         </p>
       </article>
+      <Subscribe/>
     </Section>
   )
 }

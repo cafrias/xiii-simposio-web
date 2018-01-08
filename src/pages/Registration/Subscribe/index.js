@@ -5,7 +5,8 @@ import './Subscribe.css'
 import Form from './Form'
 
 const Subscribe = () =>
-  <section className="subscription">
+  <section id="subs_form" className="subscription">
+    <h2>Formulario de Inscripción</h2>
     <Form/>
   </section>
 
