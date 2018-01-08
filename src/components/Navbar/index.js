@@ -3,12 +3,9 @@ import React from 'react'
 import {Link} from 'react-scroll'
 
 import './Navbar.css'
+import logo from './logo.svg'
 
 const options = [
-  {
-    id: 'home',
-    label: 'Inicio'
-  },
   {
     id: 'about',
     label: '¿Qué es el Simposio?'
@@ -79,19 +76,25 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
   render() {
     return (
       <nav className="navbar is-fixed-top" aria-label="main navigation">
-        <div className="navbar-brand">
-          <Hamburger active={this.state.active} handler={this.toggleActive.bind(this)}/>
-        </div>
-        <div className={`navbar-menu ${this.state.active ? 'is-active' : ''}`}>
-          <div className="navbar-start">
-            <Menu/>
+        <div className="container">
+          <div className="navbar-brand">
+            <Link spy={false} duration={500} smooth={true} to="home"
+              className="navbar-item">
+              <img src={logo} alt="Logo Simposio"/>
+            </Link>
+            <Hamburger active={this.state.active} handler={this.toggleActive.bind(this)}/>
           </div>
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <Link spy={false} duration={500} smooth={true} to="subs_form"
-                offset={-50} className="button is-primary">
-                Incribirse
-              </Link>
+          <div className={`navbar-menu ${this.state.active ? 'is-active' : ''}`}>
+            <div className="navbar-start">
+              <Menu/>
+            </div>
+            <div className="navbar-end">
+              <div className="navbar-item">
+                <Link spy={false} duration={500} smooth={true} to="subs_form"
+                  offset={-50} className="button is-primary">
+                  Incribirse
+                </Link>
+              </div>
             </div>
           </div>
         </div>
