@@ -78,7 +78,7 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
       <nav className="navbar is-fixed-top" aria-label="main navigation">
         <div className="container">
           <div className="navbar-brand">
-            <Link spy={false} duration={500} smooth={true} to="home"
+            <Link spy={false} duration={500} offset={-100} smooth={true} to="home"
               className="navbar-item">
               <img src={logo} alt="Logo Simposio"/>
             </Link>

@@ -20,13 +20,13 @@ function Location() {
       <article className="tile">
         <div className="tile__left">
           <h2 className="tile__title">DIRECCIÓN</h2>
-          <p className="text-container tile__text">
+          <p className="tile__text">
             SUM de la Caja de Previsión Social de la Provincia de Tierra del Fuego,
             <br/>
             Alem 2410, Ushuaia, Tierra del Fuego, Argentina.
           </p>
           <p className="tile__text">
-            <a target="_blank" href="https://www.google.com.ar/maps/place/Av.+Leandro+N.+Alem+2410,+V9410ADX+Ushuaia,+Tierra+del+Fuego/@-54.8093112,-68.3365895,16.83z/data=!4m5!3m4!1s0xbc4c233f167580ad:0xaf5184363e0591db!8m2!3d-54.8086259!4d-68.3377634?hl=en">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com.ar/maps/place/Av.+Leandro+N.+Alem+2410,+V9410ADX+Ushuaia,+Tierra+del+Fuego/@-54.8093112,-68.3365895,16.83z/data=!4m5!3m4!1s0xbc4c233f167580ad:0xaf5184363e0591db!8m2!3d-54.8086259!4d-68.3377634?hl=en">
               Ver en Google Maps
             </a>
           </p>
@@ -47,16 +47,18 @@ function Location() {
       </article>
       <article className="tile tile--hotel">
         <h2 className="tile__title">ALOJAMIENTO</h2>
-        <p className="text-container hotel__text">El Hotel Ushuaia ofrece una tarifa diferencial a los asistentes al Simposio, la cual podrá utilizarse informando al momento de realizar la reserva la participación en el evento:
-        </p>
-        <ul className="text-container">
-          <li>Habitación single por noche $900</li>
-          <li>Habitación doble por noche $1.150</li>
-          <li>Habitación triple por noche $1.300</li>
-        </ul>
+        <div className="hotel__text">
+          <p className="text-container">El Hotel Ushuaia ofrece una tarifa diferencial a los asistentes al Simposio, la cual podrá utilizarse informando al momento de realizar la reserva la participación en el evento:
+          </p>
+          <ul className="text-container">
+            <li>Habitación single por noche $900</li>
+            <li>Habitación doble por noche $1.150</li>
+            <li>Habitación triple por noche $1.300</li>
+          </ul>
+        </div>
         <ul className="tile__social hotel__links">
           <li>
-            <a target="_blank" href="http://www.hotelushuaia.com.ar">www.hotelushuaia.com.ar</a>
+            <a target="_blank" rel="noopener noreferrer" href="http://www.hotelushuaia.com.ar">www.hotelushuaia.com.ar</a>
           </li>
           <li>
             <a href="tel:+54 2901 430671">+54 2901 430671</a>
