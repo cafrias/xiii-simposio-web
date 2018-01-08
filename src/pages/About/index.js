@@ -57,7 +57,7 @@ function About() {
               className="about__pic about__pic--back" alt="participantes del simposio"/>
           </div>
         </div>
-        <article className="introduction">
+        <article className="introduction mobile-pad">
           <h2>Introducción</h2>
           <div className="text-container">
             <p>

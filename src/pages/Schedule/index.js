@@ -15,7 +15,7 @@ import days from './data'
 function Schedule() {
   return(
     <Section id="schedule" name="Cronograma" className="background_white schedule">
-      <div className="mobile-content text-container">
+      <div className="mobile-content mobile-pad text-container">
         {
           days.map((day, i) => (
             <MobileTable key={i} {...day}/>

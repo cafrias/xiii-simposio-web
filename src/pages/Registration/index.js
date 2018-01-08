@@ -77,13 +77,13 @@ function Registration() {
   return (
     <Section id="registration" name="Inscripción"
       className="background_white registration-container">
-      <article className="deadlines">
+      <article className="deadlines mobile-pad">
         <h2>Presentación de trabajos</h2>
         {
           DEADLINE_DATA.map(DeadLine)
         }
       </article>
-      <article className="costs">
+      <article className="costs mobile-pad">
         <h2>Costo de las matrículas</h2>
         {
           COST_DATA.map(Cost)
@@ -95,7 +95,7 @@ function Registration() {
           </small>
         </p>
       </article>
-      <article className="how-to">
+      <article className="how-to mobile-pad">
         <h2>¿Cómo inscribirse?</h2>
         <p className="text-container">
           Llene la siguiente <a target="_blank"  rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYNlFjcmJCVEQtTmM/view">ficha de inscripción</a>{' '}
