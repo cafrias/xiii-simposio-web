@@ -48,72 +48,63 @@ const COST_DATA = [
   }
 ]
 
-function DeadLine({name, weekday, date}, key) {
-  return (
-    <div key={key} className="deadline">
-      <h3 className="deadline__title">{name}</h3>
-      <p className="table__date deadline__date">
-        <span className="table__weekday">
-          {weekday}
-        </span>
-        {date}
-      </p>
-    </div>
-  )
-}
+const DeadLine = ({name, weekday, date}, key) =>
+  <div key={key} className="deadline">
+    <h3 className="deadline__title">{name}</h3>
+    <p className="table__date deadline__date">
+      <span className="table__weekday">
+        {weekday}
+      </span>
+      {date}
+    </p>
+  </div>
 
-function Cost({name, cost}, i) {
-  return (
-    <div key={i} className="cost">
-      <h3 className="cost__title">{name}</h3>
-      <p className="cost__total">
-        {cost}
-      </p>
-    </div>
-  )
-}
+const Cost = ({name, cost}, key) =>
+  <div key={key} className="cost">
+    <h3 className="cost__title">{name}</h3>
+    <p className="cost__total">
+      {cost}
+    </p>
+  </div>
 
-function Registration() {
-  return (
-    <Section id="registration" name="Inscripción"
-      className="background_white registration-container">
-      <article className="deadlines mobile-pad">
-        <h2>Presentación de trabajos</h2>
-        {
-          DEADLINE_DATA.map(DeadLine)
-        }
-      </article>
-      <article className="costs mobile-pad">
-        <h2>Costo de las matrículas</h2>
-        {
-          COST_DATA.map(Cost)
-        }
-        <p className="text-container disclaimer">
-          <small>
-            * Incluye material del Simposio, Cóctail de bienvenida y Cena de camaradería<br/>
-            ** Incluye el material del Simposio
-          </small>
-        </p>
-      </article>
-      <article className="how-to mobile-pad">
-        <h2>¿Cómo inscribirse?</h2>
+const Registration = () =>
+  <Section id="registration" name="Inscripción"
+    className="background_white registration-container">
+    <article className="deadlines mobile-pad">
+      <h2>Presentación de trabajos</h2>
+      {
+        DEADLINE_DATA.map(DeadLine)
+      }
+    </article>
+    <article className="costs mobile-pad">
+      <h2>Costo de las matrículas</h2>
+      {
+        COST_DATA.map(Cost)
+      }
+      <p className="text-container disclaimer">
+        <small>
+          * Incluye material del Simposio, Cóctail de bienvenida y Cena de camaradería<br/>
+          ** Incluye el material del Simposio
+        </small>
+      </p>
+    </article>
+    <article className="how-to mobile-pad">
+      <h2>¿Cómo inscribirse?</h2>
+      <p className="text-container">
+        Llene la siguiente <a target="_blank"  rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYNlFjcmJCVEQtTmM/view">ficha de inscripción</a>{' '}
+        y envíela a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>;{' '}
+        nos pondremos en contacto con usted a la brevedad.
+      </p>
+      <section>
+        <h3>¿Cómo presentar ponencias?</h3>
         <p className="text-container">
-          Llene la siguiente <a target="_blank"  rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYNlFjcmJCVEQtTmM/view">ficha de inscripción</a>{' '}
-          y envíela a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>;{' '}
-          nos pondremos en contacto con usted a la brevedad.
+          Para la presentación de ponencias recomendamos lea atentamente el {' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYSGQ3WVJHRER4dXM/view">reglamento</a>.{' '}
+          Cualquier consulta puede ser dirigida a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
         </p>
-        <section>
-          <h3>¿Cómo presentar ponencias?</h3>
-          <p className="text-container">
-            Para la presentación de ponencias recomendamos lea atentamente el {' '}
-            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYSGQ3WVJHRER4dXM/view">reglamento</a>.{' '}
-            Cualquier consulta puede ser dirigida a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
-          </p>
-        </section>
-      </article>
-      <Subscribe/>
-    </Section>
-  )
-}
+      </section>
+    </article>
+    <Subscribe/>
+  </Section>
 
 export default Registration

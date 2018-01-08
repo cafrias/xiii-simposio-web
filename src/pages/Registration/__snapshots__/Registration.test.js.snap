@@ -71,7 +71,7 @@ exports[`should match snapshot 1`] = `
       <p
         className="cost__total"
       >
-        $2.200*
+        $2.700*
       </p>
     </div>
     <div
@@ -86,7 +86,7 @@ exports[`should match snapshot 1`] = `
       <p
         className="cost__total"
       >
-        $1.600*
+        $2.000*
       </p>
     </div>
     <div
@@ -101,7 +101,7 @@ exports[`should match snapshot 1`] = `
       <p
         className="cost__total"
       >
-        $1.300*
+        $1.600*
       </p>
     </div>
     <div
@@ -131,7 +131,7 @@ exports[`should match snapshot 1`] = `
       <p
         className="cost__total"
       >
-        $300**
+        $350**
       </p>
     </div>
     <p
