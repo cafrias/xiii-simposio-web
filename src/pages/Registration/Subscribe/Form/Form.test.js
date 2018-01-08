@@ -39,7 +39,7 @@ const OK = {
   ponencia_titulo: "Algun titulo",
   ponencia_area: "Mecanica Cuantica",
   ponencia_coautores: "Martinez, Brizualdo",
-  ponencia_institucion: "UNTDF",
+  institucion: "UNTDF",
   acompanantes: "2"
 }
 
@@ -91,7 +91,7 @@ const notOK = {
   ponencia_titulo: "Algun titulo",
   ponencia_area: "Mecanica Cuantica",
   ponencia_coautores: "Martinez, Brizualdo",
-  ponencia_institucion: "UNTDF",
+  institucion: "UNTDF",
   acompanantes: "2"
 }
 

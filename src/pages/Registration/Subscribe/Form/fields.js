@@ -25,7 +25,7 @@ export type FormField =
   | 'arancel_pago'
   | 'acompanantes'
   | 'ponencia_presenta'
-  | 'ponencia_institucion'
+  | 'institucion'
   | 'ponencia_titulo'
   | 'ponencia_area'
   | 'ponencia_coautores'
@@ -112,6 +112,13 @@ const fields: FieldsObject =  {
     label: 'Email',
     icon: 'fa-envelope',
   },
+  institucion: {
+    required: false,
+    validator: validators.any,
+    control: Input,
+    id: 'institucion',
+    label: 'Institución',
+  },
   direccion: {
     required: true,
     validator: validators.any,
@@ -142,12 +149,6 @@ const fields: FieldsObject =  {
     control: Select,
     options: [
       'Argentina',
-      'Bolivia',
-      'Brasil',
-      'Chile',
-      'Paraguay',
-      'Uruguay',
-      'Otro'
     ],
     id: 'pais',
     label: 'País',
@@ -233,14 +234,6 @@ const fields: FieldsObject =  {
     control: Input,
     id: 'ponencia_coautores',
     label: 'Co-Autor/es',
-  },
-  ponencia_institucion: {
-    required: false,
-    requiredIf: 'presenta_ponencia',
-    validator: validators.any,
-    control: Input,
-    id: 'ponencia_institucion',
-    label: 'Institución',
   }
 }
 

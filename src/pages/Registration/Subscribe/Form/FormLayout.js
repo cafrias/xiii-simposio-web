@@ -56,30 +56,37 @@ const FormLayout = (props: FormLayoutProps) => {
         </div>
         <div className="columns">
           <div className="column">
-            {fields[5]}
+            <div className="columns">
+              <div className="column">
+                {fields[5]}
+              </div>
+              <div className="column">
+                {fields[6]}
+              </div>
+            </div>
           </div>
           <div className="column">
-            {fields[6]}
+            {fields[7]}
           </div>
         </div>
         <div className="columns">
           <div className="column">
             <div className="columns">
               <div className="column">
-                {fields[7]}
+                {fields[8]}
               </div>
               <div className="column">
-                {fields[8]}
+                {fields[9]}
               </div>
             </div>
           </div>
           <div className="column">
             <div className="columns">
               <div className="column">
-                {fields[9]}
+                {fields[10]}
               </div>
               <div className="column">
-                {fields[10]}
+                {fields[11]}
               </div>
             </div>
           </div>
@@ -89,12 +96,12 @@ const FormLayout = (props: FormLayoutProps) => {
         <legend className="label has-text-centered">Pago Arancel</legend>
         <div className="columns">
           <div className="column">
-            {fields[11]}
+            {fields[12]}
           </div>
         </div>
         <div className="columns">
           <div className="column">
-            {fields[12]}
+            {fields[13]}
           </div>
           <div className="column">
             {fields[14]}
@@ -102,23 +109,22 @@ const FormLayout = (props: FormLayoutProps) => {
         </div>
         <div className="columns">
           <div className="column">
-            {fields[13]}
+            {fields[15]}
           </div>
         </div>
       </fieldset>
       <fieldset className="box">
         <legend className="label has-text-centered">Ponencia</legend>
         <div className="columns flx justify-center">
-          {fields[15]}
+          {fields[16]}
         </div>
         { presenta ? (
           <React.Fragment>
             <div className="columns">
-              <div className="column">{fields[16]}</div>
               <div className="column">{fields[17]}</div>
+              <div className="column">{fields[18]}</div>
             </div>
             <div className="columns">
-              <div className="column">{fields[18]}</div>
               <div className="column">{fields[19]}</div>
             </div>
           </React.Fragment>
