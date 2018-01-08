@@ -15,7 +15,9 @@ function Section({id, name, className, children}: SectionProps) {
     <section id={id} className={className} style={{
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
+      marginTop: 0,
+      marginBottom: 0
     }}>
       <Header title={name}/>
       {children}

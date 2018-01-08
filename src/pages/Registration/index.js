@@ -102,12 +102,14 @@ function Registration() {
           y envíela a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>;{' '}
           nos pondremos en contacto con usted a la brevedad.
         </p>
-        <h3>¿Cómo presentar ponencias?</h3>
-        <p className="text-container">
-          Para la presentación de ponencias recomendamos lea atentamente el {' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYSGQ3WVJHRER4dXM/view">reglamento</a>.{' '}
-          Cualquier consulta puede ser dirigida a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
-        </p>
+        <section>
+          <h3>¿Cómo presentar ponencias?</h3>
+          <p className="text-container">
+            Para la presentación de ponencias recomendamos lea atentamente el {' '}
+            <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYSGQ3WVJHRER4dXM/view">reglamento</a>.{' '}
+            Cualquier consulta puede ser dirigida a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
+          </p>
+        </section>
       </article>
       <Subscribe/>
     </Section>
