@@ -18,7 +18,7 @@ exports[`should match snapshot 1`] = `
         DIRECCIÓN
       </h2>
       <p
-        className="text-container tile__text"
+        className="tile__text"
       >
         SUM de la Caja de Previsión Social de la Provincia de Tierra del Fuego,
         <br />
@@ -29,6 +29,7 @@ exports[`should match snapshot 1`] = `
       >
         <a
           href="https://www.google.com.ar/maps/place/Av.+Leandro+N.+Alem+2410,+V9410ADX+Ushuaia,+Tierra+del+Fuego/@-54.8093112,-68.3365895,16.83z/data=!4m5!3m4!1s0xbc4c233f167580ad:0xaf5184363e0591db!8m2!3d-54.8086259!4d-68.3377634?hl=en"
+          rel="noopener noreferrer"
           target="_blank"
         >
           Ver en Google Maps
@@ -63,30 +64,35 @@ exports[`should match snapshot 1`] = `
     >
       ALOJAMIENTO
     </h2>
-    <p
-      className="text-container hotel__text"
+    <div
+      className="hotel__text"
     >
-      El Hotel Ushuaia ofrece una tarifa diferencial a los asistentes al Simposio, la cual podrá utilizarse informando al momento de realizar la reserva la participación en el evento:
-    </p>
-    <ul
-      className="text-container"
-    >
-      <li>
-        Habitación single por noche $900
-      </li>
-      <li>
-        Habitación doble por noche $1.150
-      </li>
-      <li>
-        Habitación triple por noche $1.300
-      </li>
-    </ul>
+      <p
+        className="text-container"
+      >
+        El Hotel Ushuaia ofrece una tarifa diferencial a los asistentes al Simposio, la cual podrá utilizarse informando al momento de realizar la reserva la participación en el evento:
+      </p>
+      <ul
+        className="text-container"
+      >
+        <li>
+          Habitación single por noche $900
+        </li>
+        <li>
+          Habitación doble por noche $1.150
+        </li>
+        <li>
+          Habitación triple por noche $1.300
+        </li>
+      </ul>
+    </div>
     <ul
       className="tile__social hotel__links"
     >
       <li>
         <a
           href="http://www.hotelushuaia.com.ar"
+          rel="noopener noreferrer"
           target="_blank"
         >
           www.hotelushuaia.com.ar
