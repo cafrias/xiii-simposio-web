@@ -11,9 +11,9 @@ $blue: #309D6C
 $light-brown: #A9CE47
 $dark-brown: #679E92
 
-$dark-gradient: linear-gradient(to right, #ca7246 0%,#df7b3d 40%,#f48534 62%,#fab989 100%)
+$dark-gradient: linear-gradient(to right, $primary 0%, $dark-brown 100%)
 
-$light-gradient: linear-gradient(135deg, #fecb2a 0%,#fecb2a 13%,#faa92f 38%,#f79931 70%,#f48534 100%)
+$light-gradient: linear-gradient(135deg, lighten($dark-brown, 2) 0%,$dark-brown 13%,darken($dark-brown, 3) 38%,$primary 100%)
 
 =shadow-0
   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.42), -3px 8px 12px 0 rgba(0,0,0,0.32)
