@@ -1,16 +1,19 @@
+// @flow
 import React from 'react'
 
 import './Location.css'
 
-import map from './maps-2.jpg'
 
 // MAP IMAGES __________________________________________________________________
+
 import map_1000 from './_assets/map.png'
 import map_800 from './_assets/map@800.png'
 import map_550 from './_assets/map@550.png'
 import map_400 from './_assets/map@400.png'
 
+
 // COMPONENTS __________________________________________________________________
+
 import Section from '../../components/Section'
 import SocialLinks from '../../components/SocialLinks'
 
