@@ -199,6 +199,8 @@ exports[`should match snapshot 1`] = `
       </p>
     </section>
   </article>
+  <hr />
   <Subscribe />
+  <hr />
 </Section>
 `;
