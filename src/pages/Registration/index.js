@@ -104,7 +104,9 @@ const Registration = () =>
         </p>
       </section>
     </article>
+    <hr/>
     <Subscribe/>
+    <hr/>
   </Section>
 
 export default Registration
