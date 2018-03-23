@@ -78,7 +78,7 @@ function About() {
             <p>
               Es por todo esto que se invita a estudiantes, docentes e investigadores vinculados a la Contabilidad y la Auditoría y al público en general, a participar de este importante evento.
             </p>
-            <p className="download-disclaimer">
+            {/* <p className="download-disclaimer">
               La publicación con todos los trabajos presentados en la presente edición del Simposio,
               titulada <em>Memorias del XI° Simposio de Contabilidad y Auditoría del Extremo Sur</em>, {' '}
               está disponible para descargar{' '}
@@ -86,7 +86,7 @@ function About() {
                 href="https://drive.google.com/open?id=0B7VKVU2ob_G2bUZCZ3V3TXdiTkk">
                 Aquí
               </a>.
-            </p>
+            </p> */}
             <footer className="about__more-info">
               <small>Más información: {' '}
                 <a target="_blank" rel="noopener noreferrer"
