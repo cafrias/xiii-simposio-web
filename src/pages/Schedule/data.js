@@ -11,19 +11,19 @@ export const timeEntries = [
 export default [
   {
     weekday: 'Miércoles',
-    date: '17/05/2017',
+    date: '16/05/2018',
     activities: {
       '15.00': 'Acreditaciones',
       '17.00': 'Acto de Apertura',
       '17.30': 'Trabajo en comisiones',
       '19.00': 'Coffee Break',
-      '19.30': 'Conferencia',
-      '21.00': 'Cóctel de bienvenida'
+      '19.30': 'Conferencias',
+      '21.00': 'Cóctel de bienvenida (tarjeta requerida)'
     }
   },
   {
     weekday: 'Jueves',
-    date: '18/05/2017',
+    date: '17/05/2018',
     activities: {
       '17.00': 'Trabajo en comisiones',
       '17.30': 'Trabajo en comisiones',
@@ -34,14 +34,14 @@ export default [
   },
   {
     weekday: 'Viernes',
-    date: '19/05/2017',
+    date: '18/05/2018',
     activities: {
       '17.00': 'Trabajo en comisiones',
       '17.30': 'Trabajo en comisiones',
       '19.00': 'Coffee Break',
       '19.30': 'Conferencia',
       '21.00': 'Acto de clausura',
-      '22.30': 'Cena de camaradería'
+      '22.30': 'Cena de camaradería (tarjeta requerida)'
     }
   },
 ]
