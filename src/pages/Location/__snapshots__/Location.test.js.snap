@@ -76,13 +76,13 @@ exports[`should match snapshot 1`] = `
         className="text-container"
       >
         <li>
-          Habitación single por noche $900
+          Habitación single por noche $1.150
         </li>
         <li>
-          Habitación doble por noche $1.150
+          Habitación doble por noche $1.350
         </li>
         <li>
-          Habitación triple por noche $1.300
+          Habitación triple por noche $1.500
         </li>
       </ul>
     </div>

@@ -10,52 +10,52 @@ exports[`should match snapshot 1`] = `
     className="speakers__grid"
   >
     <Speaker
-      id="01"
-      inst="(UBA)"
-      key="0"
-      name="Ricardo Pahlen Acuña"
-      pic="01.jpg"
-    />
-    <Speaker
       id="02"
       inst="(UBA)"
-      key="1"
+      key="0"
       name="Ana María Campo"
       pic="02.jpg"
     />
     <Speaker
       id="04"
       inst="(UNTDF-UNPSJB)"
-      key="2"
+      key="1"
       name="Ricardo Barrera"
       pic="04.jpg"
     />
     <Speaker
       id="05"
       inst="(UBA)"
-      key="3"
+      key="2"
       name="Francisco Provenzani"
       pic="05.jpg"
     />
     <Speaker
-      id="06"
-      inst="(UBA)"
-      key="4"
-      name="Hugo Bottino"
-      pic="06.jpg"
-    />
-    <Speaker
       id="07"
       inst="(UBA)"
-      key="5"
+      key="3"
       name="Juan Permuy"
       pic="07.jpg"
     />
     <Speaker
       id="08"
       inst="(UBA)"
-      key="6"
+      key="4"
       name="Mauricio Lambertucci"
+      pic="08.jpg"
+    />
+    <Speaker
+      id="09"
+      inst="(UNaM)"
+      key="5"
+      name="Eduardo Solis"
+      pic="08.jpg"
+    />
+    <Speaker
+      id="10"
+      inst="(UNNE)"
+      key="6"
+      name="Beatriz Franchini de Monfardini"
       pic="08.jpg"
     />
   </ul>
