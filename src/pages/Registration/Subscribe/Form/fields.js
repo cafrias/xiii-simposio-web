@@ -1,5 +1,6 @@
 // @flow
 import validators from './validators'
+import coercers from './coercers'
 
 import Input from '../fields/Input'
 import Select from '../fields/Select'
@@ -30,6 +31,34 @@ export type FormField =
   | 'ponencia_area'
   | 'ponencia_coautores'
 
+export function validFieldName(value: string): [bool, FormField] {
+  switch(value) {
+  case 'nombre':
+  case 'apellido':
+  case 'documento':
+  case 'telefono':
+  case 'celular':
+  case 'fax':
+  case 'email':
+  case 'direccion':
+  case 'zip':
+  case 'localidad':
+  case 'pais':
+  case 'arancel_categoria':
+  case 'arancel_adicional':
+  case 'arancel_pago':
+  case 'acompanantes':
+  case 'ponencia_presenta':
+  case 'institucion':
+  case 'ponencia_titulo':
+  case 'ponencia_area':
+  case 'ponencia_coautores':
+    return [true, (value: FormField)]
+  default:
+    return [false, 'nombre']
+  }
+}
+
 type OptionsObject = {|
   val: any,
   label: string  
@@ -41,6 +70,7 @@ type FieldsObject = {
   [FormField]: {|
     required: boolean,
     validator: (value: mixed) => boolean,
+    coercer: (value: mixed) => mixed,
     control: StatelessFunctionalComponent<Object>,
     id: string,
     default?: any,
@@ -58,6 +88,7 @@ const fields: FieldsObject =  {
   nombre: {
     required: true,
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'nombre',
     label: 'Nombre(s)',
@@ -65,6 +96,7 @@ const fields: FieldsObject =  {
   apellido: {
     required: true,
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'apellido',
     label: 'Apellido(s)',
@@ -72,6 +104,7 @@ const fields: FieldsObject =  {
   documento: {
     required: true,
     validator: validators.number,
+    coercer: coercers.number,
     control: Input,
     type: 'number',
     id: 'documento',
@@ -80,6 +113,7 @@ const fields: FieldsObject =  {
   telefono: {
     required: false,
     validator: validators.number,
+    coercer: coercers.number,
     control: Input,
     type: 'number',
     id: 'telefono',
@@ -89,6 +123,7 @@ const fields: FieldsObject =  {
   celular: {
     required: false,
     validator: validators.number,
+    coercer: coercers.number,
     control: Input,
     type: 'number',
     id: 'celular',
@@ -98,6 +133,7 @@ const fields: FieldsObject =  {
   fax: {
     required: false,
     validator: validators.number,
+    coercer: coercers.number,
     control: Input,
     type: 'number',
     id: 'fax',
@@ -107,6 +143,7 @@ const fields: FieldsObject =  {
   email: {
     required: true,
     validator: validators.email,
+    coercer: coercers.identity,
     control: Input,
     type: 'email',
     id: 'email',
@@ -116,6 +153,7 @@ const fields: FieldsObject =  {
   institucion: {
     required: false,
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'institucion',
     label: 'Institución',
@@ -123,6 +161,7 @@ const fields: FieldsObject =  {
   direccion: {
     required: true,
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'direccion',
     label: 'Dirección',
@@ -131,6 +170,7 @@ const fields: FieldsObject =  {
   zip: {
     required: true,
     validator: validators.number,
+    coercer: coercers.number,
     control: Input,
     type: 'number',
     id: 'zip',
@@ -139,6 +179,7 @@ const fields: FieldsObject =  {
   localidad: {
     required: true,
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'localidad',
     label: 'Localidad',
@@ -147,6 +188,7 @@ const fields: FieldsObject =  {
   pais: {
     required: true,
     validator: validators.any,
+    coercer: coercers.identity,
     control: Select,
     options: [
       'Argentina',
@@ -158,24 +200,26 @@ const fields: FieldsObject =  {
   },
   arancel_categoria: {
     required: true,
-    validator: validators.number,
+    validator: validators.categorias,
+    coercer: coercers.identity,
     control: Select,
     options: [
-      { val: '0', label: 'Sin cargo - Estudiantes UNTDF' },
-      { val: '1', label: '$350 - Estudiantes otras instituciones' },
-      { val: '2', label: '$1600 - Docentes UNTDF*' },
-      { val: '3', label: '$2000 - Matriculados CPCETF*' },
-      { val: '4', label: '$2700 - Docentes/General*' },
+      { val: 'estudiante_untdf', label: 'Sin cargo - Estudiantes UNTDF' },
+      { val: 'estudiante_otro', label: '$350 - Estudiantes otras instituciones' },
+      { val: 'docente_untdf', label: '$1600 - Docentes UNTDF*' },
+      { val: 'matriculado_cpcetf', label: '$2000 - Matriculados CPCETF*' },
+      { val: 'general', label: '$2700 - Docentes/General*' },
     ],
     id: 'arancel_categoria',
     label: 'Arancel',
     icon: 'fa-money',
-    default: '0',
+    default: 'estudiante_untdf',
     small: '* Se incluye: Material, Certificado de Asistencia/Ponencia, Cóctel de Bienvenida y Cena de Camaradería'
   },
   arancel_adicional: {
     required: false,
     validator: validators.number,
+    coercer: coercers.number,
     control: Input,
     type: 'number',
     id: 'arancel_adicional',
@@ -184,13 +228,15 @@ const fields: FieldsObject =  {
   arancel_pago: {
     required: true,
     validator: validators.any,
+    coercer: coercers.identity,
     control: TextArea,
     id: 'arancel_pago',
     label: 'Forma de pago (detallar Nº de recibo)',
   },
   acompanantes: {
     required: true,
-    validator: validators.any,
+    validator: validators.number,
+    coercer: coercers.number,
     control: Select,
     options: [
       '0',
@@ -207,6 +253,7 @@ const fields: FieldsObject =  {
   ponencia_presenta: {
     required: true,
     validator: validators.boolean,
+    coercer: coercers.boolean,
     control: Radio,
     id: 'ponencia_presenta',
     label: '¿Presenta Ponencia?',
@@ -217,6 +264,7 @@ const fields: FieldsObject =  {
     required: false,
     requiredIf: 'presenta_ponencia',
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'ponencia_titulo',
     label: 'Título de la Ponencia',
@@ -225,6 +273,7 @@ const fields: FieldsObject =  {
     required: false,
     requiredIf: 'presenta_ponencia',
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'ponencia_area',
     label: 'Área',
@@ -233,6 +282,7 @@ const fields: FieldsObject =  {
     required: false,
     requiredIf: 'presenta_ponencia',
     validator: validators.any,
+    coercer: coercers.identity,
     control: Input,
     id: 'ponencia_coautores',
     label: 'Co-Autor/es',

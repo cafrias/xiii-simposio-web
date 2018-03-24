@@ -3,7 +3,7 @@ import * as React from 'react'
 import FormLayout from './FormLayout'
 
 import Field from '../fields/Field'
-import fields from './fields'
+import fields, { validFieldName } from './fields'
 
 import 'whatwg-fetch'
 
@@ -12,13 +12,13 @@ import 'whatwg-fetch'
 import type { FormField } from './fields'
 
 export type FieldState = {|
-  value: string,
+  value: any,
   touched: boolean,
   invalid: boolean,
   missing: boolean
 |}
 type FieldsMap = {
-  [string]: FieldState
+  [FormField]: FieldState
 }
 
 type SubscriptionFormProps = {
@@ -54,7 +54,7 @@ export type TargetElements =
 
 // COMPONENT ___________________________________________________________________
 
-const endpointURI = process.env.REACT_APP_ENDPOINT || ''
+const endpointURI = `${process.env.REACT_APP_ENDPOINT || ''}/subscripcion`
 
 class SubscriptionForm extends React.Component<SubscriptionFormProps, SubscriptionFormState> {
   constructor(props: SubscriptionFormProps) {
@@ -93,9 +93,11 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     const requestObject = {}
 
     for (const key in stateFields) {
-      if (stateFields.hasOwnProperty(key)) {
-        const element = stateFields[key]
-        requestObject[key] = element.value
+      const [isField, fieldName] = validFieldName(key)
+      if (isField) {
+        const element = stateFields[fieldName]
+        // Let's coerce the value to the corresponding type to be parsed as valid JSON.
+        requestObject[key] = fields[fieldName].coercer(element.value)
       }
     }
 
@@ -139,10 +141,12 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     console.log('New state', this.state)
     
     const { fields } = this.state
+
     for (const field in fields) {
-      if (fields.hasOwnProperty(field)) {
-        const element = fields[field]
-        
+      const [isField, fieldName] = validFieldName(field)
+
+      if (isField) {
+        const element = fields[fieldName]  
         // If any is invalid or missing, we simply have to return false, this form
         // isn't valid!
         if(element.missing || element.invalid)
@@ -216,10 +220,11 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
     const { fields } = this.state
     const newFields = {}
     for (const field in fields) {
-      if (fields.hasOwnProperty(field)) {
-        const element = fields[field]
+      const [isField, fieldName] = validFieldName(field)
+      if (isField) {
+        const element = fields[fieldName]
         
-        newFields[field] = this.updateField(field, element.value)
+        newFields[fieldName] = this.updateField(fieldName, element.value)
       }
     }
 
@@ -228,15 +233,17 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
 
   changeHandler = (field: string, event: SyntheticEvent<TargetElements>) => {
     const newValue = event.currentTarget.value
-    const newState: SubscriptionFormState = Object.assign({}, this.state, {
-      fields: Object.assign({}, this.state.fields, {
-        [field]: this.updateField(field, newValue)
+
+    const [isField, fieldName] = validFieldName(field)
+    if (isField) {
+      const newState: SubscriptionFormState = Object.assign({}, this.state, {
+        fields: Object.assign({}, this.state.fields, {
+          [field]: this.updateField(fieldName, newValue)
+        })
       })
-    })
 
-    // console.log('New State:', newState)
-
-    this.setState(newState)
+      this.setState(newState)
+    }
   }
 
   blurHandler = (field: FormField, event: SyntheticEvent<TargetElements>) => {
