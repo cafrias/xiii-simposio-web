@@ -1,20 +1,15 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Failure, { messages } from './Failure'
+import Failure from './Failure'
 
-const reasons = [
-  'invalid',
-  'duplicated',
-  'unknown',
-  'internal'
-]
+const reason = 'This is the message'
+const logID = 'alksdjj2hh8273'
 
-test('renders right message according to fixture', () => {
-  reasons.forEach(reason => {
-    let wrapper = shallow(<Failure reason={reason} />)
+test('renders right message', () => {
+  let wrapper = shallow(<Failure reason={reason} logID={logID} />)
 
-    const notifText = wrapper.find('.notification').text()
-    expect(notifText).toEqual(expect.stringContaining(messages[reason]))
-  })
+  const notifText = wrapper.find('.notification').text()
+  expect(notifText).toEqual(expect.stringContaining(reason))
+  expect(notifText).toEqual(expect.stringContaining(logID))
 })
