@@ -9,12 +9,6 @@ import pic08 from './assets/08.jpg'
 
 export default [
   {
-    id: '01',
-    pic: pic01,
-    name: 'Ricardo Pahlen Acuña',
-    inst: '(UBA)'
-  },
-  {
     id: '02',
     pic: pic02,
     name: 'Ana María Campo',
@@ -33,12 +27,6 @@ export default [
     inst: '(UBA)'
   },
   {
-    id: '06',
-    pic: pic06,
-    name: 'Hugo Bottino',
-    inst: '(UBA)'
-  },
-  {
     id: '07',
     pic: pic07,
     name: 'Juan Permuy',
@@ -49,5 +37,17 @@ export default [
     pic: pic08,
     name: 'Mauricio Lambertucci',
     inst: '(UBA)'
-  }
+  },
+  {
+    id: '09',
+    pic: pic08,
+    name: 'Eduardo Solis',
+    inst: '(UNaM)'
+  },
+  {
+    id: '10',
+    pic: pic08,
+    name: 'Beatriz Franchini de Monfardini',
+    inst: '(UNNE)'
+  },
 ]
