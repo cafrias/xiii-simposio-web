@@ -5,11 +5,11 @@ import Failure from './Failure'
 
 import type { FormStatus } from '../Form'
 
-const Notification = ({condition, reason}: FormStatus) => {
+const Notification = ({condition, reason, logID}: FormStatus) => {
   let component
   switch(condition) {
   case 'failure':
-    component = <Failure reason={reason}/>
+    component = <Failure reason={reason} logID={logID}/>
     break
   case 'success':
     component = <Success/>

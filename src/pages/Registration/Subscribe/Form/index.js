@@ -30,15 +30,10 @@ export type StatusConditions =
   | 'failure'
   | 'initial'
 
-export type StatusReasons = 
-  | 'duplicated'
-  | 'invalid'
-  | 'internal'
-  | 'unknown'
-
 export type FormStatus = {
   condition: StatusConditions,
-  reason?: StatusReasons
+  logID?: string,
+  reason?: string
 }
 
 type SubscriptionFormState = {
@@ -178,25 +173,13 @@ class SubscriptionForm extends React.Component<SubscriptionFormProps, Subscripti
         }))
         console.log('Successfully done!')
       } else {
-        let reason
-        switch(res.status) {
-        case 400:
-          reason = 'invalid'
-          break
-        case 409:
-          reason = 'duplicated'
-          break
-        case 500:
-          reason = 'internal'
-          break
-        default:
-          reason = 'unknown'
-        }
+        const body = await res.json()
 
         this.setState(Object.assign({}, this.state, {
           status: {
             condition: 'failure',
-            reason
+            logID: body.log_id,
+            reason: body.message,
           }
         }))
       }
