@@ -16,12 +16,12 @@ const DEADLINE_DATA = [
   {
     name: 'Fecha límite presentación de Resúmenes',
     weekday: 'Viernes',
-    date: '21/04/2017'
+    date: '20/04/2018'
   },
   {
     name: 'Fecha límite presentación de Trabajos',
     weekday: 'Viernes',
-    date: '05/05/2017'
+    date: '27/04/2018'
   }
 ]
 
@@ -44,7 +44,7 @@ const COST_DATA = [
   },
   {
     name: 'Estudiantes otras instituciones',
-    cost: '$350**'
+    cost: '$400**'
   }
 ]
 
@@ -91,9 +91,8 @@ const Registration = () =>
     <article className="how-to mobile-pad">
       <h2>¿Cómo inscribirse?</h2>
       <p className="text-container">
-        Llene la siguiente <a target="_blank"  rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYNlFjcmJCVEQtTmM/view">ficha de inscripción</a>{' '}
-        y envíela a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>;{' '}
-        nos pondremos en contacto con usted a la brevedad.
+        Llene el <a href="#subs_form">formulario de inscripción</a>{' '}
+        y nos pondremos en contacto con usted a la brevedad.
       </p>
       <section>
         <h3>¿Cómo presentar ponencias?</h3>
