@@ -23,24 +23,24 @@ test('renders form', () => {
 const OK = {
   "apellido": "Ramirez",
   "nombre": "Pepe diego",
-  "documento": 34186550,
-  "telefono": 542964546732,
-  "celular": 542964510169,
-  "fax": 0,
+  "documento": "34186550",
+  "telefono": "542964546732",
+  "celular": "542964510169",
+  "fax": "0",
   "email": "epep@argonio.com.ar",
   "direccion": "Mi casa 182",
-  "zip": 9420,
+  "zip": "9420",
   "localidad": "Rio Grande, Tierra del Fuego",
   "pais": "Argentina",
   "arancel_categoria": "general",
-  "arancel_adicional": 111.0,
+  "arancel_adicional": "111.0",
   "arancel_pago": "Recibo Nro 122245",
-  "ponencia_presenta": true,
+  "ponencia_presenta": "true",
   "ponencia_titulo": "Algun titulo",
   "ponencia_area": "Mecanica Cuantica",
   "ponencia_coautores": "Martinez, Brizualdo",
   "institucion": "UNTDF",
-  "acompanantes": 2
+  "acompanantes": "2"
 }
 
 test('submits when valid', async () => {
@@ -75,30 +75,31 @@ test('submits when valid', async () => {
 const notOK = {
   "apellido": "Ramirez",
   "nombre": "Pepe diego",
-  "documento": 34186550,
-  "telefono": 542964546732,
-  "celular": 542964510169,
-  "fax": -1000,
+  "documento": "",
+  "telefono": "542964546732",
+  "celular": "542964510169",
+  "fax": "",
   "email": "epep@argonio.com.ar",
   "direccion": "Mi casa 182",
-  "zip": 9420,
+  "zip": "9420",
   "localidad": "Rio Grande, Tierra del Fuego",
   "pais": "Argentina",
   "arancel_categoria": "generales",
-  "arancel_adicional": 111.0,
+  "arancel_adicional": "111.0",
   "arancel_pago": "Recibo Nro 122245",
-  "ponencia_presenta": true,
+  "ponencia_presenta": "true",
   "ponencia_titulo": "Algun titulo",
   "ponencia_area": "Mecanica Cuantica",
   "ponencia_coautores": "Martinez, Brizualdo",
   "institucion": "UNTDF",
-  "acompanantes": 2
+  "acompanantes": "2"
 }
 
-test('doesn\'t submit whewn invalid', async () => {
+test('doesn\'t submit when invalid', async () => {
   const wrapper = mount(<Form/>)
   wrapper.instance().submitRequest = jest.fn()
   wrapper.update()
+
 
   for (const field in notOK) {
     if (notOK.hasOwnProperty(field)) {
