@@ -1,12 +1,6 @@
 import React from 'react'
 
-import type { StatusReason } from '../Form'
-
 // MESSAGES ____________________________________________________________________
-
-type MessagesTypes = {
-  [StatusReason]: string
-}
 
 type FailureType = {
   reason: string,

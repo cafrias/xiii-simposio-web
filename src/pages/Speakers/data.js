@@ -1,9 +1,7 @@
 // @flow
-import pic01 from './assets/01.jpg'
 import pic02 from './assets/02.jpg'
 import pic04 from './assets/04.jpg'
 import pic05 from './assets/05.jpg'
-import pic06 from './assets/06.jpg'
 import pic07 from './assets/07.jpg'
 import pic08 from './assets/08.jpg'
 
