@@ -4,6 +4,7 @@ import pic04 from './assets/04.jpg'
 import pic05 from './assets/05.jpg'
 import pic07 from './assets/07.jpg'
 import pic08 from './assets/08.jpg'
+import pic10 from './assets/10.jpg'
 
 export default [
   {
@@ -37,14 +38,8 @@ export default [
     inst: '(UBA)'
   },
   {
-    id: '09',
-    pic: pic08,
-    name: 'Eduardo Solis',
-    inst: '(UNaM)'
-  },
-  {
     id: '10',
-    pic: pic08,
+    pic: pic10,
     name: 'Beatriz Franchini de Monfardini',
     inst: '(UNNE)'
   },

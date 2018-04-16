@@ -45,18 +45,11 @@ exports[`should match snapshot 1`] = `
       pic="08.jpg"
     />
     <Speaker
-      id="09"
-      inst="(UNaM)"
-      key="5"
-      name="Eduardo Solis"
-      pic="08.jpg"
-    />
-    <Speaker
       id="10"
       inst="(UNNE)"
-      key="6"
+      key="5"
       name="Beatriz Franchini de Monfardini"
-      pic="08.jpg"
+      pic="10.jpg"
     />
   </ul>
 </Section>
