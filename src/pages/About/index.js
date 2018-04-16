@@ -90,7 +90,7 @@ function About() {
             <footer className="about__more-info">
               <small>Más información: {' '}
                 <a target="_blank" rel="noopener noreferrer"
-                  href="https://drive.google.com/file/d/0B4-MAjalS7DYQjRNem83TTZIVm8/view">
+                  href="https://drive.google.com/open?id=17Z5EQhUtKSbZFGCrkhd4tDnoP6J3tFMG">
                     Aquí
                 </a>
               </small>

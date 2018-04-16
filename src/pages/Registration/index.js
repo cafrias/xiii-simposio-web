@@ -98,7 +98,7 @@ const Registration = () =>
         <h3>¿Cómo presentar ponencias?</h3>
         <p className="text-container">
           Para la presentación de ponencias recomendamos lea atentamente el {' '}
-          <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B4-MAjalS7DYSGQ3WVJHRER4dXM/view">reglamento</a>.{' '}
+          <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/open?id=1xI7ZLC-ao7fAGEnP4_1NjxUUwIhm48KI">reglamento</a>.{' '}
           Cualquier consulta puede ser dirigida a: <a href="mailto:ponencias.simposio@gmail.com">ponencias.simposio@gmail.com</a>
         </p>
       </section>
