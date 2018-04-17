@@ -44,13 +44,6 @@ exports[`should match snapshot 1`] = `
       name="Mauricio Lambertucci"
       pic="08.jpg"
     />
-    <Speaker
-      id="10"
-      inst="(UNNE)"
-      key="5"
-      name="Beatriz Franchini de Monfardini"
-      pic="10.jpg"
-    />
   </ul>
 </Section>
 `;
