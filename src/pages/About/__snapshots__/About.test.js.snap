@@ -106,15 +106,57 @@ exports[`should match snapshot 1`] = `
           key="0"
           topics={
             Array [
-              "Información Contable. Elaboración de variables e indicadores en procesos robotizados.",
-              "Rol del Profesional y cumplimiento de los requisitos de la Información Contable en el desarrollo e implementación de programas informáticos frente a las NCPA y las NIIF.",
-              "Unidad de Medida. Variables a considerar en el ambiente interno y externo de las organizaciones.",
-              "Contabilidad Gubernamental, la rendición de cuentas basadas en programas informáticos de gestión presupuestaria.",
-              "La Información Contable de los EPEQ, efectos de la utilización de programas de autogestión.",
-              "Los Usuarios de la Información Contable y el acceso digital a bases de datos.",
-              "Información Contable para la Gestión en ambientes informatizados y/o robotizados.",
-              "La Contabilidad de Gestión orientada al proceso de toma de decisiones en ambientes automatizados y robotizados.",
-              "Técnicas contables de medición para el reconocimiento y registro de transacciones en procesos automatizados y robotizados.",
+              Object {
+                "subtemas": Array [
+                  "Elaboración de variables e indicadores en procesos robotizados.",
+                  "Elaboración de variables e indicadores para la Contabilidad Ambiental y Social.",
+                ],
+                "tema": "Información Contable:",
+              },
+              Object {
+                "subtemas": Array [
+                  "En el desarrollo e implementación de programas informáticos frente a las NCPA y las NIIF.",
+                  "En el desarrollo e implementación de programas informáticos para la Contabilidad Ambiental y Social.",
+                ],
+                "tema": "Rol del Profesional y cumplimiento de los requisitos de la Información Contable:",
+              },
+              Object {
+                "tema": "Unidad de Medida. Variables a considerar en el ambiente interno y externo de las organizaciones.",
+              },
+              Object {
+                "subtemas": Array [
+                  "Basada en programas informáticos de gestión presupuestaria.",
+                  "Orientada a la inclusión de recursos naturales y variables sociales.",
+                ],
+                "tema": "Contabilidad Gubernamental, la rendición de cuentas:",
+              },
+              Object {
+                "subtemas": Array [
+                  "Efectos de la utilización de programas informáticos de autogestión.",
+                  "La inclusión de la Contabilidad Ambiental y Social.",
+                ],
+                "tema": "La Información Contable de los EPEQ:",
+              },
+              Object {
+                "tema": "Los Usuarios de la Información Contable y el acceso digital a bases de datos.",
+              },
+              Object {
+                "tema": "Información Contable para la Gestión en ambientes informatizados y/o robotizados.",
+              },
+              Object {
+                "subtemas": Array [
+                  "Al proceso de toma de decisiones en ambientes automatizados y robotizados.",
+                  "A la inclusión de variables ambientales y sociales en la Contabilidad.",
+                ],
+                "tema": "La Contabilidad de Gestión orientada:",
+              },
+              Object {
+                "subtemas": Array [
+                  "De transacciones en procesos automatizados y robotizados",
+                  "De variables ambientales y sociales.",
+                ],
+                "tema": "Técnicas contables de medición para el reconocimiento y registro:",
+              },
             ]
           }
         />
@@ -123,15 +165,57 @@ exports[`should match snapshot 1`] = `
           key="1"
           topics={
             Array [
-              "El accionar del auditor en contextos automatizados y robotizados.",
-              "El riesgo y el enfoque de la auditoría en contextos automatizados y robotizados.",
-              "Las acciones interdisciplinarias en la auditoría en contextos automatizados y robotizados.",
-              "La Auditoría y el Control Interno, en grupos económicos, adaptación a ambientes automatizados, robotizados y con complejidad asociada.",
-              "La Contabilidad Gubernamental y el Control, en ambientes con tendencias a la robotización y automatización.",
-              "Técnicas de Auditoría específicas para el desarrollo de auditorías en contextos automatizados y robotizados.",
-              "La auditoría auxiliar de soportes de datos en la nube.",
-              "Técnicas de auditoría específicas para el examen de nuevos negocios en contextos automatizados y robotizados.",
-              "La Auditoría y sus acciones en contextos automatizados y robotizados.",
+              Object {
+                "subtemas": Array [
+                  "Contextos automatizados y robotizados.",
+                  "Contextos de alto impacto ambiental y social.",
+                ],
+                "tema": "El accionar del auditor en:",
+              },
+              Object {
+                "subtemas": Array [
+                  "Contextos automatizados y robotizados.",
+                  "Contextos de alto impacto ambiental y social.",
+                ],
+                "tema": "El riesgo y el enfoque de la auditoría en:",
+              },
+              Object {
+                "subtemas": Array [
+                  "Contextos automatizados y robotizados.",
+                  "Contextos de alto impacto ambiental y social.",
+                ],
+                "tema": "Las acciones interdisciplinarias en la auditoría en:",
+              },
+              Object {
+                "subtemas": Array [
+                  "Ambientes automatizados, robotizados y con complejidad asociada.",
+                  "Inclusión de variables de ambientales y sociales en la Contabilidad.",
+                ],
+                "tema": "La Auditoría y el Control Interno, en grupos económicos, adaptación a:",
+              },
+              Object {
+                "subtemas": Array [
+                  "Ambientes con tendencias a la robotización y automatización.",
+                  "Ambientes de alto impacto ambiental y social.",
+                ],
+                "tema": "La Contabilidad Gubernamental y el Control en:",
+              },
+              Object {
+                "subtemas": Array [
+                  "Contextos automatizados y robotizados.",
+                  "Contextos de alto impacto ambiental y social.",
+                ],
+                "tema": "Técnicas de Auditoría específicas para el desarrollo de auditorías en:",
+              },
+              Object {
+                "tema": "La auditoría auxiliar de soportes de datos en la nube.",
+              },
+              Object {
+                "tema": "Técnicas de auditoría específicas para el examen de nuevos negocios en contextos automatizados y robotizados.",
+              },
+              Object {
+                "tema": "La Auditoría y sus acciones en contextos automatizados y robotizados.",
+              },
             ]
           }
         />
@@ -140,10 +224,18 @@ exports[`should match snapshot 1`] = `
           key="2"
           topics={
             Array [
-              "La Contabilidad y la Auditoría en ambientes automatizados y robotizados.",
-              "Los nuevos tipos de relaciones económicas que surgen de la automatización y robotización, su contabilización y auditoría.",
-              "Marco Normativo de la Contabilidad y Auditoría, criterios a adoptar frente a la automatización y robotización.",
-              "La Contabilidad Social y Ambiental dentro de la automatización y robotización de procesos comerciales y administrativos.",
+              Object {
+                "tema": "La Contabilidad y la Auditoría en ambientes automatizados y robotizados.",
+              },
+              Object {
+                "tema": "Los nuevos tipos de relaciones económicas que surgen de la automatización y robotización, su contabilización y auditoría.",
+              },
+              Object {
+                "tema": "Marco Normativo de la Contabilidad y Auditoría, criterios a adoptar frente a la automatización y robotización.",
+              },
+              Object {
+                "tema": "La Contabilidad Social y Ambiental dentro de la automatización y robotización de procesos comerciales y administrativos.",
+              },
             ]
           }
         />

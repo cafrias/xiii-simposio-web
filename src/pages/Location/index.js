@@ -5,11 +5,8 @@ import './Location.css'
 
 
 // MAP IMAGES __________________________________________________________________
-
-import map_1000 from './_assets/map.png'
-import map_800 from './_assets/map@800.png'
-import map_550 from './_assets/map@550.png'
-import map_400 from './_assets/map@400.png'
+import map_2x from './_assets/map@2x.jpg'
+import map from './_assets/map.jpg'
 
 
 // COMPONENTS __________________________________________________________________
@@ -24,12 +21,10 @@ function Location() {
         <div className="tile__left">
           <h2 className="tile__title">DIRECCIÓN</h2>
           <p className="tile__text">
-            SUM de la Caja de Previsión Social de la Provincia de Tierra del Fuego,
-            <br/>
-            Alem 2410, Ushuaia, Tierra del Fuego, Argentina.
+            Hipólito Yrigoyen 879, Ushuaia, Tierra del Fuego, Argentina.
           </p>
           <p className="tile__text">
-            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com.ar/maps/place/Av.+Leandro+N.+Alem+2410,+V9410ADX+Ushuaia,+Tierra+del+Fuego/@-54.8093112,-68.3365895,16.83z/data=!4m5!3m4!1s0xbc4c233f167580ad:0xaf5184363e0591db!8m2!3d-54.8086259!4d-68.3377634?hl=en">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com.ar/maps/place/Hip%C3%B3lito+Yrigoyen+879,+Ushuaia,+Tierra+del+Fuego/@-54.8267468,-68.3323381,17z/data=!3m1!4b1!4m5!3m4!1s0xbc4c2373a6566475:0xf3d9edd91f8702cb!8m2!3d-54.8267468!4d-68.3301494?hl=en">
               Ver en Google Maps
             </a>
           </p>
@@ -39,11 +34,9 @@ function Location() {
         </div>
         <div className="tile__right">
           <img className="tile__map" alt="Mapa de la ubicacion"
-            src={map_400}
+            src={map}
             srcSet={`
-              ${map_550} 550w,
-              ${map_800} 800w,
-              ${map_1000} 1000w
+              ${map_2x} 800w,
             `}
           />
         </div>
