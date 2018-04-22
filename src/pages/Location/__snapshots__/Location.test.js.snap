@@ -20,15 +20,13 @@ exports[`should match snapshot 1`] = `
       <p
         className="tile__text"
       >
-        SUM de la Caja de Previsión Social de la Provincia de Tierra del Fuego,
-        <br />
-        Alem 2410, Ushuaia, Tierra del Fuego, Argentina.
+        Hipólito Yrigoyen 879, Ushuaia, Tierra del Fuego, Argentina.
       </p>
       <p
         className="tile__text"
       >
         <a
-          href="https://www.google.com.ar/maps/place/Av.+Leandro+N.+Alem+2410,+V9410ADX+Ushuaia,+Tierra+del+Fuego/@-54.8093112,-68.3365895,16.83z/data=!4m5!3m4!1s0xbc4c233f167580ad:0xaf5184363e0591db!8m2!3d-54.8086259!4d-68.3377634?hl=en"
+          href="https://www.google.com.ar/maps/place/Hip%C3%B3lito+Yrigoyen+879,+Ushuaia,+Tierra+del+Fuego/@-54.8267468,-68.3323381,17z/data=!3m1!4b1!4m5!3m4!1s0xbc4c2373a6566475:0xf3d9edd91f8702cb!8m2!3d-54.8267468!4d-68.3301494?hl=en"
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -47,11 +45,9 @@ exports[`should match snapshot 1`] = `
       <img
         alt="Mapa de la ubicacion"
         className="tile__map"
-        src="map@400.png"
+        src="map.jpg"
         srcSet="
-                    map@550.png 550w,
-                    map@800.png 800w,
-                    map.png 1000w
+                    map@2x.jpg 800w,
                   "
       />
     </div>
