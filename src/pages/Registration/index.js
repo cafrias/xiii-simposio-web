@@ -16,12 +16,12 @@ const DEADLINE_DATA = [
   {
     name: 'Fecha límite presentación de Resúmenes',
     weekday: 'Viernes',
-    date: '20/04/2018'
+    date: '04/05/2018'
   },
   {
     name: 'Fecha límite presentación de Trabajos',
     weekday: 'Viernes',
-    date: '27/04/2018'
+    date: '09/05/2018'
   }
 ]
 
@@ -48,7 +48,7 @@ const COST_DATA = [
   }
 ]
 
-const DeadLine = ({name, weekday, date}, key) =>
+const DeadLine = ({ name, weekday, date }, key) =>
   <div key={key} className="deadline">
     <h3 className="deadline__title">{name}</h3>
     <p className="table__date deadline__date">
@@ -59,7 +59,7 @@ const DeadLine = ({name, weekday, date}, key) =>
     </p>
   </div>
 
-const Cost = ({name, cost}, key) =>
+const Cost = ({ name, cost }, key) =>
   <div key={key} className="cost">
     <h3 className="cost__title">{name}</h3>
     <p className="cost__total">
@@ -83,7 +83,7 @@ const Registration = () =>
       }
       <p className="text-container disclaimer">
         <small>
-          * Incluye material del Simposio, Cóctail de bienvenida y Cena de camaradería<br/>
+          * Incluye material del Simposio, Cóctail de bienvenida y Cena de camaradería<br />
           ** Incluye el material del Simposio
         </small>
       </p>
@@ -103,9 +103,9 @@ const Registration = () =>
         </p>
       </section>
     </article>
-    <hr/>
-    <Subscribe/>
-    <hr/>
+    <hr />
+    <Subscribe />
+    <hr />
   </Section>
 
 export default Registration
