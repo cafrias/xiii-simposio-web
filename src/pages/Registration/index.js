@@ -21,7 +21,7 @@ const DEADLINE_DATA = [
   {
     name: 'Fecha límite presentación de Trabajos',
     weekday: 'Viernes',
-    date: '09/05/2018'
+    date: '11/05/2018'
   }
 ]
 
