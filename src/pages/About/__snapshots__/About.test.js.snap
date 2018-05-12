@@ -89,6 +89,44 @@ exports[`should match snapshot 1`] = `
     </article>
   </div>
   <hr />
+  <article
+    className="about__old"
+  >
+    <h2>
+      Material XI Simposio
+    </h2>
+    <p>
+      Puede descargar las 
+      <strong>
+        ponencias
+      </strong>
+      , 
+      <a
+        href="https://drive.google.com/drive/folders/1zperoJNNNlCjokTjpKgcgxUZJkw0wZYV"
+        rel="noopener noreferrer"
+        target="__blank"
+      >
+        aquí
+      </a>
+      .
+    </p>
+    <p>
+      Puede descargar las 
+      <strong>
+        diapositivas
+      </strong>
+       de las presentaciones, 
+      <a
+        href="https://drive.google.com/drive/folders/1gNoJfmoyBbtOuZ4ruKAM8KDZq_j0hPpe"
+        rel="noopener noreferrer"
+        target="__blank"
+      >
+        aquí
+      </a>
+      .
+    </p>
+  </article>
+  <hr />
   <div
     className="about__content"
   >

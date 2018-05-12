@@ -43,7 +43,7 @@ function About() {
                 ${img01_2160} 2160w,
                 ${img01_2400} 2400w
               `}
-              className="about__pic" alt="participantes del simposio"/>
+              className="about__pic" alt="participantes del simposio" />
           </div>
           <div className="about__pic-container about__pic-container--back">
             <img
@@ -54,7 +54,7 @@ function About() {
                 ${img02_2160} 2160w,
                 ${img02_2400} 2400w
               `}
-              className="about__pic about__pic--back" alt="participantes del simposio"/>
+              className="about__pic about__pic--back" alt="participantes del simposio" />
           </div>
         </div>
         <article className="introduction mobile-pad">
@@ -91,21 +91,27 @@ function About() {
               <small>Más información: {' '}
                 <a target="_blank" rel="noopener noreferrer"
                   href="https://drive.google.com/open?id=17Z5EQhUtKSbZFGCrkhd4tDnoP6J3tFMG">
-                    Aquí
+                  Aquí
                 </a>
               </small>
             </footer>
           </div>
         </article>
       </div>
-      <hr/>
+      <hr />
+      <article className="about__old">
+        <h2>Material XI Simposio</h2>
+        <p>Puede descargar las <strong>ponencias</strong>, <a target="__blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1zperoJNNNlCjokTjpKgcgxUZJkw0wZYV">aquí</a>.</p>
+        <p>Puede descargar las <strong>diapositivas</strong> de las presentaciones, <a target="__blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1gNoJfmoyBbtOuZ4ruKAM8KDZq_j0hPpe">aquí</a>.</p>
+      </article>
+      <hr />
       <div className="about__content">
         <article className="temario">
           <h2>Temario</h2>
           <div className="temario-grid">
             {
               areas.map((area, i) => (
-                <Temario key={i} {...area}/>
+                <Temario key={i} {...area} />
               ))
             }
           </div>
