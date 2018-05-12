@@ -21,15 +21,15 @@ function Location() {
         <div className="tile__left">
           <h2 className="tile__title">DIRECCIÓN</h2>
           <p className="tile__text">
-            Hipólito Yrigoyen 879, Ushuaia, Tierra del Fuego, Argentina.
+            Aula 1 de Fuegia Basket 251, Ushuaia, Tierra del Fuego, Argentina.
           </p>
           <p className="tile__text">
-            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com.ar/maps/place/Hip%C3%B3lito+Yrigoyen+879,+Ushuaia,+Tierra+del+Fuego/@-54.8267468,-68.3323381,17z/data=!3m1!4b1!4m5!3m4!1s0xbc4c2373a6566475:0xf3d9edd91f8702cb!8m2!3d-54.8267468!4d-68.3301494?hl=en">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Fuegia+Basket+251,+V9410BXE+Ushuaia,+Tierra+del+Fuego/@-54.8188082,-68.3277281,17z/data=!3m1!4b1!4m5!3m4!1s0xbc4c2313c9d54fcb:0xf3c5850f10e7b3ea!8m2!3d-54.8188082!4d-68.3255394">
               Ver en Google Maps
             </a>
           </p>
           <div className="tile__social">
-            <SocialLinks/>
+            <SocialLinks />
           </div>
         </div>
         <div className="tile__right">
