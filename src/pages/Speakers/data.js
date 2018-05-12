@@ -4,6 +4,8 @@ import pic04 from './assets/04.jpg'
 import pic05 from './assets/05.jpg'
 import pic07 from './assets/07.jpg'
 import pic08 from './assets/08.jpg'
+import picGustavo from './assets/gustavo.jpg'
+import picAlessandro from './assets/alessandro.jpg'
 
 export default [
   {
@@ -34,6 +36,18 @@ export default [
     id: '08',
     pic: pic08,
     name: 'Mauricio Lambertucci',
+    inst: '(UBA)'
+  },
+  {
+    id: '09',
+    pic: picAlessandro,
+    name: 'Carolina Alessandro',
+    inst: '(UBA)'
+  },
+  {
+    id: '10',
+    pic: picGustavo,
+    name: 'Gustavo Montanini',
     inst: '(UBA)'
   },
 ]
