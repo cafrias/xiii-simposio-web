@@ -101,7 +101,7 @@ function About() {
       <hr />
       <article className="about__old">
         <h2>Material XI Simposio</h2>
-        <p>Puede descargar las <strong>ponencias</strong>, <a target="__blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1zperoJNNNlCjokTjpKgcgxUZJkw0wZYV">aquí</a>.</p>
+        <p>Puede descargar las <strong>ponencias</strong>, <a target="__blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/0B7VKVU2ob_G2bUZCZ3V3TXdiTkk/view">aquí</a>.</p>
         <p>Puede descargar las <strong>diapositivas</strong> de las presentaciones, <a target="__blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1gNoJfmoyBbtOuZ4ruKAM8KDZq_j0hPpe">aquí</a>.</p>
       </article>
       <hr />
