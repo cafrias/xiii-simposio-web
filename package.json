@@ -1,6 +1,6 @@
 {
-  "name": "simposio-xii-web",
-  "description": "Sitio web para el XII Simposio de Contabilidad Extremo Sur",
+  "name": "simposio-xiii-web",
+  "description": "Sitio web para el XIII Simposio de Contabilidad Extremo Sur",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
