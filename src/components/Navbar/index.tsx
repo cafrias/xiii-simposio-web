@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-scroll";
 
 import "./Navbar.sass";
-import logo from "./logo.svg";
+import logo from "./logo.png";
 
 const options = [
   {

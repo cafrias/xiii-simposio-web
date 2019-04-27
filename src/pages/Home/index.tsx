@@ -5,7 +5,7 @@ import React from "react";
 import "./assets/subtle_dots_@2X.png";
 import "./Home.sass";
 
-import logo from "./assets/logo.svg";
+import logo from "./assets/logo.png";
 import time from "./assets/time.svg";
 
 import idei_x2 from "./assets/idei@2x.png";
@@ -27,6 +27,8 @@ function Home() {
         <img
           className="hero-logo"
           src={logo}
+          width="501"
+          height="263"
           alt="Simposio Ushuaia logo con lema"
         />
       </div>
