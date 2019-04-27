@@ -136,7 +136,7 @@ function About() {
         </article>
       </div>
       <hr />
-      <article className="about__old">
+      {/* <article className="about__old">
         <h2>Material XI Simposio</h2>
         <p>
           Puede descargar las <strong>ponencias</strong>,{" "}
@@ -162,7 +162,7 @@ function About() {
           .
         </p>
       </article>
-      <hr />
+      <hr /> */}
       <div className="about__content">
         <article className="temario">
           <h2>Temario</h2>
