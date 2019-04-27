@@ -13,7 +13,7 @@ export const timeEntries = [
 const activities: DayObject[] = [
   {
     weekday: "Miércoles",
-    date: "16/05/2018",
+    date: "15/05/2019",
     activities: {
       "15.00": "Acreditaciones",
       "17.00": "Acto de Apertura",
@@ -25,7 +25,7 @@ const activities: DayObject[] = [
   },
   {
     weekday: "Jueves",
-    date: "17/05/2018",
+    date: "16/05/2019",
     activities: {
       "17.00": "Trabajo en comisiones",
       "17.30": "Trabajo en comisiones",
@@ -36,7 +36,7 @@ const activities: DayObject[] = [
   },
   {
     weekday: "Viernes",
-    date: "18/05/2018",
+    date: "17/05/2019",
     activities: {
       "17.00": "Trabajo en comisiones",
       "17.30": "Trabajo en comisiones",

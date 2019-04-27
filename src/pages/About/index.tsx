@@ -192,6 +192,7 @@ function About() {
                 social)
               </li>
               <li>Premio Señor Rector UNTDF (mejor trabajo de estudiantes)</li>
+              <li>Premio Dr. Mario Biondi (área investigación)</li>
             </ul>
           </div>
         </article>

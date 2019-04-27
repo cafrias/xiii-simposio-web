@@ -13,27 +13,27 @@ const DEADLINE_DATA = [
   {
     name: "Fecha límite presentación de Resúmenes",
     weekday: "Viernes",
-    date: "04/05/2018"
+    date: "19/04/2019"
   },
   {
     name: "Fecha límite presentación de Trabajos",
-    weekday: "Viernes",
-    date: "11/05/2018"
+    weekday: "Martes",
+    date: "30/04/2019"
   }
 ];
 
 const COST_DATA = [
   {
     name: "Asistentes en general",
-    cost: "$2.700*"
+    cost: "$3.200*"
   },
   {
     name: "Matriculados Consejo Profesional de Ciencias Económicas TDF",
-    cost: "$2.000*"
+    cost: "$2.400*"
   },
   {
     name: "Docentes UNTDF",
-    cost: "$1.600*"
+    cost: "$1.900*"
   },
   {
     name: "Estudiantes UNTDF",
@@ -41,7 +41,7 @@ const COST_DATA = [
   },
   {
     name: "Estudiantes otras instituciones",
-    cost: "$400**"
+    cost: "$500**"
   }
 ];
 

@@ -57,9 +57,9 @@ function Location() {
             la reserva la participación en el evento:
           </p>
           <ul className="text-container">
-            <li>Habitación single por noche $1.150</li>
-            <li>Habitación doble por noche $1.350</li>
-            <li>Habitación triple por noche $1.500</li>
+            <li>Habitación single por noche $1.300</li>
+            <li>Habitación doble por noche $1.500</li>
+            <li>Habitación triple por noche $1.700</li>
           </ul>
         </div>
         <ul className="tile__social hotel__links">

@@ -20,7 +20,7 @@ const temario: TemarioType = [
       {
         tema: "Información Contable:",
         subtemas: [
-          "Elaboración de variables e indicadores en procesos robotizados.",
+          "Elaboración de informes orientados al cambio de paradigma propuesto por la economía azul (blue economy).",
           "Elaboración de variables e indicadores para la Contabilidad Ambiental y Social."
         ]
       },
@@ -28,8 +28,8 @@ const temario: TemarioType = [
         tema:
           "Rol del Profesional y cumplimiento de los requisitos de la Información Contable:",
         subtemas: [
-          "En el desarrollo e implementación de programas informáticos frente a las NCPA y las NIIF.",
-          "En el desarrollo e implementación de programas informáticos para la Contabilidad Ambiental y Social."
+          "Relaciones de la RT 36 en la elaboración de informes bajo los principios de la economía azul (blue economy).",
+          "Participación en equipos interdisciplinarios para el desarrollo e implementación de SIC para la Contabilidad Ambiental y Social."
         ]
       },
       {
@@ -39,29 +39,29 @@ const temario: TemarioType = [
       {
         tema: "Contabilidad Gubernamental, la rendición de cuentas:",
         subtemas: [
-          "Basada en programas informáticos de gestión presupuestaria.",
+          "Basada en los principio propuestos por la economía azul (blue economy).",
           "Orientada a la inclusión de recursos naturales y variables sociales."
         ]
       },
       {
         tema: "La Información Contable de los EPEQ:",
         subtemas: [
-          "Efectos de la utilización de programas informáticos de autogestión.",
+          "El registro contable vinculado a los nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "La inclusión de la Contabilidad Ambiental y Social."
         ]
       },
       {
         tema:
-          "Los Usuarios de la Información Contable y el acceso digital a bases de datos."
+          "Los Usuarios de la Información Contable y los grupos de interés relacionados a la economía azul (blue economy)."
       },
       {
         tema:
-          "Información Contable para la Gestión en ambientes informatizados y/o robotizados."
+          "Información Contable para la Gestión bajo los principios propuestos por la economía azul (blue economy)."
       },
       {
         tema: "La Contabilidad de Gestión orientada:",
         subtemas: [
-          "Al proceso de toma de decisiones en ambientes automatizados y robotizados.",
+          "Al proceso de toma de decisiones como generador de la huella ambiental.",
           "A la inclusión de variables ambientales y sociales en la Contabilidad."
         ]
       },
@@ -69,7 +69,7 @@ const temario: TemarioType = [
         tema:
           "Técnicas contables de medición para el reconocimiento y registro:",
         subtemas: [
-          "De transacciones en procesos automatizados y robotizados",
+          "De transacciones vinculadas a los nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "De variables ambientales y sociales."
         ]
       }
@@ -81,21 +81,21 @@ const temario: TemarioType = [
       {
         tema: "El accionar del auditor en:",
         subtemas: [
-          "Contextos automatizados y robotizados.",
+          "Nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "Contextos de alto impacto ambiental y social."
         ]
       },
       {
         tema: "El riesgo y el enfoque de la auditoría en:",
         subtemas: [
-          "Contextos automatizados y robotizados.",
+          "Nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "Contextos de alto impacto ambiental y social."
         ]
       },
       {
         tema: "Las acciones interdisciplinarias en la auditoría en:",
         subtemas: [
-          "Contextos automatizados y robotizados.",
+          "Nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "Contextos de alto impacto ambiental y social."
         ]
       },
@@ -103,14 +103,14 @@ const temario: TemarioType = [
         tema:
           "La Auditoría y el Control Interno, en grupos económicos, adaptación a:",
         subtemas: [
-          "Ambientes automatizados, robotizados y con complejidad asociada.",
+          "Nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "Inclusión de variables de ambientales y sociales en la Contabilidad."
         ]
       },
       {
         tema: "La Contabilidad Gubernamental y el Control en:",
         subtemas: [
-          "Ambientes con tendencias a la robotización y automatización.",
+          "Nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "Ambientes de alto impacto ambiental y social."
         ]
       },
@@ -118,20 +118,20 @@ const temario: TemarioType = [
         tema:
           "Técnicas de Auditoría específicas para el desarrollo de auditorías en:",
         subtemas: [
-          "Contextos automatizados y robotizados.",
+          "Nuevos tipo de negocios en el marco de la economía azul (blue economy).",
           "Contextos de alto impacto ambiental y social."
         ]
       },
       {
-        tema: "La auditoría auxiliar de soportes de datos en la nube."
+        tema:
+          "La auditoría auxiliar para los subsistemas de información que colaboran con la definición de la huella ambiental de las organizaciones."
       },
       {
         tema:
-          "Técnicas de auditoría específicas para el examen de nuevos negocios en contextos automatizados y robotizados."
-      },
-      {
-        tema:
-          "La Auditoría y sus acciones en contextos automatizados y robotizados."
+          "Técnicas de auditoría específicas para el examen de nuevos negocios en cumplimiento a los principios propuestos por la economía azul (blue economy).",
+        subtemas: [
+          "La Auditoría y sus acciones en nuevos tipo de negocios en el marco de la economía azul (blue economy)"
+        ]
       }
     ]
   },
@@ -140,19 +140,19 @@ const temario: TemarioType = [
     topics: [
       {
         tema:
-          "La Contabilidad y la Auditoría en ambientes automatizados y robotizados."
+          "La Contabilidad y la Auditoría orientada al cambio paradigmático propuesto por la economía azul (blue economy)."
       },
       {
         tema:
-          "Los nuevos tipos de relaciones económicas que surgen de la automatización y robotización, su contabilización y auditoría."
+          "Los nuevos tipos de relaciones económicas que surgen de la economía azul (blue economy)."
       },
       {
         tema:
-          "Marco Normativo de la Contabilidad y Auditoría, criterios a adoptar frente a la automatización y robotización."
+          "Marco Normativo de la Contabilidad y Auditoría, para la contabilidad azul."
       },
       {
         tema:
-          "La Contabilidad Social y Ambiental dentro de la automatización y robotización de procesos comerciales y administrativos."
+          "La Contabilidad Social y Ambiental aportando al proceso de cambio propuesto por la economía azul (blue economy)."
       }
     ]
   }
