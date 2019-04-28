@@ -201,11 +201,11 @@ const fields: FieldsObject = {
       { val: "estudiante_untdf", label: "Sin cargo - Estudiantes UNTDF" },
       {
         val: "estudiante_otro",
-        label: "$350 - Estudiantes otras instituciones"
+        label: "$500 - Estudiantes otras instituciones"
       },
-      { val: "docente_untdf", label: "$1600 - Docentes UNTDF*" },
-      { val: "matriculado_cpcetf", label: "$2000 - Matriculados CPCETF*" },
-      { val: "general", label: "$2700 - Docentes/General*" }
+      { val: "docente_untdf", label: "$1900 - Docentes UNTDF*" },
+      { val: "matriculado_cpcetf", label: "$2400 - Matriculados CPCETF*" },
+      { val: "general", label: "$3200 - Docentes/General*" }
     ],
     id: "arancel_categoria",
     label: "Arancel",

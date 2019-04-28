@@ -13,12 +13,12 @@ const DEADLINE_DATA = [
   {
     name: "Fecha límite presentación de Resúmenes",
     weekday: "Viernes",
-    date: "19/04/2019"
+    date: "03/05/2019"
   },
   {
     name: "Fecha límite presentación de Trabajos",
-    weekday: "Martes",
-    date: "30/04/2019"
+    weekday: "Viernes",
+    date: "10/05/2019"
   }
 ];
 
@@ -106,7 +106,7 @@ const Registration = () => (
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/open?id=1xI7ZLC-ao7fAGEnP4_1NjxUUwIhm48KI"
+            href="https://drive.google.com/file/d/1P_oQHCQ6PBmGJI_jqWY0omdzAk50cZTp/view?ts=5cc50956"
           >
             reglamento
           </a>
