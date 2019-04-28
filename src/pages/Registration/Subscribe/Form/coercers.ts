@@ -5,7 +5,7 @@ type CoercersMap = {
 const coercers: CoercersMap = {
   identity: value => value,
   number: value => Number(value),
-  boolean: value => value === "true" || value === "false"
+  boolean: value => value === "true"
 };
 
 export default coercers;

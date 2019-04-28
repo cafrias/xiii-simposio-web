@@ -101,6 +101,8 @@ class SubscriptionForm extends React.Component<
   };
 
   submitHandler = async (e: React.FormEvent) => {
+    e.preventDefault();
+
     const newState = Object.assign({}, this.state, {
       loading: true
     });
