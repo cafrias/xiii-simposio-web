@@ -1,10 +1,11 @@
 import pic02 from "./assets/02.jpg";
 import pic04 from "./assets/04.jpg";
 import pic05 from "./assets/05.jpg";
-import pic07 from "./assets/07.jpg";
 import pic08 from "./assets/08.jpg";
 import picGustavo from "./assets/gustavo.jpg";
 import picAlessandro from "./assets/alessandro.jpg";
+import picHector from "./assets/hector.jpg";
+import picOmar from "./assets/omar.jpg";
 
 export default [
   {
@@ -26,12 +27,6 @@ export default [
     inst: "(UBA)"
   },
   {
-    id: "07",
-    pic: pic07,
-    name: "Juan Permuy",
-    inst: "(UBA)"
-  },
-  {
     id: "08",
     pic: pic08,
     name: "Mauricio Lambertucci",
@@ -47,6 +42,18 @@ export default [
     id: "10",
     pic: picGustavo,
     name: "Gustavo Montanini",
+    inst: "(UBA)"
+  },
+  {
+    id: "11",
+    pic: picHector,
+    name: "Héctor Chyrikins",
+    inst: "(UBA)"
+  },
+  {
+    id: "12",
+    pic: picOmar,
+    name: "Omar Quiroga",
     inst: "(UBA)"
   }
 ];
