@@ -1,7 +1,7 @@
 #!/bin/bash
 # Deploys built version to s3
 
-# yarn build
+yarn build
 
 if [ "$1" == "production" ]; then
   echo 'Pushing to production ...'
