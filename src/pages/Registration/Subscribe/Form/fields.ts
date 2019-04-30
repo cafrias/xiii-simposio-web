@@ -224,9 +224,10 @@ const fields: FieldsObject = {
     label: "Adicional"
   },
   arancel_pago: {
-    required: true,
+    required: false,
     validator: validators.any,
     coercer: coercers.identity,
+    default: " ",
     control: TextArea,
     id: "arancel_pago",
     label: "Forma de pago (detallar Nº de recibo)"
