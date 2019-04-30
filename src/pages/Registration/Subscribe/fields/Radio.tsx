@@ -19,7 +19,7 @@ const Input = (props: ControlProps) => {
           name={id}
           onChange={changeHandler}
           onBlur={blurHandler}
-          value="true"
+          value={true as any}
         />
         Si
       </label>
@@ -29,7 +29,7 @@ const Input = (props: ControlProps) => {
           name={id}
           onChange={changeHandler}
           onBlur={blurHandler}
-          value="false"
+          value={false as any}
         />
         No
       </label>

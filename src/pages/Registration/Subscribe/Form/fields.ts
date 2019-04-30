@@ -248,7 +248,7 @@ const fields: FieldsObject = {
     control: Radio,
     id: "ponencia_presenta",
     label: "¿Presenta Ponencia?",
-    default: "false",
+    default: false,
     centered: true
   },
   ponencia_titulo: {
