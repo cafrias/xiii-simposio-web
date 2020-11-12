@@ -115,11 +115,11 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
                   spy={false}
                   duration={500}
                   smooth={true}
-                  to="subs_form"
+                  to="registration"
                   offset={-50}
                   className="button is-primary"
                 >
-                  Incribirse
+                  Inscribirse
                 </Link>
               </div>
             </div>
