@@ -13,8 +13,11 @@ const Registration: React.FunctionComponent = () => (
     <article className="how-to mobile-pad">
       <h2>¿Cómo inscribirse?</h2>
       <p className="text-container">
-        Llene el <a href="#subs_form">formulario de inscripción</a> y nos
-        pondremos en contacto con usted a la brevedad.
+        Llene el{" "}
+        <a href="https://forms.gle/9MCWQcpMZGrwv9k76" target="_blank">
+          formulario de inscripción
+        </a>{" "}
+        y nos pondremos en contacto con usted a la brevedad.
       </p>
       <p className="text-container">
         Cualquier consulta puede ser dirigida a:{" "}
