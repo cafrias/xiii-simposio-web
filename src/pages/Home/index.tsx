@@ -58,16 +58,18 @@ function Home() {
             <Sponsor key={i} logo={logo} alt={alt} />
           ))}
         </ul>
-        <section className="collaboration">
-          <h3 className="collaboration__title">
-            Se agradece la colaboración de:
-          </h3>
-          <ul className="sponsors__grid collaborators__grid">
-            {collaborators.map(({ logo, alt }, i) => (
-              <Sponsor key={i} logo={logo} alt={alt} small={true} />
-            ))}
-          </ul>
-        </section>
+        {collaborators.length > 0 ? (
+          <section className="collaboration">
+            <h3 className="collaboration__title">
+              Se agradece la colaboración de:
+            </h3>
+            <ul className="sponsors__grid collaborators__grid">
+              {collaborators.map(({ logo, alt }, i) => (
+                <Sponsor key={i} logo={logo} alt={alt} small={true} />
+              ))}
+            </ul>
+          </section>
+        ) : null}
       </section>
     </section>
   );

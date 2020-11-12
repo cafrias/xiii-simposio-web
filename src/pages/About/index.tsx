@@ -16,11 +16,6 @@ import img02_2400 from "./assets/about-pic-2@2400.jpg";
 // COMPONENTS __________________________________________________________________
 
 import Section from "../../components/Section";
-import Temario from "./Temario";
-
-// DATA ________________________________________________________________________
-
-import areas from "./areas";
 
 function About() {
   return (
@@ -105,89 +100,6 @@ function About() {
               investigadores vinculados a la Contabilidad y la Auditoría y al
               público en general, a participar de este importante evento.
             </p>
-            {/* <p className="download-disclaimer">
-              La publicación con todos los trabajos presentados en la presente edición del Simposio,
-              titulada <em>Memorias del XI° Simposio de Contabilidad y Auditoría del Extremo Sur</em>, {' '}
-              está disponible para descargar{' '}
-              <a target="_blank" rel="noopener noreferrer"
-                href="https://drive.google.com/open?id=0B7VKVU2ob_G2bUZCZ3V3TXdiTkk">
-                Aquí
-              </a>.
-            </p> */}
-            <footer className="about__more-info">
-              <small>
-                Más información:{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://drive.google.com/open?id=17Z5EQhUtKSbZFGCrkhd4tDnoP6J3tFMG"
-                >
-                  Aquí
-                </a>
-              </small>
-            </footer>
-          </div>
-        </article>
-      </div>
-      <hr />
-      {/* <article className="about__old">
-        <h2>Material XI Simposio</h2>
-        <p>
-          Puede descargar las <strong>ponencias</strong>,{" "}
-          <a
-            target="__blank"
-            rel="noopener noreferrer"
-            href="https://drive.google.com/file/d/0B7VKVU2ob_G2bUZCZ3V3TXdiTkk/view"
-          >
-            aquí
-          </a>
-          .
-        </p>
-        <p>
-          Puede descargar las <strong>diapositivas</strong> de las
-          presentaciones,{" "}
-          <a
-            target="__blank"
-            rel="noopener noreferrer"
-            href="https://drive.google.com/drive/folders/1gNoJfmoyBbtOuZ4ruKAM8KDZq_j0hPpe"
-          >
-            aquí
-          </a>
-          .
-        </p>
-      </article>
-      <hr /> */}
-      <div className="about__content">
-        <article className="temario">
-          <h2>Temario</h2>
-          <div className="temario-grid">
-            {areas.map((area, i) => (
-              <Temario key={i} {...area} />
-            ))}
-          </div>
-        </article>
-        <article className="prizes">
-          <h2>Constitución de Premios</h2>
-          <div className="text-container">
-            <p>
-              Deseando reconocer el esfuerzo de los ponentes, y resaltar la
-              calidad académica de las presentaciones realizadas, hemos
-              constituido los siguientes premios:
-            </p>
-            <ul>
-              <li>Premio Simposio Area Contabilidad</li>
-              <li>Premio Simposio Area Auditoria</li>
-              <li>
-                Premio Profesor Hector Chyrikins (auditoria en el área
-                gubernamental)
-              </li>
-              <li>
-                Premio Profesor Ricardo Pahlen Acuña (contabilidad ambiental y
-                social)
-              </li>
-              <li>Premio Señor Rector UNTDF (mejor trabajo de estudiantes)</li>
-              <li>Premio Dr. Mario Biondi (área investigación)</li>
-            </ul>
           </div>
         </article>
       </div>

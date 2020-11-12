@@ -7,24 +7,24 @@ import logo from "./logo.png";
 const options = [
   {
     id: "about",
-    label: "¿Qué es el Simposio?"
+    label: "¿Qué es el Simposio?",
   },
   {
     id: "speakers",
-    label: "Disertantes"
+    label: "Disertantes",
   },
   {
     id: "schedule",
-    label: "Cronograma"
+    label: "Cronograma",
   },
   {
     id: "registration",
-    label: "Inscripción"
+    label: "Inscripción",
   },
   {
     id: "location",
-    label: "Ubicación"
-  }
+    label: "Ubicación",
+  },
 ];
 
 type HamburgerProps = {
@@ -71,19 +71,19 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
   constructor(props: NavbarProps) {
     super(props);
     this.state = {
-      active: false
+      active: false,
     };
   }
 
-  toggleActive() {
+  toggleActive(): void {
     this.setState(
       Object.assign({}, this.state, {
-        active: !this.state.active
+        active: !this.state.active,
       })
     );
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <nav className="navbar is-fixed-top" aria-label="main navigation">
         <div className="container">
@@ -115,11 +115,11 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
                   spy={false}
                   duration={500}
                   smooth={true}
-                  to="subs_form"
+                  to="registration"
                   offset={-50}
                   className="button is-primary"
                 >
-                  Incribirse
+                  Inscribirse
                 </Link>
               </div>
             </div>

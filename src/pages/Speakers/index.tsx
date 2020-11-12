@@ -9,19 +9,6 @@ import Speaker from "./Speaker";
 // DATA ________________________________________________________________________
 import speakers from "./data";
 
-// componentDidMount() {
-//   window.addEventListener('scroll', (e) => {
-//     const should = this.refs._grid.getBoundingClientRect().top < (window.innerHeight/2)
-//
-//     if(should && !this.state.shouldAppear) {
-//       console.log('triggered')
-//       this.setState({
-//         shouldAppear: true
-//       })
-//     }
-//   })
-// }
-
 function Speakers() {
   return (
     <Section
