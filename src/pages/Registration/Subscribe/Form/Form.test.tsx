@@ -53,7 +53,7 @@ test('submits when valid', async () => {
       const value = OK[field]
       
       if(field !== 'ponencia_presenta') {
-        let control = wrapper.find(`[name="${field}"]`)
+        const control = wrapper.find(`[name="${field}"]`)
         control.instance().value = value
         control.simulate('change')
       } else {
@@ -106,7 +106,7 @@ test('doesn\'t submit when invalid', async () => {
       const value = notOK[field]
       
       if(field !== 'ponencia_presenta') {
-        let control = wrapper.find(`[name="${field}"]`)
+        const control = wrapper.find(`[name="${field}"]`)
         control.instance().value = value
         control.simulate('change')
       } else {

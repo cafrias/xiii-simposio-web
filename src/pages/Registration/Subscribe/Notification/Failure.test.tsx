@@ -7,7 +7,7 @@ const reason = 'This is the message'
 const logID = 'alksdjj2hh8273'
 
 test('renders right message', () => {
-  let wrapper = shallow(<Failure reason={reason} logID={logID} />)
+  const wrapper = shallow(<Failure reason={reason} logID={logID} />)
 
   const notifText = wrapper.find('.notification').text()
   expect(notifText).toEqual(expect.stringContaining(reason))

@@ -110,7 +110,7 @@ test("renders options mixed as string and object", () => {
 
   expect(elements).toHaveLength(2);
   elements.forEach(elem => {
-    let text = elem.text();
+    const text = elem.text();
     if (text === "option 1") {
       expect(props.options[0]).toEqual({
         val: elem.prop("value"),
