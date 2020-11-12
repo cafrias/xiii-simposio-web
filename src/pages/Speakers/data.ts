@@ -1,59 +1,93 @@
-import pic02 from "./assets/02.jpg";
-import pic04 from "./assets/04.jpg";
-import pic05 from "./assets/05.jpg";
-import pic08 from "./assets/08.jpg";
-import picGustavo from "./assets/gustavo.jpg";
-import picAlessandro from "./assets/alessandro.jpg";
-import picHector from "./assets/hector.jpg";
-import picOmar from "./assets/omar.jpg";
+type SpeakerInfo = {
+  id: string,
+  pic?: string,
+  name: string,
+  inst?: string,
+}
 
-export default [
+const speakersData: SpeakerInfo[] = [
   {
-    id: "02",
-    pic: pic02,
-    name: "Ana María Campo",
-    inst: "(UBA)"
+    id: "john_boretto",
+    name: "Jhon Boretto",
+    inst: "(Decano FCE- UNC)"
   },
   {
-    id: "04",
-    pic: pic04,
-    name: "Ricardo Barrera",
-    inst: "(UNTDF-UNPSJB)"
+    id: "juan_dipp",
+    name: "Juan Antonio Dipp",
+    inst: "(Decano FCE-UNaM)"
   },
   {
-    id: "05",
-    pic: pic05,
-    name: "Francisco Provenzani",
-    inst: "(UBA)"
+    id: "eugenio_luque",
+    name: "Eugenio Luque J. Dominguez",
+    inst: "(Decano FCEyE- Universidad de Málaga)"
   },
   {
-    id: "08",
-    pic: pic08,
-    name: "Mauricio Lambertucci",
-    inst: "(UBA)"
+    id: "maria_maza",
+    name: "Maria Beatriz Maza",
+    inst: "(Decana FCEyA- UNCa)"
   },
   {
-    id: "09",
-    pic: picAlessandro,
-    name: "Carolina Alessandro",
-    inst: "(UBA)"
+    id: "ricardo_acuna",
+    name: "Ricardo J. M. Pahlen Acuña",
+    inst: "(Decano FCE-UBA)"
   },
   {
-    id: "10",
-    pic: picGustavo,
-    name: "Gustavo Montanini",
-    inst: "(UBA)"
+    id: "tomas_perez",
+    name: "Tomas H. Rubio Perez",
+    inst: "(Director de la Fac. Contaduria y Administración- UNAM)"
   },
   {
-    id: "11",
-    pic: picHector,
-    name: "Héctor Chyrikins",
-    inst: "(UBA)"
+    id: 'eduardo_solis',
+    name: 'Eduardo Solis',
   },
   {
-    id: "12",
-    pic: picOmar,
-    name: "Omar Quiroga",
-    inst: "(UBA)"
-  }
+    id: 'ricardo_barrera',
+    name: 'Ricardo Barrera',
+  },
+  {
+    id: 'mauricio_lambertucci',
+    name: 'Mauricio Lambertucci',
+  },
+  {
+    id: 'ricardo_frias',
+    name: 'Ricardo Frias',
+  },
+  {
+    id: 'hector_ostengo',
+    name: 'Héctor Ostengo',
+  },
+  {
+    id: 'maria_rodriguez',
+    name: 'María Del Carmen Rodriguez de Ramirez',
+  },
+  {
+    id: 'gustavo_montanini',
+    name: 'Gustavo Montanini',
+  },
+  {
+    id: 'hugo_arreghini',
+    name: 'Hugo Arreghini',
+  },
+  {
+    id: 'hector_chyrikins',
+    name: 'Héctor Chyrikins',
+  },
+  {
+    id: 'mariela_coletta',
+    name: 'Mariela Coletta',
+  },
+  {
+    id: 'enrique_fowler',
+    name: 'Enrique Fowler Newton',
+  },
+  {
+    id: 'ana_campo',
+    name: 'Ana M. Campo',
+  },
+  {
+    id: 'roberto_vazquez',
+    name: 'Roberto Vazquez',
+  },
 ];
+
+export default speakersData
