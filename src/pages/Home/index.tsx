@@ -6,6 +6,7 @@ import "./assets/subtle_dots_@2X.png";
 import "./Home.sass";
 
 import logo from "./assets/logo.png";
+import jucLogo from "./assets/juc-logo.jpg";
 import time from "./assets/time.svg";
 
 import idei_x2 from "./assets/idei@2x.png";
@@ -23,6 +24,15 @@ import { sponsors, collaborators } from "./Sponsor/_data";
 function Home() {
   return (
     <section id="home" className="home-container">
+      <div className="hero-juc-container">
+        <img
+          className="hero-logo"
+          src={jucLogo}
+          width="256"
+          height="79"
+          alt="Logo JUC"
+        />
+      </div>
       <div className="hero-logo-container">
         <img
           className="hero-logo"
