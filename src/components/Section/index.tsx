@@ -6,7 +6,7 @@ type SectionProps = {
   id: string;
   name: string;
   className: string;
-  children?: any;
+  children?: React.ReactNode;
 };
 
 function Section({ id, name, className, children }: SectionProps) {
@@ -19,7 +19,7 @@ function Section({ id, name, className, children }: SectionProps) {
         flexDirection: "column",
         alignItems: "center",
         marginTop: 0,
-        marginBottom: 0
+        marginBottom: 0,
       }}
     >
       <Header title={name} />
