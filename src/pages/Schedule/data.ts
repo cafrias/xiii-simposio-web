@@ -2,7 +2,9 @@ import { DayObject } from "./DesktopTable";
 
 export const timeEntries = [
   "11.00",
+  "18.00",
   "18.30",
+  "20.30",
 ];
 
 const activities: DayObject[] = [
@@ -10,23 +12,25 @@ const activities: DayObject[] = [
     weekday: "Miércoles",
     date: "25/11/2020",
     activities: {
-      "18.30": "Transmisión en vivo",
+      "18.00": "Acto de Apertura",
+      "18.30": "Mesa de Decanos",
     }
   },
   {
     weekday: "Jueves",
     date: "26/11/2020",
     activities: {
-      "11.00": "Transmisión en vivo",
-      "18.30": "Transmisión en vivo",
+      "11.00": "Disertantes Invitados: Eduardo Solís, Ricardo Barrera, Mauricio Lambertucci y Ricardo Frías",
+      "18.30": "Disertantes Invitados: Héctor Ostengo, María del Carmen Rodríguez de Ramírez y Gustavo Montanini",
     }
   },
   {
     weekday: "Viernes",
     date: "27/11/2020",
     activities: {
-      "11.00": "Transmisión en vivo",
-      "18.30": "Transmisión en vivo",
+      "11.00": "Disertantes Invitados: Hugo Arrghini, Héctor Chyrikins y Mariela Coletta",
+      "18.30": "Disertantes Invitados: Enrique Fowler Newton, Ana M. Campo y Roberto Vázquez",
+      "20.30": "Acto de Cierre"
     }
   }
 ];
