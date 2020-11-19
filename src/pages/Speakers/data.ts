@@ -53,10 +53,6 @@ const speakersData: SpeakerInfo[] = [
     name: 'Ricardo Frias',
   },
   {
-    id: 'hector_ostengo',
-    name: 'Héctor Ostengo',
-  },
-  {
     id: 'maria_rodriguez',
     name: 'María Del Carmen Rodriguez de Ramirez',
   },
@@ -77,8 +73,12 @@ const speakersData: SpeakerInfo[] = [
     name: 'Mariela Coletta',
   },
   {
-    id: 'enrique_fowler',
-    name: 'Enrique Fowler Newton',
+    id: 'claudia_clas',
+    name: 'Claudia Clas'
+  },
+  {
+    id: 'heraclio_lanza',
+    name: 'Heraclio Lanza',
   },
   {
     id: 'ana_campo',
